@@ -202,10 +202,26 @@ class App extends Component {
                           <Route path="/signin" element={<SignIn />} />
                           <Route path="/signup" element={<SignUp />} />
                           <Route path="/metamask" element={<Metamask />} />
-                          <Route path="/projects" element={<Projects />} />
+                          <Route path="/projects" element={<Projects account={this.state.account}
+                                                                      projects={this.state.projects} />} />
                           <Route path="/donation" element={<DonationPage />} />
+                          <Route path="/main" element={<Main 
+                                                        account={this.state.account}
+                                                        projects={this.state.projects}
+                                                        createProject={this.createProject}
+                                                        donateProject={this.donateProject} 
+                                                        deleteProject={this.deleteProject}
+                                                        
+                                                        createUser={this.createUser}
+                                                        loginUser ={this.loginUser}/>} />
                         </Routes>
                       </BrowserRouter>
+
+                      
+                        
+
+
+                      
               </div>
 
               
