@@ -22,7 +22,7 @@ export default function ProjectsPage() {
             <Header2 />
             <section className="projects-body">
                 <div className="explore-projects">
-                    FundCHAIN PROJECTS
+                    FUNDCHAIN PROJECTS
                 </div>
                 <div className="projects-list">
                     {cards}

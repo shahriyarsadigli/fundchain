@@ -13,12 +13,12 @@
     /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
-    width: 48%;
+    width: 45%;
   }
 
-  .logo {
+  .logo--1 {
     width: 5%;
-    z-index: 1;
+    margin-left: 15px;
   }
   
   
@@ -38,6 +38,7 @@
   .home-buttons > button > a {
     text-decoration: none;
     color: white;
+    font-size: 1.1em;
   }
   
   .home-buttons > button > a:hover {

@@ -125,38 +125,46 @@
 #email-icon-2 {
     position: absolute;
     font-size: 1.1em;
-    top: 12.8em;
-    left: 4.2em;
+    top: 14.55em;
+    left: 4.5em;
 }
 
 #password-icon-2 {
     position: absolute;
     font-size: 1.1em;
-    top: 16.4em;
-    left: 4.2em;
+    top: 18.55em;
+    left: 4.5em;
 }
 
 #eye-icon-2 {
     position: absolute;
     font-size: 1.1em;
-    top: 16.45em;
-    left: 20em;
+    top: 18.55em;
+    left: 19.5em;
     color: black;
 }
 
 #user-icon-1 {
     position: absolute;
     font-size: 1.1em;
-    top: 5.5em;
-    left: 4.2em;
+    top: 6.6em;
+    left: 4.5em;
     color: black;
 }
 
 #user-icon-2 {
     position: absolute;
     font-size: 1.1em;
-    top: 9.2em;
-    left: 4.2em;
+    top: 10.6em;
+    left: 4.5em;
+    color: black;
+}
+
+#username-icon {
+    position: absolute;
+    font-size: 1.1em;
+    top: 2.65em;
+    left: 4.5em;
     color: black;
 }
 

@@ -18,8 +18,9 @@ export default function SignUp() {
                         </div>
                         <div className="forum-content">
                             <div className='personal-info'>     
+                                <input type="text" className="signup-lname" placeholder="Username" size ="14"></input>
                                 <input type="text" className="signup-name" placeholder="Name" size="14"></input>
-                                <input type="password" className="signup-lname" placeholder="Lastname" size ="14"></input>
+                                <input type="text" className="signup-lname" placeholder="Lastname" size ="14"></input>
                             </div>
                             <div className='signup-info'>
                                 <input type="text" className="email" placeholder="Email"></input>
@@ -35,6 +36,7 @@ export default function SignUp() {
                             <a href="#"><i class="fa-regular fa-eye-slash" id="eye-icon-2"></i></a>
                             <i class="fa-regular fa-user" id="user-icon-1"></i>
                             <i class="fa-regular fa-user" id="user-icon-2"></i>
+                            <i class="fa-solid fa-user" id="username-icon"></i>
                         </div>
                     </div>
                 </section>

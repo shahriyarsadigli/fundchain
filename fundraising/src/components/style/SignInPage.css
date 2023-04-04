@@ -105,10 +105,14 @@
     width: 9.5em;
 }
 
+.register-options > h6 {
+    margin-top: 5px;
+}
+
 .signin-button-eth {
     margin-bottom: 20px;
     background: white;
-    padding: 30px 70px;
+    padding: 30px 55px;
     border-radius: 10px;
     border: none;
     box-shadow: 0px 4px 5px 1px rgb(234, 233, 233), 0px -4px 5px 1px rgb(234, 233, 233);
@@ -149,30 +153,30 @@
     font-size: 2.2em;
     color: black;
     position: absolute;
-    right: 9.1em;
-    top: 10.1em;
+    right: 9.6em;
+    top: 10.41em;
 }
 
 #email-icon {
     font-size: 1.1em;
     color: black;
     position: absolute;
-    right: 21.7em;
-    top: 5.1em;
+    right: 21.2em;
+    top: 4.3em;
 }
 
 #password-icon {
     font-size: 1.1em;
     color: black;
     position: absolute;
-    right: 21.7em;
-    top: 8.7em;
+    right: 21.2em;
+    top: 8.3em;
 }
 
 #eye-icon {
     font-size: 1.1em;
     color: black;
     position: absolute;
-    right: 2.7em;
-    top: 8.75em;
+    right: 3.4em;
+    top: 8.3em;
 }

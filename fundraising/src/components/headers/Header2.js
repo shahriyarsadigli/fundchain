@@ -8,7 +8,7 @@ export default function Header2() {
         <div>
             <header>
                 <nav className="n-bar">
-                <img src={logo} className="logo" alt="logo"/>
+                <img src={logo} className="logo--2" alt="logo"/>
                     <div className="n-buttons">
                         <div className="menu-buttons">
                             <button type="button"><a href="/">Home</a></button>
@@ -20,10 +20,10 @@ export default function Header2() {
                                 <a href="#">2.00 ETH</a>
                             </button> 
                             <div className="dropdown-menu">
-                                <a href="#">WALLET</a>
+                                <a className="drop--first" href="#">WALLET</a>
                                 <a href="#">My account</a>
                                 <a href="#">Create a project</a>
-                                <a href="#">Sign out</a>
+                                <a className="drop--last" href="#">Sign out</a>
                             </div>
                         </div>
                     </div>

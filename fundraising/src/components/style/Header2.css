@@ -8,10 +8,11 @@ header {
     justify-content: space-between;
     align-items: center;
     background: rgb(16, 110, 135);
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   }
   
 .n-buttons {
-    width: 600px;
+    width: 620px;
     height: 100px;
     margin-right: 70px;
     display: flex;
@@ -24,7 +25,7 @@ header {
     width: 385px;
     justify-content: space-between;
     align-items: center;
-    margin-left: 33px;
+    margin-left: 42px;
 }
 
 .menu-buttons > button {
@@ -37,11 +38,13 @@ header {
     display: inline-block;
     font-size: 16px;
     border-radius: 50px;
+    display: flex;
 }
 
 .menu-buttons button > a {
     text-decoration: none;
     color: white;
+    font-size: 1.1em;
 }
 
 .menu-buttons > button > a:hover {
@@ -51,7 +54,7 @@ header {
 .account-button {
     display: flex;
     flex-direction: column;
-    padding: 4px 40px 4px 15px;
+    padding: 0px 40px 0px 15px;
     border-radius: 50px;
     background-color: yellowgreen;
     border: none;
@@ -60,6 +63,7 @@ header {
 
 .account-button > span {
     font-weight: bold;
+    padding-top: 2px;
 }
 
 .account-button > a {
@@ -67,6 +71,7 @@ header {
     color: white;
     font-size: 0.9em;
     padding-left: 10px;
+    padding-bottom: 2px;
 }
 
 .circle {
@@ -84,22 +89,22 @@ header {
 }
 
 .dropdown-menu {
-    width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     background-color: #f9f9f9;
     position: absolute;
-    left: 86.4%;
-    top: 69.3%;
+    left: 0%;
+    top: 90%;
     border-radius: 20px;
     display: none;
+    padding-top: -10px;
+    box-sizing: border-box;
 }
 
 .dropdown-menu > a {
     color: rgb(94, 93, 93);
     text-decoration: none;
     display: block;
-    padding: 12px 16px;
-    display: block;
+    padding: 14px 16px;
     border-radius: 20px;
 }
 
@@ -110,4 +115,17 @@ header {
 .dropdown-menu a:hover {
     background-color: #d1d1d1;
     color: black;
+}
+
+.logo--2 {
+    width: 5%;
+    margin-left: 30px;
+}
+
+.drop--first {
+    margin-top: -7px;
+}
+
+.drop--last {
+    margin-bottom: -7px;
 }

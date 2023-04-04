@@ -44,6 +44,7 @@
 .project-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
     height: 240px;
@@ -59,16 +60,18 @@
     color: black;
     font-size: 1.4em;
     font-weight: 600;
+    margin-top: 15px;
 }
 
 .project-name > p {
     color: rgb(63, 62, 62);
     font-size: 0.9em;
+    margin-top: 10px;
 }
 
 .project-author {
     color: gray;
-    margin-top: -25px;
+    margin-top: -5px;
 }
 
 .donation-amount {
@@ -76,7 +79,6 @@
     display: flex;
     justify-content: flex-start;
     height: 20px;
-    margin-top: 10px;
 
 }
 
@@ -84,7 +86,7 @@
     color: gray;
     padding-left: 10px;
     position: absolute;
-    bottom: -21px;
+    bottom: -10px;
     left: 40px;
 }
 
@@ -96,11 +98,13 @@
 .project-footer {
     height: 40px;
     position: relative;
+    bottom: 10px;
 }
+
 
 .project-verified {
     position: absolute;
-    bottom: 0px;
+    bottom: -10px;
 }
 
 .project-verified > i {
@@ -112,12 +116,12 @@
     font-size: 0.7em;
     color: green;
     position: absolute;
-    top: 2px;
+    top: 4px;
 }
 
 .project-location {
     position: absolute;
-    bottom: 1px;
+    bottom: -10px;
     left: 30%;
 }
 
