@@ -167,7 +167,7 @@ class App extends Component {
                           <Route index element={<HomePage />} />
                           <Route path="/homepage" element={<HomePageV2 />} />
                           <Route path="/signin" element={<SignIn />} />
-                          <Route path="/signup" element={<SignUp />} />
+                          <Route path="/signup" element={<SignUp createUser={this.createUser}/>} />
                           <Route path="/metamask" element={<Metamask />} />
                           <Route path="/projects" element={<Projects account={this.state.account}
                                                                       projects={this.state.projects} />} />
