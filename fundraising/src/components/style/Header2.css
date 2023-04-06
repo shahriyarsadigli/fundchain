@@ -7,7 +7,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(16, 110, 135);
+    background: rgb(231, 231, 231);
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   }
   
@@ -29,7 +29,7 @@ header {
 }
 
 .menu-buttons > button {
-    background-color: #51126a; /*to be changed*/
+    background-color: rgb(17, 17, 111);
     color: white;
     border: none;
     padding: 10px 60px;

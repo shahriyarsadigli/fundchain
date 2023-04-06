@@ -1,9 +1,9 @@
 .signin-body {
     height: 1200px;
-    background: rgb(36, 126, 150);
+    background: rgb(231, 231, 231);
 }
 .signin-page {
-    background: rgb(36, 126, 150);
+    background: rgb(231, 231, 231);
     display: flex;
     justify-content: center;
     align-items: center;

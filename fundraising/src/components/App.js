@@ -16,6 +16,7 @@ import SignUp from './pages/SignUpPage'
 import Metamask from './pages/MetamaskPage'
 import Projects from './pages/ProjectsPage'
 import DonationPage from './pages/DonationPage'
+import MyAccount from './pages/MyAccounts.js'
 
 // eki
 
@@ -204,6 +205,7 @@ class App extends Component {
                           <Route path="/metamask" element={<Metamask />} />
                           <Route path="/projects" element={<Projects />} />
                           <Route path="/donation" element={<DonationPage />} />
+                          <Route path="/myaccount" element={<MyAccount />} />
                         </Routes>
                       </BrowserRouter>
               </div>

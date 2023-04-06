@@ -6,7 +6,7 @@ html, body{
 
 .main-page {
   height: 1024px;
-  background: rgb(36, 126, 150);
+  background: rgb(231, 231, 231);
 }
 
 .donate-button {
@@ -58,11 +58,11 @@ html, body{
 }
 
 .main-buttons > button {
-  background-color: rgb(16, 110, 135); /*to be changed*/
+  background: rgb(17, 17, 111);
   color: white;
   width: 280px;
   height: 60px;
-  border: 4px solid #51126a;
+  border: 4px solid rgb(17, 17, 111);
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -80,7 +80,7 @@ html, body{
 }
 
 .main-buttons > button:hover{
-  background-color: rgb(9, 70, 87);
+  background-color: rgb(56, 56, 119);
 }
 
 .main-buttons > button > a {
