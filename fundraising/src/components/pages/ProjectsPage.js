@@ -21,7 +21,7 @@ class ProjectsPage extends Component {
           <main className="projects-page">
             <Header2 />
             <section className="projects-body">
-              <div className="explore-projects">
+              <div className="explore-projects" >
                 FUNDCHAIN PROJECTS
               </div>
               {console.log(cards)}
