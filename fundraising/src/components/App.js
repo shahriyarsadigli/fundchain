@@ -49,6 +49,12 @@ class App extends Component {
     const networkData = Fundraising.networks[networkId]
     const networkData2 = Users.networks[networkId]
 
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    if (isLoggedIn === 'true') {
+      // user was previously authenticated, set the state accordingly
+      this.setState({ userAuthenticated: true });
+    }
+
     if(networkData) {
       const fundraising = new web3.eth.Contract(Fundraising.abi, networkData.address)
       this.setState({ fundraising })
@@ -85,11 +91,11 @@ class App extends Component {
 
     this.createUser = this.createUser.bind(this)
     this.loginUser = this.loginUser.bind(this)
+    this.logoutUser = this.logoutUser.bind(this)
 
     console.log(this.state.userAuthenticated)
 
   }
-
 
   handleTransactionResponse = (receipt) => {
     this.setState({ loading: false })
@@ -143,15 +149,19 @@ class App extends Component {
       console.log("Logged in successfully");
       // set the user as logged in
       this.setState({ userAuthenticated: true });
+      localStorage.setItem('isLoggedIn', true);
     } else {
       console.log("Invalid username or password");
       // display an error message
       this.setState({ userAuthenticated: false });
     }
   }
-  
-  
 
+  async logoutUser() {
+    this.setState({ userAuthenticated: false });
+    localStorage.removeItem('isLoggedIn');
+  }
+  
   createProject(title, excerpt, body, targetAmount) {
     this.setState({ loading: true })
     this.state.fundraising.methods.createProject(title, excerpt, body, targetAmount).send({ from: this.state.account })
@@ -175,14 +185,32 @@ class App extends Component {
     .catch(this.handleTransactionError);
   }
 
+  componentDidMount() {
+    const isLoggedIn = localStorage.getItem('isLoggedIn');
+    console.log(isLoggedIn)
+    if (isLoggedIn === 'true') {
+      // user was previously authenticated, set the state accordingly
+      console.log("if is seen here")
+
+      this.setState({ userAuthenticated: true }, () => {
+        console.log(this.state.userAuthenticated);
+      });
+      
+    }
+  }
+
   render() {
     return (
       <div>
       
-              { this.state.loading
+              { 
+               this.state.loading
                 
                 ? <div id="loader" className="text-center"><p className="text-center" id="alert-message">Loading... Waiting for MetaMask confirmation...</p></div> 
-                : <BrowserRouter>
+                : 
+                <div>
+                {console.log(this.state.userAuthenticated)}
+                <BrowserRouter>
                         <Routes>
                           <Route index element={<HomePage />} />
                           <Route path="/homepage" element={<HomePageV2 />} />
@@ -203,10 +231,11 @@ class App extends Component {
                                                         deleteProject={this.deleteProject}
                                                         
                                                         createUser={this.createUser}
-                                                        loginUser ={this.loginUser}/>} />
+                                                        loginUser ={this.loginUser}
+                                                        logoutUser={this.logoutUser}/>} />
                         </Routes>
                       </BrowserRouter>
-
+                </div>
                       
               }                  
       
