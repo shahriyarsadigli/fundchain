@@ -42,6 +42,7 @@ class App extends Component {
     const accounts = await web3.eth.getAccounts()
 
     const currentAccount = accounts[0]
+    // save the current accound
     this.setState({ account: currentAccount })
     
     const networkId = await web3.eth.net.getId()
