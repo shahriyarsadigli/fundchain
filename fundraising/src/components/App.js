@@ -40,16 +40,9 @@ class App extends Component {
     const web3 = window.web3
     // Load account
     const accounts = await web3.eth.getAccounts()
-    // if (accounts.length > 0) {
-    //   // check if the user is signed in
-    //   const signedIn = await this.loginUser(accounts[0])
-    //   if (signedIn) {
-    //     const currentAccount = accounts[0]
-    //     this.setState({ userAuthenticated: true, account: currentAccount })
-    //   }
-    // }
+
     const currentAccount = accounts[0]
-    this.setState({ userAuthenticated: true, account: currentAccount })
+    this.setState({ account: currentAccount })
     
     const networkId = await web3.eth.net.getId()
     const networkData = Fundraising.networks[networkId]
@@ -82,7 +75,7 @@ class App extends Component {
       projectNum: 0,
       projects: [],
       loading: true,
-      userAuthenticated: false,
+      userAuthenticated: false // initially there is no user logged in
     }
 
     this.createProject = this.createProject.bind(this)
@@ -154,8 +147,6 @@ class App extends Component {
       // display an error message
       this.setState({ userAuthenticated: false });
     }
-
-    // console.log(this.state.userAuthenticated)
   }
   
   
