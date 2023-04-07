@@ -5,9 +5,6 @@ import Fundraising from '../abis/Fundraising.json';
 import Users from '../abis/Users.json';
 import Navbar from './Navbar'
 import Main from './Main'
-
-/// eki
-
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage'
 import HomePageV2 from './pages/HomePageV2'
@@ -17,20 +14,6 @@ import Metamask from './pages/MetamaskPage'
 import Projects from './pages/ProjectsPage'
 import DonationPage from './pages/DonationPage'
 import MyAccount from './pages/MyAccounts.js'
-
-// eki
-
-// const head = document.getElementsByTagName('head')[0];
-// const bootstrapLink = document.createElement('link');
-// bootstrapLink.rel = 'stylesheet';
-// bootstrapLink.href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css';
-// head.appendChild(bootstrapLink);
-
-// const fontAwesomeLink = document.createElement('link');
-// fontAwesomeLink.rel = 'stylesheet';
-// fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
-// head.appendChild(fontAwesomeLink);
-
 
 class App extends Component {
 
@@ -176,44 +159,39 @@ class App extends Component {
   render() {
     return (
       <div>
-        {/* <Navbar account={this.state.account} />
-        <div className="container-fluid mt-5">
-          <div className="row">
-            <main role="main" className="col-lg-12 d-flex">
+      
               { this.state.loading
+                
                 ? <div id="loader" className="text-center"><p className="text-center" id="alert-message">Loading... Waiting for MetaMask confirmation...</p></div> 
-                : <Main 
-                  account={this.state.account}
-                  projects={this.state.projects}
-                  createProject={this.createProject}
-                  donateProject={this.donateProject} 
-                  deleteProject={this.deleteProject}
-                  
-                  createUser={this.createUser}
-                  loginUser ={this.loginUser}/>
-
-                  
-              } */}
-
-              <div>
-                      <BrowserRouter>
+                : <BrowserRouter>
                         <Routes>
                           <Route index element={<HomePage />} />
                           <Route path="/homepage" element={<HomePageV2 />} />
                           <Route path="/signin" element={<SignIn />} />
                           <Route path="/signup" element={<SignUp />} />
                           <Route path="/metamask" element={<Metamask />} />
-                          <Route path="/projects" element={<Projects />} />
+                          <Route path="/projects" element={<Projects account={this.state.account}
+                                                                      projects={this.state.projects} />} />
                           <Route path="/donation" element={<DonationPage />} />
+<<<<<<< HEAD
                           <Route path="/myaccount" element={<MyAccount />} />
+=======
+                          <Route path="/main" element={<Main 
+                                                        account={this.state.account}
+                                                        projects={this.state.projects}
+                                                        createProject={this.createProject}
+                                                        donateProject={this.donateProject} 
+                                                        deleteProject={this.deleteProject}
+                                                        
+                                                        createUser={this.createUser}
+                                                        loginUser ={this.loginUser}/>} />
+>>>>>>> b465db6e7f17a6ad87ebc9d7510e4e15706da65e
                         </Routes>
                       </BrowserRouter>
-              </div>
 
-              
-            {/* </main>
-          </div>
-        </div> */}
+                      
+              }                  
+      
       </div>
     );
   }
