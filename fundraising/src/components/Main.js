@@ -45,26 +45,14 @@ class Main extends Component {
     }
   };
 
-  // handleLogin = (event) => {
-  //   event.preventDefault();
-  //   const { userUsername, userPassword } = this;
-  //   const { users, usernameExists } = this.state;
-  //   const user = users.find(u => u.username === userUsername.value);
-  
-  //   if (!usernameExists[userUsername.value]) {
-  //     this.setState({ loginError: "Username not found" });
-  //     return;
-  //   }
-  
-  //   if (user.password !== userPassword.value) {
-  //     this.setState({ loginError: "Incorrect password" });
-  //     return;
-  //   }
-  
-  //   // Successful login
-  //   this.setState({ currentUser: user });
-  // }
+  handleLogin = (event) => {
+    event.preventDefault();
+    
+    const loginUserEmail = this.loginEmail.value
+    const loginUserPassword = this.loginPassword.value
 
+    this.props.loginUser(loginUserEmail, loginUserPassword)
+  }
   // fix the handleLogin to make sure that users can log into their accounts
   
 
@@ -338,7 +326,6 @@ class Main extends Component {
               className="form-control"
               placeholder="email"
               required 
-              onBlur={this.validateEmail}
             />
             <span className="text-danger" ref={(span) => { this.emailError = span }}></span>
           </div>

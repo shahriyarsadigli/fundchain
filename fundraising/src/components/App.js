@@ -6,6 +6,7 @@ import Users from '../abis/Users.json';
 import Navbar from './Navbar'
 import Main from './Main'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage'
 import HomePageV2 from './pages/HomePageV2'
 import SignIn from './pages/SignInPage'
@@ -13,6 +14,7 @@ import SignUp from './pages/SignUpPage'
 import Metamask from './pages/MetamaskPage'
 import Projects from './pages/ProjectsPage'
 import DonationPage from './pages/DonationPage'
+import CreateProject from './pages/CreateProject';
 
 class App extends Component {
 
@@ -38,7 +40,17 @@ class App extends Component {
     const web3 = window.web3
     // Load account
     const accounts = await web3.eth.getAccounts()
-    this.setState({ account: accounts[0] })
+    // if (accounts.length > 0) {
+    //   // check if the user is signed in
+    //   const signedIn = await this.loginUser(accounts[0])
+    //   if (signedIn) {
+    //     const currentAccount = accounts[0]
+    //     this.setState({ userAuthenticated: true, account: currentAccount })
+    //   }
+    // }
+    const currentAccount = accounts[0]
+    this.setState({ userAuthenticated: true, account: currentAccount })
+    
     const networkId = await web3.eth.net.getId()
     const networkData = Fundraising.networks[networkId]
     const networkData2 = Users.networks[networkId]
@@ -69,7 +81,8 @@ class App extends Component {
       account: '',
       projectNum: 0,
       projects: [],
-      loading: true
+      loading: true,
+      userAuthenticated: false,
     }
 
     this.createProject = this.createProject.bind(this)
@@ -79,7 +92,10 @@ class App extends Component {
     this.createUser = this.createUser.bind(this)
     this.loginUser = this.loginUser.bind(this)
 
+    console.log(this.state.userAuthenticated)
+
   }
+
 
   handleTransactionResponse = (receipt) => {
     this.setState({ loading: false })
@@ -116,22 +132,32 @@ class App extends Component {
     });
   }
 
-  loginUser = async (username, password) => {
+  async loginUser(email, password) {
     const web3 = window.web3;
-    const user = this.state.users._address;
+    const accounts = await web3.eth.getAccounts()
+    const user = accounts[0];
+  
+    if (!this.state.users) {
+      console.log("Users contract is not loaded yet");
+      return;
+    }
+  
     const userObj = await this.state.users.methods.users(user).call();
     const inputPasswordHash = web3.utils.sha3(password);
   
-    if (userObj.username === username && userObj.passwordHash === inputPasswordHash) {
+    if (userObj.email === email && userObj.passwordHash === inputPasswordHash) {
       console.log("Logged in successfully");
       // set the user as logged in
-      this.setState({ isLoggedIn: true });
+      this.setState({ userAuthenticated: true });
     } else {
       console.log("Invalid username or password");
       // display an error message
-      this.setState({ loginErrorMessage: "Invalid username or password" });
+      this.setState({ userAuthenticated: false });
     }
+
+    // console.log(this.state.userAuthenticated)
   }
+  
   
 
   createProject(title, excerpt, body, targetAmount) {
@@ -139,6 +165,8 @@ class App extends Component {
     this.state.fundraising.methods.createProject(title, excerpt, body, targetAmount).send({ from: this.state.account })
     .once('receipt', this.handleTransactionResponse)
     .catch(this.handleTransactionError);
+    // Redirect to projects page if successful
+    // this.props.history.push('/projects');
   }
 
   donateProject(id, amount) {
@@ -172,6 +200,9 @@ class App extends Component {
                           <Route path="/projects" element={<Projects account={this.state.account}
                                                                       projects={this.state.projects} />} />
                           <Route path="/donation" element={<DonationPage />} />
+                          <Route path="/create-project" element={<CreateProject 
+                                                        createProject={this.createProject}
+                                                        />} />
                           <Route path="/main" element={<Main 
                                                         account={this.state.account}
                                                         projects={this.state.projects}
