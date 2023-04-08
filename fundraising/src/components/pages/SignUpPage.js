@@ -118,7 +118,6 @@ class SignUp extends Component {
                                     onInput={(e) => e.target.setCustomValidity('')}
                                     required 
                                 />
-                                {/* <label htmlFor="userPassword">Password (must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, and one number)</label> */}
 
                             </div>
                             <button type="submit" className="signin-button">SIGN UP</button>

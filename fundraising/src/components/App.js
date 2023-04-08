@@ -166,10 +166,11 @@ class App extends Component {
       // set the user as logged in
       this.setState({ userAuthenticated: true });
       localStorage.setItem('isLoggedIn', true);
+      window.location.href = '/'; // redirect to main page
     } else {
       console.log("Invalid username or password");
       // display an error message
-      this.setState({ userAuthenticated: false });
+      this.setState({ userAuthenticated: false, loginError: true });
     }
   }
 
@@ -181,10 +182,12 @@ class App extends Component {
   createProject(title, excerpt, body, targetAmount) {
     this.setState({ loading: true })
     this.state.fundraising.methods.createProject(title, excerpt, body, targetAmount).send({ from: this.state.account })
-    .once('receipt', this.handleTransactionResponse)
+    .once('receipt', () => {
+      this.handleTransactionResponse();
+      this.setState({ loading: true }) // show loading screen before redirecting to the projects page
+      window.location.href = '/projects'; // redirect to projects page
+    })
     .catch(this.handleTransactionError);
-    // Redirect to projects page if successful
-    // this.props.history.push('/projects');
   }
 
   donateProject(id, amount) {
