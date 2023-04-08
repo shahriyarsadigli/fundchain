@@ -3,10 +3,8 @@ import Web3 from 'web3'
 import './App.css';
 import Fundraising from '../abis/Fundraising.json';
 import Users from '../abis/Users.json';
-import Navbar from './Navbar'
 import Main from './Main'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Navigate } from 'react-router-dom';
 import HomePage from './pages/HomePage'
 import HomePageV2 from './pages/HomePageV2'
 import SignIn from './pages/SignInPage'
@@ -15,6 +13,10 @@ import Metamask from './pages/MetamaskPage'
 import Projects from './pages/ProjectsPage'
 import DonationPage from './pages/DonationPage'
 import CreateProject from './pages/CreateProject';
+import Header2 from './headers/Header2';
+import Header1 from './headers/Header1';
+
+
 
 class App extends Component {
 
@@ -42,8 +44,10 @@ class App extends Component {
     const accounts = await web3.eth.getAccounts()
 
     const currentAccount = accounts[0]
-    // save the current accound
+    // save the current account
     this.setState({ account: currentAccount })
+
+
     
     const networkId = await web3.eth.net.getId()
     const networkData = Fundraising.networks[networkId]
@@ -53,6 +57,10 @@ class App extends Component {
     if (isLoggedIn === 'true') {
       // user was previously authenticated, set the state accordingly
       this.setState({ userAuthenticated: true });
+
+      const balanceInWei = await web3.eth.getBalance(this.state.account);
+      const balanceInEth = web3.utils.fromWei(balanceInWei, "ether");
+      this.setState({ balanceInEth })
     }
 
     if(networkData) {
@@ -62,6 +70,11 @@ class App extends Component {
       this.setState({ users })
       const projectNum = await fundraising.methods.projectNum().call()
       this.setState({ projectNum })
+
+      const currentAccountData = await this.state.users.methods.users(currentAccount).call()
+      this.setState({
+        currentAccountData: currentAccountData
+      });
       // Load projects
       for (var i = 1; i <= projectNum; i++) {
         const project = await fundraising.methods.projects(i).call()
@@ -69,10 +82,12 @@ class App extends Component {
           projects: [...this.state.projects, project]
         })
       }
-      this.setState({ loading: false})
+      this.setState({ loading: false })
     } else {
       window.alert('Fundraising contract not deployed to detected network.')
     }
+
+  
   }
 
   constructor(props) {
@@ -82,7 +97,8 @@ class App extends Component {
       projectNum: 0,
       projects: [],
       loading: true,
-      userAuthenticated: false // initially there is no user logged in
+      userAuthenticated: false, // initially there is no user logged in
+      currentAccountData: null
     }
 
     this.createProject = this.createProject.bind(this)
@@ -187,7 +203,6 @@ class App extends Component {
 
   componentDidMount() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
-    console.log(isLoggedIn)
     if (isLoggedIn === 'true') {
       // user was previously authenticated, set the state accordingly
       console.log("if is seen here")
@@ -197,28 +212,49 @@ class App extends Component {
       });
       
     }
+
+    // if the user changes the account in metamask, then log the user out
+    window.ethereum.on('accountsChanged', (accounts) => {
+      // If the user changes their account, log them out
+      if (this.state.userAuthenticated) {
+        this.logoutUser();
+      }
+    });
   }
 
   render() {
+
     return (
+
       <div>
-      
               { 
                this.state.loading
                 
                 ? <div id="loader" className="text-center"><p className="text-center" id="alert-message">Loading... Waiting for MetaMask confirmation...</p></div> 
                 : 
                 <div>
+                { this.state.userAuthenticated
+                ? 
+                <Header2 account={this.state.account}
+                        logoutUser={this.logoutUser} 
+                        currentAccountData={this.state.currentAccountData} 
+                        balance={this.state.balanceInEth}
+                        />
+
+                : 
+                <Header1/>
+                }
                 {console.log(this.state.userAuthenticated)}
                 <BrowserRouter>
                         <Routes>
                           <Route index element={<HomePage />} />
                           <Route path="/homepage" element={<HomePageV2 />} />
-                          <Route path="/signin" element={<SignIn />} />
+                          <Route path="/signin" element={<SignIn loginUser={this.loginUser} />} />
                           <Route path="/signup" element={<SignUp createUser={this.createUser}/>} />
                           <Route path="/metamask" element={<Metamask />} />
                           <Route path="/projects" element={<Projects account={this.state.account}
-                                                                      projects={this.state.projects} />} />
+                                                                     projects={this.state.projects}
+                                                                     userAuthenticated={this.state.userAuthenticated} />} />
                           <Route path="/donation" element={<DonationPage />} />
                           <Route path="/create-project" element={<CreateProject 
                                                         createProject={this.createProject}

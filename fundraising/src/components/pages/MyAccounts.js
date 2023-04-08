@@ -6,7 +6,6 @@ import React from 'react';
 export default function MyAccounts() {
     return (
         <div className='myaccounts-body'>
-            <Header2 />
             <main className='myaccounts-page'>
                 <div className='info-details'>
                 <img src={Avatar1} className="avatar"/>
