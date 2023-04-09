@@ -1,34 +1,33 @@
-import Header2 from '../headers/Header2.js'
 import '../style/MyAccountPage.css'
 import Avatar1 from '../images/user-avatar.png'
-import React from 'react';
+import React, { Component } from 'react';
 
-export default function MyAccount() {
+class MyAccount extends Component {
+    render() {
     return (
         <main className='account--main'>
-            <Header2 />
             <div className='account--section'>
                 <div className='section--first'>
                     <div className='img--row'>
                         <img src={Avatar1} className="user--avatar"/>
-                        <span className='user--name'>Shahriyar Sadigli</span>
+                        <span className='user--name'>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
                     </div>
                     <div className='wallet--row'>
                         <h3>My Wallet</h3>
                         <button type="button" className="account-button">
-                                <span>Shahriyar Sadigli</span>
-                                <a href="#">2.000 ETH</a>
+                                <span>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
+                                <a><span>{this.props.balance} ETH</span></a>
                         </button> 
                     </div>
                     <div className='account--row'>
                         <h3>My Account</h3>
-                        <span className='user--email'>shahriyarsadigli@gmail.com</span>
+                        <span className='user--email'>{this.props.currentAccountData.email}</span>
                         <a href="#"><span className='edit--profile'>Edit profile</span></a>
                         <i class="fa-solid fa-pencil" id="edit--icon"></i>
                     </div>
                     <div className='wallet--address'>
-                        <p>Wallet address:</p>
-                        <span>0x647862d87995eda2061dbe8740f07f33dd0bcc4c</span>
+                        <p>My wallet address:</p>
+                        <span>{this.props.account}</span>
                     </div>
                     <div className="eth--icon">
                         <i class="fa-brands fa-ethereum" id="et-icon"></i>
@@ -65,4 +64,7 @@ export default function MyAccount() {
             </div>
         </main>
     )
+    }
 }
+
+export default MyAccount;

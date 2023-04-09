@@ -1,13 +1,12 @@
 import '../style/AProjectPage.css'
 import bg from '../images/project-wallpaper.jpg'
-import Header1 from '../headers/Header1.js'
+import Pimg8 from '../images/project8.jpg'
 import React from 'react';
 
 
 export default function AProject() {
     return (
         <main className='project--main'>
-            <Header1 />
             <div className='project--body '>
                 <div className='project--header'>
                     <img src={bg} className='project--bg'/>

@@ -22,8 +22,7 @@ class Header2 extends Component {
                                 <a><span>{Number(this.props.balance).toFixed(3)} ETH</span></a> {/* show until 3 decimal places */}
                             </button> 
                             <div className="dropdown-menu">
-                                <a className="drop--first" href="#">WALLET</a>
-                                <a href="#">My account</a>
+                                <a href="/myaccount">My account</a>
                                 <a href="/create-project">Create a project</a>
                                 <a className="drop--last" href="/"><button onClick={() => this.props.logoutUser()}>Sign Out</button></a>
                             </div>
