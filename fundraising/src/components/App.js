@@ -251,7 +251,7 @@ class App extends Component {
                 : 
                 <Header1/>
                 }
-                {console.log(this.state.userAuthenticated)}
+                {/* {console.log(this.state.userAuthenticated)} */}
                 <BrowserRouter>
                         <Routes>
                           <Route index element={<HomePage />} />
@@ -263,7 +263,9 @@ class App extends Component {
                                                                      projects={this.state.projects}
                                                                      userAuthenticated={this.state.userAuthenticated} />} />
                           <Route path="/donation" element={<DonationPage />} />
-                          <Route path="/myaccount" element={<MyAccountPage />} />
+                          <Route path="/myaccount" element={<MyAccountPage account={this.state.account}
+                                                                           currentAccountData={this.state.currentAccountData} 
+                                                                           balance={this.state.balanceInEth}/>} />
                           <Route path="/project" element={<AProjectPage />} />
                           <Route path="/create-project" element={<CreateProject 
                                                         createProject={this.createProject}
