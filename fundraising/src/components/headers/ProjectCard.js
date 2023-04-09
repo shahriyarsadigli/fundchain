@@ -11,12 +11,13 @@ export default function ProjectCard(props) {
         <div className="project-card">
 
             <div className="project-content">
-                <a href="#"className="project-name">
-                    <h4>{props.project.title}</h4>
-                    <span className="project-author">By {props.project.creator}</span>
-                    {/* // creator name should be brought here  */}
-                    <p>{props.project.excerpt}</p>
-                </a>
+            <a href={`/projects/${props.project.id}`} className="project-name">
+                {/* // move to the page of the project with this id  */}
+                <h4>{props.project.title}</h4>
+                <span className="project-author">By {props.project.creator}</span>
+                <p>{props.project.excerpt}</p>
+            </a>
+
                 <div className="donation-amount">
                     <span>{fromWei(props.project.amountRaised, 'ether')} Eth</span>
                     <h6>Raised</h6>

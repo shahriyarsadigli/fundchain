@@ -251,7 +251,6 @@ class App extends Component {
                 : 
                 <Header1/>
                 }
-                {/* {console.log(this.state.userAuthenticated)} */}
                 <BrowserRouter>
                         <Routes>
                           <Route index element={<HomePage />} />
@@ -280,6 +279,9 @@ class App extends Component {
                                                         createUser={this.createUser}
                                                         loginUser ={this.loginUser}
                                                         logoutUser={this.logoutUser}/>} />
+                            {this.state.projects.map((project) => (
+                              <Route key={project.id} path={`/projects/${project.id}`} element={<AProjectPage project={project} />} />
+                            ))}
                         </Routes>
                       </BrowserRouter>
                 </div>
