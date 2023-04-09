@@ -15,6 +15,7 @@ import Metamask from './pages/MetamaskPage'
 import Projects from './pages/ProjectsPage'
 import DonationPage from './pages/DonationPage'
 import CreateProject from './pages/CreateProject';
+import MyAccountPage from './pages/MyAccountPage'
 
 class App extends Component {
 
@@ -192,6 +193,7 @@ class App extends Component {
                           <Route path="/projects" element={<Projects account={this.state.account}
                                                                       projects={this.state.projects} />} />
                           <Route path="/donation" element={<DonationPage />} />
+                          <Route path="/myaccount" element={<MyAccountPage />} />
                           <Route path="/create-project" element={<CreateProject 
                                                         createProject={this.createProject}
                                                         />} />
