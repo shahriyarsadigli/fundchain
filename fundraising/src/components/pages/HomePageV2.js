@@ -8,7 +8,6 @@ import React from 'react';
 export default function HomePage() {
     return (
         <main className="main-page">
-            <Header2 />
             <section className="home">
                 <div className="home-body">
                     <h1>Uplift Bright Ideas</h1>

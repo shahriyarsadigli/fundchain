@@ -8,7 +8,6 @@ export default function DonationPage() {
 
     return (
         <main>
-            <Header2 />
             <section className="donation--card">
                 <div className="project--info">
                     <img className="project--img" src={Pimg1}/>

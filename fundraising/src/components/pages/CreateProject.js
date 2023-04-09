@@ -7,7 +7,6 @@ class CreateProject extends Component {
     render() {
         return (
         <div className='createproject-body'>
-            <Header2 />
             <main className='createproject-page'>
                 <div className='createproject-head'>
                     <img src={stars} className="startss1"/>

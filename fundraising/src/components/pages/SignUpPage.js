@@ -46,7 +46,6 @@ class SignUp extends Component {
     render() {
     return (
         <div className='signup-body'>
-            <Header1 />
             <main className='signup-page'>
                 <section className='signup' >
                 <form onSubmit={this.handleSubmit}>
@@ -119,7 +118,6 @@ class SignUp extends Component {
                                     onInput={(e) => e.target.setCustomValidity('')}
                                     required 
                                 />
-                                {/* <label htmlFor="userPassword">Password (must be at least 8 characters long and include at least one lowercase letter, one uppercase letter, and one number)</label> */}
 
                             </div>
                             <button type="submit" className="signin-button">SIGN UP</button>
@@ -129,12 +127,12 @@ class SignUp extends Component {
                                 <span>Already have an account?</span>
                                 <a href="/signin">Sign in</a>
                             </div>
-                            <i class="fa-solid fa-envelope" id="email-icon-2"></i>
-                            <i class="fa-solid fa-key" id="password-icon-2"></i>
-                            <a href="#"><i class="fa-regular fa-eye-slash" id="eye-icon-2"></i></a>
-                            <i class="fa-regular fa-user" id="user-icon-1"></i>
-                            <i class="fa-regular fa-user" id="user-icon-2"></i>
-                            <i class="fa-solid fa-user" id="username-icon"></i>
+                            <i className="fa-solid fa-envelope" id="email-icon-2"></i>
+                            <i className="fa-solid fa-key" id="password-icon-2"></i>
+                            <a href="#"><i className="fa-regular fa-eye-slash" id="eye-icon-2"></i></a>
+                            <i className="fa-regular fa-user" id="user-icon-1"></i>
+                            <i className="fa-regular fa-user" id="user-icon-2"></i>
+                            <i className="fa-solid fa-user" id="username-icon"></i>
                         </div>
                         
                     </div>

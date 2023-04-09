@@ -347,6 +347,19 @@ class Main extends Component {
         </form>
 
 
+        <br>
+        </br>
+        <br>
+        </br>
+        <br>
+        </br>
+
+
+
+        <button onClick={() => this.props.logoutUser()}>Logout</button>
+
+
+
       </div>
       
 

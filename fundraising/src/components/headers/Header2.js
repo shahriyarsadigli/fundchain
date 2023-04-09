@@ -1,9 +1,11 @@
-import React from 'react';
-
+import React, { Component } from 'react';
 import '../style/Header2.css';
 import logo from '../images/logo.png';
 
-export default function Header2() {
+class Header2 extends Component {
+
+    
+    render() {
     return (
         <div>
             <header>
@@ -16,14 +18,14 @@ export default function Header2() {
                         </div>
                         <div className="dropdown">
                             <button type="button" className="account-button">
-                                <span>Walter White</span>
-                                <a href="#">2.00 ETH</a>
+                                <span>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
+                                <a><span>{Number(this.props.balance).toFixed(3)} ETH</span></a> {/* show until 3 decimal places */}
                             </button> 
                             <div className="dropdown-menu">
                                 <a className="drop--first" href="#">WALLET</a>
                                 <a href="#">My account</a>
-                                <a href="#">Create a project</a>
-                                <a className="drop--last" href="#">Sign out</a>
+                                <a href="/create-project">Create a project</a>
+                                <a className="drop--last" href="/"><button onClick={() => this.props.logoutUser()}>Sign Out</button></a>
                             </div>
                         </div>
                     </div>
@@ -35,4 +37,7 @@ export default function Header2() {
             </header>
         </div>
     )
+    }
 }
+
+export default Header2;
