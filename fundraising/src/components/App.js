@@ -13,14 +13,14 @@ import Metamask from './pages/MetamaskPage'
 import Projects from './pages/ProjectsPage'
 import DonationPage from './pages/DonationPage'
 import CreateProject from './pages/CreateProject';
-<<<<<<< HEAD
+
 import MyAccountPage from './pages/MyAccountPage'
-=======
+import AProjectPage from './pages/AProjectPage'
+
 import Header2 from './headers/Header2';
 import Header1 from './headers/Header1';
 
 
->>>>>>> 00200dc5f102e0bcd7859fe534c713b5162fb1ba
 
 class App extends Component {
 
@@ -264,6 +264,7 @@ class App extends Component {
                                                                      userAuthenticated={this.state.userAuthenticated} />} />
                           <Route path="/donation" element={<DonationPage />} />
                           <Route path="/myaccount" element={<MyAccountPage />} />
+                          <Route path="/project" element={<AProjectPage />} />
                           <Route path="/create-project" element={<CreateProject 
                                                         createProject={this.createProject}
                                                         />} />
