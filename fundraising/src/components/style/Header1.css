@@ -1,0 +1,46 @@
+
+.navbar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(231, 231, 231);
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  }
+  
+  .home-buttons {
+    padding-right: 70px;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+  }
+
+  .logo--1 {
+    width: 5%;
+    margin-left: 15px;
+  }
+  
+  
+  .home-buttons > button {
+    background-color: rgb(17, 17, 111);
+    color: white;
+    border: none;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    display: flex;
+  }
+  
+  .home-buttons > button > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+  }
+  
+  .home-buttons > button > a:hover {
+    color: cyan;
+  }

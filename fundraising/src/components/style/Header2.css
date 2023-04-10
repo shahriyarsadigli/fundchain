@@ -1,0 +1,131 @@
+header {
+    position: relative;
+}
+
+.n-bar {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(231, 231, 231);
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+  }
+  
+.n-buttons {
+    width: 620px;
+    height: 100px;
+    margin-right: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-buttons {
+    display: flex;
+    width: 385px;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 42px;
+}
+
+.menu-buttons > button {
+    background-color: rgb(17, 17, 111);
+    color: white;
+    border: none;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50px;
+    display: flex;
+}
+
+.menu-buttons button > a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+.menu-buttons > button > a:hover {
+    color: cyan;
+}
+
+.account-button {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px 0px 15px;
+    border-radius: 50px;
+    background-color: yellowgreen;
+    border: none;
+
+}
+
+.account-button > span {
+    font-weight: bold;
+    padding-top: 2px;
+}
+
+.account-button > a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.9em;
+    padding-left: 10px;
+    padding-bottom: 2px;
+}
+
+.circle {
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 93.3%;
+    top: 36.5%;
+    border-radius: 50%;
+    background: red;
+}
+
+.dropdown-menu {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    background-color: #f9f9f9;
+    position: absolute;
+    left: 0%;
+    top: 90%;
+    border-radius: 20px;
+    display: none;
+    padding-top: -10px;
+    box-sizing: border-box;
+}
+
+.dropdown-menu > a {
+    color: rgb(94, 93, 93);
+    text-decoration: none;
+    display: block;
+    padding: 14px 16px;
+    border-radius: 20px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+.dropdown-menu a:hover {
+    background-color: #d1d1d1;
+    color: black;
+}
+
+.logo--2 {
+    width: 5%;
+    margin-left: 30px;
+}
+
+.drop--first {
+    margin-top: -7px;
+}
+
+.drop--last {
+    margin-bottom: -7px;
+}

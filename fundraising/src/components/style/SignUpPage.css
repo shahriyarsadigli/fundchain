@@ -1,0 +1,187 @@
+.signup-body {
+    height: 1200px;
+    background: rgb(231, 231, 231);
+}
+.signup-page {
+    background: rgb(231, 231, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.signup {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    min-width: 900px;
+    height: 600px;
+}
+
+.forum-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 900px;
+    background: #51126a;
+}
+
+.forum-header > h2 {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.forum-main {
+    width: 900px;
+    height: 530px;
+    display: flex;
+    /* border: 2px solid red; */
+}
+
+.forum-img {
+    width: 50%;
+}
+
+.login-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.forum-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.personal-info > input {
+    display: flex;
+    font-size: 1em;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid gray;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 140px;
+}
+
+.signup-info > input {
+    display: flex;
+    font-size: 1em;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 40px;
+    padding-right: 92px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid gray;
+}
+
+.signin-button {
+    background: #51126a;
+    margin-bottom: 20px;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+.signin-button > a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.signup-button {
+    background: #51126a;
+    margin-bottom: 20px;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+}
+
+.signup-button > a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.signup-button > a:hover {
+    color: cyan;
+}
+
+#email-icon-2 {
+    position: absolute;
+    font-size: 1.1em;
+    top: 14.55em;
+    left: 4.5em;
+}
+
+#password-icon-2 {
+    position: absolute;
+    font-size: 1.1em;
+    top: 18.55em;
+    left: 4.5em;
+}
+
+#eye-icon-2 {
+    position: absolute;
+    font-size: 1.1em;
+    top: 18.55em;
+    left: 19.5em;
+    color: black;
+}
+
+#user-icon-1 {
+    position: absolute;
+    font-size: 1.1em;
+    top: 6.6em;
+    left: 4.5em;
+    color: black;
+}
+
+#user-icon-2 {
+    position: absolute;
+    font-size: 1.1em;
+    top: 10.6em;
+    left: 4.5em;
+    color: black;
+}
+
+#username-icon {
+    position: absolute;
+    font-size: 1.1em;
+    top: 2.65em;
+    left: 4.5em;
+    color: black;
+}
+
+.signin-option {
+    width: 340px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 15px;
+}
+
+.signin-option > span{
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.signin-option > a {
+    font-size: 0.9em;
+    font-weight: bold;
+}

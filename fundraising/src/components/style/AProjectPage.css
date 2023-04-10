@@ -1,0 +1,190 @@
+
+.project--main {
+    margin: auto;
+}
+
+.project--body {
+    height: 1400px;
+    width: 100%;
+    position: relative;
+    background: rgb(231, 231, 231);
+}
+
+.project--header {
+    height: 32%;
+    width: 100%;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.project--header:hover .project--bg,
+.project--header:focus .project--bg {
+    transform: scale(1.15);
+    filter: brightness(60%);
+}
+
+.project--header > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 25% 10%;
+    transition: all .5s ease;
+}
+
+.project-name-badge {
+    position: absolute;
+    left: 15%;
+    top: 3em;
+    height: 330px;
+    width: 300px;
+    border: 2px solid blue;
+    border-radius: 10px;
+    overflow: hidden;
+    display: none;
+    
+}
+
+.project--header:hover .project-name-badge {
+    display: block;
+}
+
+
+.project-name-img > img {
+    height: 200px;
+    width: 300px;
+    box-sizing: border-box;
+    padding: 15px 15px 5px 15px;
+    
+}
+
+.project-name-info {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-name-verified {
+    margin-top: 10px;
+}
+
+
+.project-name-verified > i {
+    font-size: 1.5em;
+    margin-right: 5px;
+    color: rgb(0, 255, 0);
+}
+
+.project-name-verified > span {
+    color: rgb(0, 255, 0);
+    position: relative;
+    bottom: 0.15em;
+}
+
+
+.project-name-info > h2 {
+    position: relative;
+    bottom: 0.3em;
+    color: white;
+}
+
+.project-name-info > span {
+    position: relative;
+    bottom: 1.6em;
+    color: red;
+}
+
+/* Donation info */
+
+.project--d-info{
+    width: 45.3%;
+    height: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(17, 17, 111);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    left: 15%;
+    border-radius: 15px;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border: 3px solid white;
+}
+
+.project--d-info > h3 {
+    margin-right: 15px;
+    color: white;
+}
+
+.project--d-info > span {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: greenyellow;
+}
+/* Project description */
+
+.project--content {
+    height: 60%;
+    display: flex;
+}
+
+.project--description {
+    height: 80%;
+    width: 40%;
+    border: 3px solid blue ;
+    padding: 10px;
+    padding: 10px 40px;
+    position: relative;
+    left: 15%;
+    border-radius: 15px;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+.project--description > p {
+    font-weight: 400;
+}
+
+/* Donation button */
+
+.project--donation {
+    position: relative;
+    left: 20%;
+    height: 25%;
+    width: 20%;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.project--donation > h3 {
+    padding: 8px 35px;
+    background-color: rgb(231, 231, 231);
+    border-radius: 10px;
+    color: black;
+    position: relative;
+    bottom: 1.9em;
+}
+
+.project--donation > a > span {
+    padding: 15px 110px;
+    background-color: rgb(0, 255, 0);
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 500;
+}
+
+.project--donation > a {
+    text-decoration: none;
+    transition: all .3s ease;
+}
+
+.project--donation > a:hover {
+    transform: scale(1.01);
+}

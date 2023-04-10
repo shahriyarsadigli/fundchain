@@ -1,0 +1,29 @@
+
+.projects-body {
+    height: 1700px;
+    background: rgb(231, 231, 231);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.explore-projects {
+    height: 60px;
+    width: 80%;
+    margin-top: 31px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(cyan, white);
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%;
+    height: 85%;
+}
