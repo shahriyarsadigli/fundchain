@@ -4,9 +4,8 @@ import './App.css';
 import Fundraising from '../abis/Fundraising.json';
 import Users from '../abis/Users.json';
 import Main from './Main'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import HomePage from './pages/HomePage'
-import HomePageV2 from './pages/HomePageV2'
 import SignIn from './pages/SignInPage'
 import SignUp from './pages/SignUpPage'
 import Metamask from './pages/MetamaskPage'
@@ -254,14 +253,13 @@ class App extends Component {
                 <BrowserRouter>
                         <Routes>
                           <Route index element={<HomePage />} />
-                          <Route path="/homepage" element={<HomePageV2 />} />
-                          <Route path="/signin" element={<SignIn loginUser={this.loginUser} />} />
+                          { this.state.userAuthenticated ? <Route path="/" /> // do not let the users access the sign in page once they are signed in
+                          : <Route path="/signin" element={<SignIn loginUser={this.loginUser} />} /> }
                           <Route path="/signup" element={<SignUp createUser={this.createUser}/>} />
                           <Route path="/metamask" element={<Metamask />} />
                           <Route path="/projects" element={<Projects account={this.state.account}
                                                                      projects={this.state.projects}
                                                                      userAuthenticated={this.state.userAuthenticated} />} />
-                          <Route path="/donation" element={<DonationPage />} />
                           <Route path="/myaccount" element={<MyAccountPage account={this.state.account}
                                                                            currentAccountData={this.state.currentAccountData} 
                                                                            balance={this.state.balanceInEth}/>} />
@@ -281,6 +279,14 @@ class App extends Component {
                                                         logoutUser={this.logoutUser}/>} />
                             {this.state.projects.map((project) => (
                               <Route key={project.id} path={`/projects/${project.id}`} element={<AProjectPage project={project} />} />
+                            ))}
+
+                            {this.state.projects.map((project) => (
+                              <Route key={project.id} path={`/donation/${project.id}`} element={<DonationPage project={project} 
+                                                                                       donateProject={this.donateProject} 
+                                                                                       account={this.state.account}
+                                                                                       balance={this.state.balanceInEth}
+                                                                                                              />} />
                             ))}
                         </Routes>
                       </BrowserRouter>

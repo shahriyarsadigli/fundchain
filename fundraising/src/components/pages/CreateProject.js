@@ -9,7 +9,6 @@ class CreateProject extends Component {
         <div className='createproject-body'>
             <main className='createproject-page'>
                 <div className='createproject-head'>
-                    <img src={stars} className="startss1"/>
                     <h1>CREATE YOUR PROJECT</h1>
                 </div>
                 <form onSubmit={(event) => {

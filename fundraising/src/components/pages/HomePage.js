@@ -1,4 +1,4 @@
-import rocket from '../images/The last Rocket.png';
+import rocket from '../images/Ethereum-Logo.png';
 import smoke from '../images/smokey.png';
 import Header1 from '../headers/Header1.js'
 import '../style/HomePage.css';

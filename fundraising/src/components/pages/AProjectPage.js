@@ -36,8 +36,8 @@ class AProject extends Component {
                     </div>
                     <div className='project--donation'>
                         <h3>{this.props.project.title}</h3>
-                        <h3>Target amount {this.props.project.targetAmount / 10**18} ETH</h3> {/* convert the amount to ethers */}
-                        <a href=""><span>DONATE</span></a>
+                        <h3>Target amount: {this.props.project.targetAmount / 10**18} ETH</h3> {/* convert the amount to ethers */}
+                        <a href={`/donation/${this.props.project.id}`}><span>DONATE</span></a>
                     </div>
             </div>
             </div>
