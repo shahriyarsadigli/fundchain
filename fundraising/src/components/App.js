@@ -44,7 +44,7 @@ class App extends Component {
 
   async loadBlockchainData() {
     const web3 = window.web3
-    // Load account
+    // Load accounts
     const accounts = await web3.eth.getAccounts()
 
     const currentAccount = accounts[0]
