@@ -9,6 +9,7 @@ class Header2 extends Component {
     return (
         <div>
             <header>
+                {/* Testing comment */}
                 <nav className="n-bar">
                 <img src={logo} className="logo--2" alt="logo"/>
                     <div className="n-buttons">
