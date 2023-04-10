@@ -31,16 +31,17 @@ html, body{
 
 .home-body > h1 {
   font-size: 4em;
-  color: white;
-  font-weight: lighter;
+  color: black;
+  font-weight: 250;
+  font-family: Tahoma;
   position: absolute;
   top: -16%;
 }
 
 .home-body > h5 {
-  color: white;
+  color: grey;
   font-weight: lighter;
-  font-size: 1.1em;
+  font-size: 1.7em;
   position: absolute;
   top: -7%;
 }

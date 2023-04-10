@@ -67,6 +67,7 @@ header {
     border: none;
     border: 1px solid black;
     overflow: hidden;
+    transition: all .3s ease-in;
 
 }
 
@@ -135,6 +136,10 @@ header {
 
 .account--button:hover .dropdown-menu {
     display: block;
+}
+
+.account-button:hover {
+    background: rgb(234, 103, 103);
 }
 
 .dropdown-menu a:hover {

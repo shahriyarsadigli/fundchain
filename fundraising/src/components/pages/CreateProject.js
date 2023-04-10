@@ -1,6 +1,5 @@
 import Header2 from '../headers/Header2'
 import '../style/CreateProject.css'
-import stars from '../images/stars.jpeg'
 import React, { Component } from 'react'
 
 class CreateProject extends Component {
