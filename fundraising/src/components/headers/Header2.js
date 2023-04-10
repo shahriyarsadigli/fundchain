@@ -9,30 +9,29 @@ class Header2 extends Component {
     return (
         <div>
             <header>
-                <nav className="n-bar">
-                <img src={logo} className="logo--2" alt="logo"/>
-                    <div className="n-buttons">
-                        <div className="menu-buttons">
-                            <button type="button"><a href="/">Home</a></button>
-                            <button type="button"><a href="/projects">Projects</a></button>  
-                        </div>
-                        <div className="dropdown">
-                            <button type="button" className="account-button">
-                                <span>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
-                                <a><span>{Number(this.props.balance).toFixed(3)} ETH</span></a> {/* show until 3 decimal places */}
-                            </button> 
-                            <div className="dropdown-menu">
-                                <a href="/myaccount">My account</a>
-                                <a href="/create-project">Create a project</a>
-                                <a className="drop--last" href="/"><button onClick={() => this.props.logoutUser()}>Sign Out</button></a>
+                <nav className="nav-bar">
+                    <div className="nav-logo">
+                        <img src={logo} className="logo--2" alt="logo"/>
+                    </div>
+                        <div className="nav-buttons">
+                            <a href="/"><button type="button">Home</button></a>
+                            <a href="/projects"><button type="button">Projects</button></a>
+                            <div className="account--button">
+                                <button type="button" className="account-button">
+                                    <span>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
+                                    <a><span>{Number(this.props.balance).toFixed(3)} ETH</span></a> {/* show until 3 decimal places */}
+                                </button> 
+                                <div className="circle">
+                                    <i class="fa-brands fa-ethereum" id="et-icon"></i>
+                                </div>
+                                <div className="dropdown-menu">
+                                    <a href="/myaccount" className="drop--first">My account</a>
+                                    <a href="/create-project">Create a project</a>
+                                    <a onClick={() => this.props.logoutUser()} className="drop--last" href="/">Sign Out</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                 </nav>
-                <div className="circle">
-                    <i class="fa-brands fa-ethereum" id="et-icon"></i>
-                </div>
-                
             </header>
         </div>
     )

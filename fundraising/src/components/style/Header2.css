@@ -2,8 +2,9 @@ header {
     position: relative;
 }
 
-.n-bar {
-    height: 100px;
+.nav-bar {
+    height: px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,81 +12,96 @@ header {
     box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
   }
   
-.n-buttons {
-    width: 620px;
+.nav-buttons {
+    width: 40%;
     height: 100px;
-    margin-right: 70px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.menu-buttons {
-    display: flex;
-    width: 385px;
     justify-content: space-between;
     align-items: center;
-    margin-left: 42px;
+    position: relative;
+    right: 7%;
 }
 
-.menu-buttons > button {
+.nav-buttons > a > button {
     background-color: rgb(17, 17, 111);
     color: white;
     border: none;
-    padding: 10px 60px;
+    padding: 8px 60px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 50px;
     display: flex;
+    border: 2px solid rgb(17, 17, 111);
+    transition: all .3s ease-in;
 }
 
-.menu-buttons button > a {
+.nav-buttons > a {
     text-decoration: none;
-    color: white;
-    font-size: 1.1em;
 }
 
-.menu-buttons > button > a:hover {
-    color: cyan;
+.nav-buttons > a > button:hover {
+    background-color: rgb(231, 231, 231);
+    color: black;
+  }
+
+.nav-buttons > a > button:active {
+    background-color: rgb(17, 17, 111); /* change the background color when the button is clicked */
+    transform: scale(0.9)
+  }
+
+/* Account button */
+
+.account--button {
+    position: relative;
 }
 
 .account-button {
     display: flex;
     flex-direction: column;
-    padding: 0px 40px 0px 15px;
+    height: 46px;
+    width: 160px;
     border-radius: 50px;
-    background-color: yellowgreen;
+    background-color: rgb(217, 55, 55);
     border: none;
+    border: 1px solid black;
+    overflow: hidden;
 
 }
 
 .account-button > span {
     font-weight: bold;
+    font-size: 0.9em;
     padding-top: 2px;
+    padding-left: 10px;
 }
 
 .account-button > a {
     text-decoration: none;
+}
+
+.account-button > a > span{
+    text-decoration: none;
     color: white;
-    font-size: 0.9em;
+    font-size: 0.8em;
     padding-left: 10px;
-    padding-bottom: 2px;
+    position: relative;
+    bottom: 20%;
 }
 
 .circle {
     position: absolute;
     height: 24px;
     width: 24px;
-    border: 1px solid red;
+    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 93.3%;
-    top: 36.5%;
+    left: 80%;
+    top: 26%;
     border-radius: 50%;
-    background: red;
+    background: yellowgreen;
 }
 
 .dropdown-menu {
@@ -93,7 +109,7 @@ header {
     background-color: #f9f9f9;
     position: absolute;
     left: 0%;
-    top: 90%;
+    top: 92%;
     border-radius: 20px;
     display: none;
     padding-top: -10px;
@@ -108,9 +124,18 @@ header {
     border-radius: 20px;
 }
 
-.dropdown:hover .dropdown-menu {
+.dropdown-menu > a > button {
+    color: rgb(94, 93, 93);
+    text-decoration: none;
     display: block;
-  }
+    padding: 14px 16px;
+    border-radius: 20px;
+    
+}
+
+.account--button:hover .dropdown-menu {
+    display: block;
+}
 
 .dropdown-menu a:hover {
     background-color: #d1d1d1;
@@ -118,7 +143,7 @@ header {
 }
 
 .logo--2 {
-    width: 5%;
+    width: 8%;
     margin-left: 30px;
 }
 

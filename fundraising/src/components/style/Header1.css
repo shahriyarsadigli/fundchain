@@ -10,7 +10,6 @@
   
   .home-buttons {
     padding-right: 70px;
-    /* border: 1px solid black; */
     display: flex;
     justify-content: space-between;
     width: 45%;
@@ -22,25 +21,34 @@
   }
   
   
-  .home-buttons > button {
+  .home-buttons > a > button {
     background-color: rgb(17, 17, 111);
     color: white;
     border: none;
-    padding: 10px 60px;
+    padding: 8px 60px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     border-radius: 50px;
     display: flex;
+    transition: all .3s ease-in;
+    border: 2px solid rgb(17, 17, 111);
   }
-  
-  .home-buttons > button > a {
+
+  .home-buttons > a > button:hover {
+    background-color: rgb(231, 231, 231);
+    color: black;
+    
+  }
+
+  .home-buttons > a > button:active {
+    background-color: rgb(17, 17, 111); /* change the background color when the button is clicked */
+    transform: scale(0.9)
+  }
+
+  .home-buttons > a {
     text-decoration: none;
-    color: white;
-    font-size: 1.1em;
   }
   
-  .home-buttons > button > a:hover {
-    color: cyan;
-  }
+  
