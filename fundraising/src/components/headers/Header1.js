@@ -9,9 +9,9 @@ export default function Header1() {
                 <nav className="navbar">
                 <img src={logo} className="logo--1" alt="logo"/>
                     <div className="home-buttons">
-                        <button type="button"><a href="/">Home</a></button>
-                        <button type="button"><a href="/projects">Projects</a></button>
-                        <button type="button"><a href="/signin">Sign in</a></button>
+                        <a href="/"><button type="button">Home</button></a>
+                        <a href="/projects"><button type="button">Projects</button></a>
+                        <a href="/signin"><button type="button">Sign in</button></a>
                     </div>
                 </nav>
             </header>
