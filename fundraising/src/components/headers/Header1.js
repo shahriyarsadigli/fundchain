@@ -7,7 +7,9 @@ export default function Header1() {
         <div>
             <header>
                 <nav className="navbar">
-                <img src={logo} className="logo--1" alt="logo"/>
+                    <div className="nav-logo">
+                    <a href="/"><img src={logo} className="logo--2" alt="logo"/></a>                    
+                    </div>
                     <div className="home-buttons">
                         <a href="/"><button type="button">Home</button></a>
                         <a href="/projects"><button type="button">Projects</button></a>

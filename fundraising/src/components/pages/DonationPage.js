@@ -1,5 +1,4 @@
 import '../style/DonationPage.css'
-import Header2 from '../headers/Header2.js'
 import React, { Component } from 'react';
 import Pimg1 from '../images/project1.jpg'
 
@@ -39,7 +38,7 @@ class DonationPage extends Component {
                         {/* <span className="donation--amount">1.00 ETH</span> */}
 
                             {
-                            this.props.project.creator !== this.props.account && parseInt(window.web3.utils.toWei(this.props.project.amountRaised.toString(), 'Ether')) < parseInt(window.web3.utils.toWei(this.props.project.targetAmount.toString(), 'Ether'))
+                            this.props.userAuthenticated === true && this.props.project.creator !== this.props.account && parseInt(window.web3.utils.toWei(this.props.project.amountRaised.toString(), 'Ether')) < parseInt(window.web3.utils.toWei(this.props.project.targetAmount.toString(), 'Ether'))
                             ? 
                                 <div>
                                 <input id="projectName"

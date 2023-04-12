@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
-import Web3 from 'web3'
 import './App.css';
+import Main from './Main'
+
+// Web3 library
+import Web3 from 'web3'
+
+// React libraries
+import React, { Component } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+// Smart contracts
 import Fundraising from '../abis/Fundraising.json';
 import Users from '../abis/Users.json';
-import Main from './Main'
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+
+// Created Pages 
 import HomePage from './pages/HomePage'
 import SignIn from './pages/SignInPage'
 import SignUp from './pages/SignUpPage'
@@ -12,12 +20,12 @@ import Metamask from './pages/MetamaskPage'
 import Projects from './pages/ProjectsPage'
 import DonationPage from './pages/DonationPage'
 import CreateProject from './pages/CreateProject';
-
 import MyAccountPage from './pages/MyAccountPage'
 import AProjectPage from './pages/AProjectPage'
 
-import Header2 from './headers/Header2';
+// Header files
 import Header1 from './headers/Header1';
+import Header2 from './headers/Header2';
 
 
 
@@ -49,8 +57,6 @@ class App extends Component {
     const currentAccount = accounts[0]
     // save the current account
     this.setState({ account: currentAccount })
-
-
     
     const networkId = await web3.eth.net.getId()
     const networkData = Fundraising.networks[networkId]
@@ -104,16 +110,19 @@ class App extends Component {
       currentAccountData: null
     }
 
+    // Fundraising project functions
     this.createProject = this.createProject.bind(this)
     this.donateProject = this.donateProject.bind(this)
     this.deleteProject = this.deleteProject.bind(this)
+    this.searchProjects = this.searchProjects.bind(this)
+    this.filterProjects = this.filterProjects.bind(this)
 
+    // Users functions
     this.createUser = this.createUser.bind(this)
     this.loginUser = this.loginUser.bind(this)
     this.logoutUser = this.logoutUser.bind(this)
 
     console.log(this.state.userAuthenticated)
-
   }
 
   handleTransactionResponse = (receipt) => {
@@ -182,9 +191,9 @@ class App extends Component {
     localStorage.removeItem('isLoggedIn');
   }
   
-  createProject(title, excerpt, body, targetAmount) {
+  createProject(title, excerpt, body, category, targetAmount) {
     this.setState({ loading: true })
-    this.state.fundraising.methods.createProject(title, excerpt, body, targetAmount).send({ from: this.state.account })
+    this.state.fundraising.methods.createProject(title, excerpt, body, category, targetAmount).send({ from: this.state.account })
     .once('receipt', () => {
       this.handleTransactionResponse();
       this.setState({ loading: true }) // show loading screen before redirecting to the projects page
@@ -206,6 +215,50 @@ class App extends Component {
     .once('receipt', this.handleTransactionResponse)
     .catch(this.handleTransactionError);
   }
+
+  async searchProjects(query) {
+    // const web3 = window.web3;
+    const fundraising = this.state.fundraising;
+
+    const projectNum = await fundraising.methods.projectNum().call();
+    const projects = [];
+
+    for (let i = 1; i <= projectNum; i++) {
+      const project = await fundraising.methods.projects(i).call();
+      if (project.title.toLowerCase().includes(query.toLowerCase()) || project.excerpt.toLowerCase().includes(query.toLowerCase())) {
+        projects.push(project);
+      }
+    }
+
+    this.setState({ projects: projects });
+
+    // add a message here and pass to the view
+    // if (projects.length === 0) {
+    //   alert("No projects matching the search query were found.");
+    // }
+  }
+
+  async filterProjects(category) {
+    const web3 = window.web3;
+    const fundraising = this.state.fundraising;
+  
+    const projectNum = await fundraising.methods.projectNum().call();
+    const projects = [];
+  
+    for (let i = 1; i <= projectNum; i++) {
+      const project = await fundraising.methods.projects(i).call();
+      if (Number(project.category) === Number(category)) {
+        projects.push(project);
+      }
+    }
+  
+    this.setState({ projects: projects });
+  
+    // if (projects.length === 0) {
+    //   alert("No projects matching the selected category were found.");
+    // }
+  }
+  
 
   componentDidMount() {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
@@ -259,7 +312,9 @@ class App extends Component {
                           <Route path="/metamask" element={<Metamask />} />
                           <Route path="/projects" element={<Projects account={this.state.account}
                                                                      projects={this.state.projects}
-                                                                     userAuthenticated={this.state.userAuthenticated} />} />
+                                                                     userAuthenticated={this.state.userAuthenticated}
+                                                                     searchProjects={this.searchProjects}
+                                                                     filterProjects={this.filterProjects} />} />
                           <Route path="/myaccount" element={<MyAccountPage account={this.state.account}
                                                                            currentAccountData={this.state.currentAccountData} 
                                                                            balance={this.state.balanceInEth}/>} />
@@ -267,6 +322,7 @@ class App extends Component {
                           <Route path="/create-project" element={<CreateProject 
                                                         createProject={this.createProject}
                                                         />} />
+
                           <Route path="/main" element={<Main 
                                                         account={this.state.account}
                                                         projects={this.state.projects}
@@ -277,8 +333,12 @@ class App extends Component {
                                                         createUser={this.createUser}
                                                         loginUser ={this.loginUser}
                                                         logoutUser={this.logoutUser}/>} />
+
                             {this.state.projects.map((project) => (
-                              <Route key={project.id} path={`/projects/${project.id}`} element={<AProjectPage project={project} />} />
+                              <Route key={project.id} path={`/projects/${project.id}`} 
+                                                      element={<AProjectPage 
+                                                      project={project}
+                                                      userAuthenticated={this.state.userAuthenticated} />} />
                             ))}
 
                             {this.state.projects.map((project) => (
@@ -286,6 +346,7 @@ class App extends Component {
                                                                                        donateProject={this.donateProject} 
                                                                                        account={this.state.account}
                                                                                        balance={this.state.balanceInEth}
+                                                                                       userAuthenticated={this.state.userAuthenticated}
                                                                                                               />} />
                             ))}
                         </Routes>

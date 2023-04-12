@@ -23,7 +23,6 @@ class AProject extends Component {
 
                             <span>Project creator address: {this.props.project.creator}</span>
                         </div>
-                        
                     </div>
                 </div>
                 <div className='project--d-info'>
@@ -37,7 +36,15 @@ class AProject extends Component {
                     <div className='project--donation'>
                         <h3>{this.props.project.title}</h3>
                         <h3>Target amount: {this.props.project.targetAmount / 10**18} ETH</h3> {/* convert the amount to ethers */}
+                        {this.props.userAuthenticated === true ?
                         <a href={`/donation/${this.props.project.id}`}><span>DONATE</span></a>
+                        :
+                        <a href={`/signin`} onClick={(e) => { e.preventDefault(); 
+                            alert("You need to be logged in to donate a project"); 
+                            window.location.href = "/signin"; }}><span>DONATE</span></a>
+                        }
+
+
                     </div>
             </div>
             </div>

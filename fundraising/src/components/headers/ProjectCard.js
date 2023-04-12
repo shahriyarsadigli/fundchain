@@ -5,7 +5,26 @@ import { fromWei } from 'web3-utils';
 
 
 export default function ProjectCard(props) {
-
+    function getCategoryName(category) {
+        switch (category) {
+          case '0':
+            return 'Other';
+          case '1':
+            return 'Technology';
+          case '2':
+            return 'Healthcare';
+          case '3':
+            return 'Environment';
+          case '4':
+            return 'Education';
+          case '5':
+            return 'Art';
+          default:
+            return 'Unknown';
+        }
+      }
+      
+      
 
     return(
         <div className="project-card">
@@ -16,6 +35,7 @@ export default function ProjectCard(props) {
                 <h4>{props.project.title}</h4>
                 <span className="project-author">By {props.project.creator}</span>
                 <p>{props.project.excerpt}</p>
+                <p>{getCategoryName(props.project.category)}</p>
             </a>
 
                 <div className="donation-amount">

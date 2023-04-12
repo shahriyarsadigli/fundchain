@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(231, 231, 231);
+  background: rgb(246, 246, 246);
   box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
@@ -21,7 +21,7 @@
 
 
 .home-buttons > a > button {
-  background-color: rgb(17, 17, 111);
+  background-color: rgb(88,153,203);
   color: white;
   border: none;
   padding: 8px 60px;
@@ -31,18 +31,19 @@
   font-size: 16px;
   border-radius: 50px;
   display: flex;
-  transition: all .3s ease-in;
-  border: 2px solid rgb(17, 17, 111);
+  transition: all .22s ease-in;
+  border: 2px solid rgb(88,153,203);
 }
 
 .home-buttons > a > button:hover {
-  background-color: rgb(231, 231, 231);
-  color: black;
+  background-color: rgb(246, 246, 246);
+  color: rgb(88,153,203);
   
 }
 
 .home-buttons > a > button:active {
-  background-color: rgb(17, 17, 111); /* change the background color when the button is clicked */
+  background-color: rgb(88,153,203); /* change the background color when the button is clicked */
+  color: white;
   transform: scale(0.9)
 }
 

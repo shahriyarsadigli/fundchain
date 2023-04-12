@@ -1,8 +1,19 @@
-import Header2 from '../headers/Header2'
 import '../style/CreateProject.css'
 import React, { Component } from 'react'
 
 class CreateProject extends Component {
+    state = {
+        categories: [
+          { value: 0, label: 'Other' },
+          { value: 1, label: 'Technology' },
+          { value: 2, label: 'Healthcare' },
+          { value: 3, label: 'Environment' },
+          { value: 4, label: 'Education' },
+          { value: 5, label: 'Art' },
+        ]
+      };
+      
+    
     render() {
         return (
         <div className='createproject-body'>
@@ -15,8 +26,10 @@ class CreateProject extends Component {
                         const title = this.projectTitle.value
                         const excerpt = this.projectExcerpt.value
                         const body = this.projectBody.value
+                        const category = this.projectCategory.value
                         const targetAmount = window.web3.utils.toWei(this.targetAmount.value.toString(), 'Ether')
-                        this.props.createProject(title, excerpt, body, targetAmount)
+
+                        this.props.createProject(title, excerpt, body, category, targetAmount)
                         }}>
                 <div className='project-info'>
                     <div className='project-info-1'>
@@ -59,6 +72,16 @@ class CreateProject extends Component {
                         placeholder="Target Amount"
                         required />
                     </div>
+                    <div className='project-info5'>
+                    <label>Category</label>
+                    <select ref={(input) => { this.projectCategory = input }}>
+                    {this.state.categories.map((category) => (
+                        <option value={category.value}>{category.label}</option>
+                    ))}
+                    </select>
+
+                    </div>
+    
                     <div className='project-button'>
                     <button type="submit">PUBLISH</button>
                     </div>

@@ -36,7 +36,6 @@ contract Users {
         require(!usernameExists[_username], "Username already exists");
         require(!emailExists[_email], "Email already taken");
         // check the password?
-        
 
 
         users[msg.sender] = User(msg.sender, _name, _surname, _username, _email, _passwordHash);

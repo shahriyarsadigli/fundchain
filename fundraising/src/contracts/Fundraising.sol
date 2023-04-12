@@ -6,13 +6,15 @@ contract Fundraising {
 
     mapping (uint => Project) public projects;
 
+    enum Category { Other, Technology, Health, Environment, Education, Art }
+
     struct Project {
         uint id;
         string title;
         string excerpt;
         string body;
+        Category category;  
         address payable creator;
-        // string imgFilePath; // path to the project image
         uint targetAmount;
         uint amountRaised;
     }
@@ -22,6 +24,7 @@ contract Fundraising {
         string title,
         string excerpt,
         string body,
+        Category category,
         address payable creator,
         uint targetAmount,
         uint amountRaised
@@ -32,6 +35,7 @@ contract Fundraising {
         string title,
         string excerpt,
         string body,
+        Category category,
         address payable creator,
         uint targetAmount,
         uint amountRaised
@@ -42,6 +46,7 @@ contract Fundraising {
         string title,
         string excerpt,
         string body,
+        Category category,
         address payable creator,
         uint targetAmount,
         uint amountRaised
@@ -51,23 +56,20 @@ contract Fundraising {
         name = "Fundraising in Blockchain";
     }
 
-    function createProject(string memory _title, string memory _excerpt, string memory _body, uint _targetAmount) public {
-        uint _amountRaised = 0; // initially the raised amount is 0 
-        // title, excerpt, and body should exist and be longer than 0 string length
+    function createProject(string memory _title, string memory _excerpt, string memory _body, Category _category, uint _targetAmount) public {
+        uint _amountRaised = 0;
         require(bytes(_title).length > 0);
         require(bytes(_excerpt).length > 0);
         require(bytes(_body).length > 0);
-
-        // the target amount should be more than 0
         require(_targetAmount > 0);
+        require(_category <= Category.Art, "Invalid category");
 
-        // fix the rest of requirements here
-        
+
+        // Add any additional requirements for the category here
+
         projectNum++;
-
-        projects[projectNum] = Project(projectNum, _title, _excerpt, _body, msg.sender, _targetAmount, _amountRaised);  
-
-        emit projectCreated(projectNum, _title, _excerpt, _body, msg.sender, _targetAmount, _amountRaised);  
+        projects[projectNum] = Project(projectNum, _title, _excerpt, _body, _category, msg.sender, _targetAmount, _amountRaised);
+        emit projectCreated(projectNum, _title, _excerpt, _body, _category, msg.sender, _targetAmount, _amountRaised);
     }
 
     function donateProject(uint _id) public payable { // we make it payable to be able to make transactions
@@ -96,7 +98,7 @@ contract Fundraising {
 
 
         
-        emit projectDonated(projectNum, _project.title, _project.excerpt, _project.body, _fundraiser, _project.targetAmount, _project.amountRaised);  
+        emit projectDonated(projectNum, _project.title, _project.excerpt, _project.body, _project.category, _fundraiser, _project.targetAmount, _project.amountRaised);  
 
     }
 
@@ -112,7 +114,7 @@ contract Fundraising {
         // Delete the project from the mapping
         delete projects[_id];
 
-        emit projectDeleted(projectNum, _project.title, _project.excerpt, _project.body, _fundraiser, _project.targetAmount, _project.amountRaised);
+        emit projectDeleted(projectNum, _project.title, _project.excerpt, _project.body, _project.category, _fundraiser, _project.targetAmount, _project.amountRaised);
     }
 
 }

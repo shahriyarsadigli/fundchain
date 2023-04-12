@@ -33,7 +33,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
 
     before(async () => {
         projectOutcome = await fundraising.createProject('FundChain StartUP',
-        'this is excerpt', 'this is body', '10000', { from: fundraiser });
+        'this is excerpt', 'this is body', 5, '10000', { from: fundraiser });
         projectNum = await fundraising.projectNum()
       })
 
@@ -64,6 +64,9 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
 
         await fundraising.createProject('FundChain StartUP', 'this is excerpt', 'this is body', 
         0, '0', { from: fundraiser }).should.be.rejected;
+        
+        await fundraising.createProject('', 'this is excerpt', 'this is body', 
+        '10000', '0', { from: fundraiser }).should.be.rejected;
         
     })
 
@@ -120,7 +123,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
 
       // create one more project to test deletion
       let projectOutcome = await fundraising.createProject('FundChain StartUP',
-      'this is excerpt', 'this is body', '10000', { from: fundraiser });
+      'this is excerpt', 'this is body', 0, '10000', { from: fundraiser });
 
       // console.log(projectOutcome.logs[0].args.id.toNumber())
 
