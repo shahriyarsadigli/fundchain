@@ -61,7 +61,6 @@ class ProjectsPage extends Component {
                 <option key={category.value} value={category.value}>{category.label}</option>
                 ))}
             </select>
-            <button onClick={this.filterByCategory}>Filter</button>
           </div>
           <div className="projects-list">
             {/* { this.props.projects ?

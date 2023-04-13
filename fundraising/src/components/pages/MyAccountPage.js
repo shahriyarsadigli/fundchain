@@ -16,7 +16,7 @@ class MyAccount extends Component {
                         <h3>My Wallet</h3>
                         <button type="button" className="account-button">
                                 <span>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
-                                <a><span>{Number(this.props.balance).toFixed(5)} ETH</span></a> {/* // show until 5 decimal places  */}
+                                <a><span>{Number(this.props.balance).toFixed(4)} ETH</span></a> {/* // show until 4 decimal places  */}
                         </button> 
                     </div>
                     <div className='account--row'>

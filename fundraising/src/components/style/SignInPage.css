@@ -1,5 +1,6 @@
 .signin-body {
     height: 1200px;
+    padding-top: 10px;
     background: rgb(231, 231, 231);
 }
 .signin-page {
@@ -24,7 +25,7 @@
     align-items: center;
     height: 70px;
     width: 900px;
-    background: #51126a;
+    background-color: rgb(17, 17, 111);
 }
 
 .forum-header > h2 {
@@ -56,6 +57,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .forum-content > input {
@@ -70,28 +72,61 @@
     border: 1px solid gray;
 }
 
+/* Icons */
+.signin--icons {
+    position: absolute;
+    bottom: 14%;
+    height: 120px;
+    width: 360px;
+}
 
-.signin-button {
+.signin--icons > a {
+    color: black;
+    transition: all .3s ease;
+}
+
+.signin--icons > a:hover {
+    color: blue;
+}
+
+#email-icon {
+    position: absolute;
+    top: 16%;
+    left: 3%;
+}
+
+#password-icon {
+    position: absolute;
+    top: 73.5%;
+    left: 3%;
+}
+
+#eye-icon {
+    position: absolute;
+    top: 73.5%;
+    left: 90%;
+}
+
+
+
+/* Icons */
+
+.signin--button {
     width: 300px;
-    background: #51126a;
-    padding: 16px 100px;
+    background: rgb(17, 17, 111);
+    padding: 16px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100px;
     margin-top: 10px;
     color: white;
-
+    border: none;
+    transition: all .3s ease;
 }
 
-.signin-button > a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.4em;
-}
-
-.signin-button > a:hover {
-    color: cyan;
+.signin--button:hover {
+    transform: scale(1.01);
 }
 
 .register-options {
@@ -138,6 +173,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin-right: 15px;
+    margin-top: 15px;
 }
 
 .signup-option > span{
@@ -148,37 +184,4 @@
 .signup-option > a {
     font-size: 0.9em;
     font-weight: bold;
-}
-
-
-#eth-icon {
-    font-size: 2.2em;
-    color: black;
-    position: absolute;
-    right: 9.6em;
-    top: 10.41em;
-}
-
-#email-icon {
-    font-size: 1.1em;
-    color: black;
-    position: absolute;
-    right: 21.2em;
-    top: 4.3em;
-}
-
-#password-icon {
-    font-size: 1.1em;
-    color: black;
-    position: absolute;
-    right: 21.2em;
-    top: 8.3em;
-}
-
-#eye-icon {
-    font-size: 1.1em;
-    color: black;
-    position: absolute;
-    right: 3.4em;
-    top: 8.3em;
 }

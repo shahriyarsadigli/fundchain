@@ -11,7 +11,7 @@ export default function HomePage() {
             <section className="home">
                 <div className="home-body">
                     <h1>Uplift Bright Ideas</h1>
-                    <h5>Be the one to change the future</h5>
+                    <h5>Be the one to change the future with fundchain</h5>
                     <img src={rocket} className="donate-rocket" alt=""/>
                     <img src={smoke} className="donate-smoke" alt=""/>
                     <div className="main-buttons">

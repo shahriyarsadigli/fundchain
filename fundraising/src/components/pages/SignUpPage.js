@@ -90,7 +90,7 @@ class SignUp extends Component {
                                     placeholder="Username"
                                     size="14"
                                     pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$"
-                                    onInvalid={(e) => {e.target.setCustomValidity("Username must be at least 6 characters and include both letters and numbers")}}
+                                    onInvalid={(e) => {e.target.setCustomValidity("Username must be at least 6 characters and include both and only letters and numbers")}}
                                     onInput={(e) => e.target.setCustomValidity('')}
                                     required />                            
                                 </div>

@@ -63,14 +63,21 @@ class CreateProject extends Component {
                         required />
                     </div>
                     <div className='project-info4'>
-                    <label>Target Amount</label>
                     <input
                         id="targetAmount"
                         type="number"
+                        step="0.0001"
                         ref={(input) => { this.targetAmount = input }}
                         className="project-excerpt"
                         placeholder="Target Amount"
-                        required />
+                        pattern="^\d+(\.\d{1,4})?$"
+                        onInvalid={(e) => {
+                            e.target.setCustomValidity(
+                            'Please enter a valid target amount with up to 4 decimal places'
+                            );
+                        }}
+                        onInput={(e) => e.target.setCustomValidity('')}
+                        required/>
                     </div>
                     <div className='project-info5'>
                     <label>Category</label>

@@ -4,6 +4,30 @@ import Pimg1 from '../images/project1.jpg'
 
 
 class DonationPage extends Component {
+
+    handleDonate = (event) => {
+        // Get the value of the input field
+        const inputAmount = this.amount.value;
+        if (!inputAmount) {
+          alert("Please enter a valid amount.");
+          return;
+        }
+        // Validate the input field against the pattern
+        const isValidAmount = this.amount.checkValidity();
+        if (!isValidAmount) {
+          alert("Please enter a valid donation amount with up to 4 decimal places.");
+          return;
+        }
+        const amount = window.web3.utils.toWei(inputAmount.toString(), 'Ether');                            
+        if (parseInt(amount) + parseInt(this.props.project.amountRaised) > parseInt(this.props.project.targetAmount)) {
+          // do not execute
+          alert("Donation amount exceeds target amount, donation not processed.");
+        } else {
+          // Pass the input field value as the button value
+          this.props.donateProject(event.target.name, amount);
+        }
+      }
+
     render() {
 
     return (
@@ -31,18 +55,18 @@ class DonationPage extends Component {
                     <div className="donation--balance">
                         <div className="balance--buttons">
                             <span className="account--balance">Balance</span>
-                            <span className="balance--amount">{Number(this.props.balance).toFixed(5)} ETH</span>
+                            <span className="balance--amount">{Number(this.props.balance).toFixed(4)} ETH</span>
                         </div>
                     </div>
                     <div className="donation--submit">
-                        {/* <span className="donation--amount">1.00 ETH</span> */}
-
                             {
                             this.props.userAuthenticated === true && this.props.project.creator !== this.props.account && parseInt(window.web3.utils.toWei(this.props.project.amountRaised.toString(), 'Ether')) < parseInt(window.web3.utils.toWei(this.props.project.targetAmount.toString(), 'Ether'))
                             ? 
                                 <div>
                                 <input id="projectName"
                                     type="number"
+                                    step="0.0001"
+                                    pattern="[0-9]+(\.[0-9]{1,4})?"
                                     ref={(input) => { this.amount = input }}
                                     className="donation--enter"
                                     placeholder="Donation Amount"
@@ -50,22 +74,7 @@ class DonationPage extends Component {
                                 <button
                                     name={this.props.project.id}
                                     className="donation--button"
-                                    onClick={(event) => {
-                                    // Get the value of the input field
-                                    const inputAmount = this.amount.value;
-                                    if (!inputAmount) {
-                                        alert("Please enter a valid amount.");
-                                        return;
-                                    }
-                                    const amount = window.web3.utils.toWei(inputAmount.toString(), 'Ether');                            
-                                    if (parseInt(amount) + parseInt(this.props.project.amountRaised) > parseInt(this.props.project.targetAmount)) {
-                                        // do not execute
-                                        alert("Donation amount exceeds target amount, donation not processed.");
-                                    } else {
-                                        // Pass the input field value as the button value
-                                        this.props.donateProject(event.target.name, amount);
-                                    }
-                                    }}
+                                    onClick={this.handleDonate}
                                 >
                                     Donate
                                 </button> 

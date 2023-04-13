@@ -18,7 +18,7 @@ class Header2 extends Component {
                             <div className="account--button">
                                 <button type="button" className="account-button">
                                     <span>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
-                                    <a><span>{Number(this.props.balance).toFixed(3)} ETH</span></a> {/* show until 3 decimal places */}
+                                    <a><span>{Number(this.props.balance).toFixed(4)} ETH</span></a> {/* show until 4 decimal places */}
                                 </button> 
                                 <div className="circle">
                                     <i class="fa-brands fa-ethereum" id="et-icon"></i>
