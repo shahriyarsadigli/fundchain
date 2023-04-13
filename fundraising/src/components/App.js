@@ -6,7 +6,7 @@ import Web3 from 'web3'
 
 // React libraries
 import React, { Component } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 // Smart contracts
 import Fundraising from '../abis/Fundraising.json';
@@ -154,7 +154,12 @@ class App extends Component {
     this.setState({ loading: true })
     const passwordHash = web3.utils.sha3(password)
     this.state.users.methods.createUser(name, surname, username, email, passwordHash).send({ from: this.state.account })
-    .once('receipt', this.handleTransactionResponse)
+    .once('receipt', (receipt) => {
+      this.setState({ loading: false })
+      this.setState({ userAuthenticated: true });
+      localStorage.setItem('isLoggedIn', true);
+      window.location.href = '/'; // redirect to main page
+    })
     .on('error', (error, receipt) => {
       this.handleTransactionError(error);
     });
@@ -244,13 +249,23 @@ class App extends Component {
   
     const projectNum = await fundraising.methods.projectNum().call();
     const projects = [];
-  
-    for (let i = 1; i <= projectNum; i++) {
-      const project = await fundraising.methods.projects(i).call();
-      if (Number(project.category) === Number(category)) {
+
+    console.log(category)
+
+    if (category === "All") { 
+      for (let i = 1; i <= projectNum; i++) {
+        const project = await fundraising.methods.projects(i).call();
         projects.push(project);
       }
     }
+    else {
+      for (let i = 1; i <= projectNum; i++) {
+        const project = await fundraising.methods.projects(i).call();
+        if (Number(project.category) === Number(category)) {
+          projects.push(project);
+          }
+        }
+    } 
   
     this.setState({ projects: projects });
   
@@ -269,7 +284,6 @@ class App extends Component {
       this.setState({ userAuthenticated: true }, () => {
         console.log(this.state.userAuthenticated);
       });
-      
     }
 
     // if the user changes the account in metamask, then log the user out
@@ -306,7 +320,7 @@ class App extends Component {
                 <BrowserRouter>
                         <Routes>
                           <Route index element={<HomePage />} />
-                          { this.state.userAuthenticated ? <Route path="/" /> // do not let the users access the sign in page once they are signed in
+                          { this.state.userAuthenticated ? <Route path="/signin" element={<Navigate replace to="/" />} /> // do not let the users access the sign in page once they are signed in
                           : <Route path="/signin" element={<SignIn loginUser={this.loginUser} />} /> }
                           <Route path="/signup" element={<SignUp createUser={this.createUser}/>} />
                           <Route path="/metamask" element={<Metamask />} />

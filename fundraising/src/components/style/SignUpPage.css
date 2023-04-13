@@ -24,7 +24,7 @@
     align-items: center;
     height: 70px;
     width: 900px;
-    background: #51126a;
+    background: rgb(88,153,203);
 }
 
 .forum-header > h2 {
@@ -87,13 +87,14 @@
 }
 
 .signin-button {
-    background: #51126a;
+    background: rgb(88,153,203);
     margin-bottom: 20px;
     padding: 16px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100px;
+    border-color: rgb(41, 121, 182);
 }
 
 .signin-button > a {

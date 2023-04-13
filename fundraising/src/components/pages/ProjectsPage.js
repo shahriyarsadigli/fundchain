@@ -26,11 +26,7 @@ class ProjectsPage extends Component {
     this.props.searchProjects(query);
   }
 
-
-
   render() {
-
-
     const cards = this.props.projects.map(project => {
       return (
         <ProjectCard
@@ -41,6 +37,7 @@ class ProjectsPage extends Component {
     });
 
     const categories = [
+      { value: null, label: "All" },
       { value: 0, label: "Other" },
       { value: 1, label: "Technology" },
       { value: 2, label: "Healthcare" },
@@ -60,7 +57,6 @@ class ProjectsPage extends Component {
           </div>
           <div>
             <select value={this.state.selectedCategory} onChange={this.handleCategoryChange}>
-              <option value="">All Categories</option>
               {categories.map(category => (
                 <option key={category.value} value={category.value}>{category.label}</option>
                 ))}
