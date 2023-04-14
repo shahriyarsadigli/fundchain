@@ -42,13 +42,11 @@ class SignIn extends Component {
               <div className='forum-content'>
                 <form className='forum-content' onSubmit={this.handleLogin}>
                   <div className='forum-content'>
-                    <div className='signin--icons'>
                         <i className='fa-solid fa-envelope' id='email-icon'></i>
                         <i className='fa-solid fa-key' id='password-icon'></i>
                         <a href='#'>
                           <i className='fa-regular fa-eye-slash' id='eye-icon'></i>
                         </a>
-                      </div>
                     <input
                       id='loginEmail'
                       type='text'
@@ -82,7 +80,7 @@ class SignIn extends Component {
                         {this.state.errorMessage}
                     </div>
                     )}
-                  <button type='submit' className='signin-button'>
+                  <button type='submit' className='signin--button'>
                     SIGN IN
                   </button>
                 </form>

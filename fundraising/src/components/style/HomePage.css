@@ -58,17 +58,18 @@ html, body{
   right: 0.4%;
 }
 
-.main-buttons > button {
-  background: rgb(17, 17, 111);
-  color: white;
+.main-buttons > a > button {
+  background-color: white;
+  color: black;
   width: 280px;
   height: 60px;
-  border: 4px solid rgb(17, 17, 111);
+  border: 4px solid gold;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
   border-radius: 10px;
+  transition: all .3s ease;
 }
 
 .main-buttons {
@@ -80,11 +81,7 @@ html, body{
   bottom: 9%;
 }
 
-.main-buttons > button:hover{
-  background-color: rgb(56, 56, 119);
-}
-
-.main-buttons > button > a {
-  text-decoration: none;
+.main-buttons > a > button:hover{
+  background-color: rgb(88,153,203);
   color: white;
 }

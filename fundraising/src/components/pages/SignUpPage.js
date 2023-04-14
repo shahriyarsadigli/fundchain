@@ -59,7 +59,13 @@ class SignUp extends Component {
                             <img src={login} className="login-img"/>
                         </div>
                         <div className="forum-content">
-                            <div className='personal-info'>     
+                            <div className='personal-info'>    
+                                <i className="fa-solid fa-envelope" id="email-icon-2"></i>
+                                <i className="fa-solid fa-key" id="password-icon-2"></i>
+                                <a href="#"><i className="fa-regular fa-eye-slash" id="eye-icon-2"></i></a>
+                                <i className="fa-regular fa-user" id="user-icon-1"></i>
+                                <i className="fa-regular fa-user" id="user-icon-2"></i>
+                                <i className="fa-solid fa-user" id="username-icon"></i> 
                                 <input
                                     id="userName"
                                     type="text"
@@ -120,19 +126,11 @@ class SignUp extends Component {
                                 />
 
                             </div>
-                            <button type="submit" className="signin-button">SIGN UP</button>
-
-
+                            <button type="submit" className="signup--button">SIGN UP</button>
                             <div className="signin-option">
                                 <span>Already have an account?</span>
                                 <a href="/signin">Sign in</a>
                             </div>
-                            <i className="fa-solid fa-envelope" id="email-icon-2"></i>
-                            <i className="fa-solid fa-key" id="password-icon-2"></i>
-                            <a href="#"><i className="fa-regular fa-eye-slash" id="eye-icon-2"></i></a>
-                            <i className="fa-regular fa-user" id="user-icon-1"></i>
-                            <i className="fa-regular fa-user" id="user-icon-2"></i>
-                            <i className="fa-solid fa-user" id="username-icon"></i>
                         </div>
                         
                     </div>

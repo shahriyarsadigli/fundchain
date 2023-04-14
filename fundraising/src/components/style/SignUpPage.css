@@ -59,7 +59,9 @@
     position: relative;
 }
 
-
+.personal-info {
+    position: relative;
+}
 
 .personal-info > input {
     display: flex;
@@ -87,88 +89,67 @@
     border: 1px solid gray;
 }
 
-.signin-button {
-    background: rgb(88,153,203);
-    margin-bottom: 20px;
-    padding: 16px 40px;
+.signup--button {
+    width: 300px;
+    background: gold;
+    padding: 16px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100px;
-    border-color: rgb(41, 121, 182);
-}
-
-.signin-button > a {
+    margin-top: 10px;
     color: white;
-    text-decoration: none;
-    font-size: 1.4em;
+    border: none;
+    transition: all .3s ease;
 }
 
-.signup-button {
-    background: #51126a;
-    margin-bottom: 20px;
-    padding: 16px 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
+.signup--button:hover {
+    color: black;
+    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
 }
 
-.signup-button > a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.4em;
-}
-
-.signup-button > a:hover {
-    color: cyan;
-}
+/* Icons */
 
 #email-icon-2 {
     position: absolute;
-    font-size: 1.1em;
-    top: 14.55em;
-    left: 4.5em;
+    top: 108.5%;
+    left: 5%;
 }
 
 #password-icon-2 {
     position: absolute;
-    font-size: 1.1em;
-    top: 18.55em;
-    left: 4.5em;
+    top: 142.5%;
+    left: 5%;
 }
 
 #eye-icon-2 {
     position: absolute;
-    font-size: 1.1em;
-    top: 18.55em;
-    left: 19.5em;
-    color: black;
+    top: 142.5%;
+    left: 88%;
 }
 
 #user-icon-1 {
     position: absolute;
-    font-size: 1.1em;
-    top: 6.6em;
-    left: 4.5em;
+    top: 41.5%;
+    left: 5%;
     color: black;
 }
 
 #user-icon-2 {
     position: absolute;
-    font-size: 1.1em;
-    top: 10.6em;
-    left: 4.5em;
+    top: 75%;
+    left: 5%;
     color: black;
 }
 
 #username-icon {
     position: absolute;
-    font-size: 1.1em;
-    top: 2.65em;
-    left: 4.5em;
+    top: 8.5%;
+    left: 5%;
     color: black;
 }
+
+/* Icons */
 
 .signin-option {
     width: 340px;
@@ -176,6 +157,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     margin-left: 15px;
+    margin-top: 15px;
 }
 
 .signin-option > span{

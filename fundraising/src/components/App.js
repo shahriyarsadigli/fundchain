@@ -301,10 +301,10 @@ class App extends Component {
 
       <div>
               { 
-               this.state.loading
+              //  this.state.loading
                 
-                ? <div id="loader" className="text-center"><p className="text-center" id="alert-message">Loading... Waiting for MetaMask confirmation...</p></div> 
-                : 
+              //   ? <div id="loader" className="text-center"><p className="text-center" id="alert-message">Loading... Waiting for MetaMask confirmation...</p></div> 
+              //   : 
                 <div>
                 { this.state.userAuthenticated
                 ? 

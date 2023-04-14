@@ -15,8 +15,8 @@ export default function HomePage() {
                     <img src={rocket} className="donate-rocket" alt=""/>
                     <img src={smoke} className="donate-smoke" alt=""/>
                     <div className="main-buttons">
-                        <button type="button"><a href="/projects">VIEW PROJECTS</a></button>
-                        <button type="button"><a href="/create-project"> CREATE A PROJECT</a></button>
+                        <a href="/projects"><button type="button">VIEW PROJECTS</button></a>
+                        <a href="/create-project"><button type="button">CREATE A PROJECT</button></a>
                     </div>
                     
                 </div>

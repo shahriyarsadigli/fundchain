@@ -8,10 +8,11 @@
 }
 
 .home-buttons {
-  padding-right: 70px;
   display: flex;
   justify-content: space-between;
-  width: 45%;
+  width: 40%;
+  position: relative;
+  right: 3%;
 }
 
 .logo--1 {
@@ -28,7 +29,6 @@
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   border-radius: 50px;
   display: flex;
   transition: all .22s ease-in;
