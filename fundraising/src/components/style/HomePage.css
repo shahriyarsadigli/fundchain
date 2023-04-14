@@ -9,13 +9,9 @@ html, body{
   background: rgb(231, 231, 231);
 }
 
-.donate-button {
-  width: 200px;
-}
-
 .home {
   width: 100%;
-  height: 100%;
+  height: 50%;
   position: relative;
 }
 .home-body {
@@ -84,4 +80,73 @@ html, body{
 .main-buttons > a > button:hover{
   background-color: rgb(88,153,203);
   color: white;
+}
+
+/* New additions */
+
+.home--promotion {
+  height: 55%;
+  width: 90%;
+  position: relative;
+  left: 5%;
+  border-radius: 20px;
+  background-color: gold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.promotion--title {
+  height: 30%;
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  font-weight: 600;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.promotion--sections {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.promotion--sections > div {
+  height: 100%;
+  width: 20%;
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 8px;
+  border-radius: 20px;
+}
+
+.icon--section {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon--section > i {
+  font-size: 3em;
+}
+
+.text--section {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text--section > span {
+  color: rgb(57, 57, 57);
 }
