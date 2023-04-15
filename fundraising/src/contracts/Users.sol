@@ -16,6 +16,10 @@ contract Users {
         string username;
         string email;
         bytes32 passwordHash;
+        uint numDonations;
+        uint numProjects;
+        uint totalDonationsFunded;
+        uint totalDonationsReceived;
     }
 
     event userCreated(
@@ -37,8 +41,15 @@ contract Users {
         require(!emailExists[_email], "Email already taken");
         // check the password?
 
+        uint _numDonations = 0;
+        uint _numProjects = 0;
+        uint _totalDonationsFunded = 0;
+        uint _totalDonationsReceived = 0;
 
-        users[msg.sender] = User(msg.sender, _name, _surname, _username, _email, _passwordHash);
+
+
+        users[msg.sender] = User(msg.sender, _name, _surname, _username, _email, _passwordHash, _numDonations, 
+                                                _numProjects, _totalDonationsFunded, _totalDonationsReceived);
         usernameExists[_username] = true;
         emailExists[_email] = true;
 
@@ -55,6 +66,24 @@ contract Users {
         } else {
             return false;
         }
+    }
+
+    function addDonation(address _userAddressDonor, address _userAddressFundraiser, uint _amount) public {
+        require(users[_userAddressDonor].userAddress != address(0), "User does not exist.");
+        // require(users[_userAddressFundraiser].userAddress != address(0), "User does not exist.");
+        users[_userAddressDonor].numDonations++;
+        users[_userAddressDonor].totalDonationsFunded += _amount;
+        users[_userAddressFundraiser].totalDonationsReceived += _amount;
+    }
+
+    function addProject(address _userAddressCreator) public {
+        // require(users[_userAddressCreator].userAddress != address(0), "User does not exist.");
+        users[_userAddressCreator].numProjects++;
+    }
+
+    function deletedProject(address _userAddressCreator) public {
+        // require(users[_userAddressCreator].userAddress != address(0), "User does not exist.");
+        users[_userAddressCreator].numProjects--;
     }
 
 

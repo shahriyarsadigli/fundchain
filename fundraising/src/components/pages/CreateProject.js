@@ -67,6 +67,7 @@ class CreateProject extends Component {
                         id="targetAmount"
                         type="number"
                         step="0.0001"
+                        min="0"
                         ref={(input) => { this.targetAmount = input }}
                         className="project-excerpt"
                         placeholder="Target Amount"

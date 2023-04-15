@@ -3,6 +3,7 @@ const Users = artifacts.require("Users");
 
 
 module.exports = function(deployer) {
-  deployer.deploy(Fundraising);
-  deployer.deploy(Users);
+  deployer.deploy(Users).then(function() {
+    return deployer.deploy(Fundraising, Users.address);
+  });
 };

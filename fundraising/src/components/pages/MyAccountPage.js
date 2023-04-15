@@ -10,7 +10,6 @@ class MyAccount extends Component {
                 <div className='section--first'>
                     <div className='img--row'>
                         <img src={Avatar1} className="user--avatar"/>
-                        <span className='user--name'>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
                     </div>
                     <div className='wallet--row'>
                         <h3>My Wallet</h3>
@@ -36,28 +35,27 @@ class MyAccount extends Component {
                 </div>
                 <div className='section--second'>
                     <a href=""><span id="dashboard--button">Dashboard</span></a>
-                    <a href=""><span id="donations--button">My donations</span></a>
                     <a href=""><span id="projects--button">My projects</span></a>
                 </div>
                 <div className='section--third'>
                     <div className='donations--section'>
                         <div>
                             <h5>DONATIONS</h5>
-                            <span>0</span>
+                            <span>{this.props.currentAccountData.numDonations}</span>
                         </div>
                         <div>
                             <h5>TOTAL DONATION AMOUNT</h5>
-                            <span>0</span>
+                            <span>{this.props.currentAccountData.totalDonationsFunded / 10 ** 18} ETH</span> {/* // show in ethers */}
                         </div>
                     </div>
                     <div className='projects--section'>
                         <div>
                             <h5>PROJECTS</h5>
-                            <span>0</span>
+                            <span>{this.props.currentAccountData.numProjects}</span>
                         </div>
                         <div>
                             <h5>TOTAL DONATION RECEIVED</h5>
-                            <span>0</span>
+                            <span>{this.props.currentAccountData.totalDonationsReceived / 10 ** 18} ETH</span> {/* // show in ethers */}
                         </div>
                     </div>
                 </div>

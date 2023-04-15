@@ -21,7 +21,7 @@ class Header2 extends Component {
                                     <a><span>{Number(this.props.balance).toFixed(4)} ETH</span></a> {/* show until 4 decimal places */}
                                 </button> 
                                 <div className="circle">
-                                    <i class="fa-brands fa-ethereum" id="et-icon"></i>
+                                    <i className="fa-brands fa-ethereum" id="et-icon"></i>
                                 </div>
                                 <div className="dropdown-menu">
                                     <a href="/myaccount" className="drop--first">My account</a>

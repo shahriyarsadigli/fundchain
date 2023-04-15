@@ -30,13 +30,10 @@ header {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Red Hat Text', sans-serif;
-    font-size: 14px;
-    border-radius: 40px;
+    border-radius: 50px;
     display: flex;
     border: 2px solid rgb(88,153,203);
     transition: all .22s ease-in;
-    text-transform: uppercase;
 }
 
 

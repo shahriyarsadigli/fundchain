@@ -30,7 +30,7 @@ export default function ProjectCard(props) {
         <div className="project-card">
 
             <div className="project-content">
-            <a href={`/projects/${props.project.id}`} className="project-name">
+            <a href={`/project/${props.project.slug}`} className="project-name">
                 {/* // move to the page of the project with this id  */}
                 <h4>{props.project.title}</h4>
                 <span className="project-author">By {props.project.creator}</span>

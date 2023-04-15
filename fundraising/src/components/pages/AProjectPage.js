@@ -35,6 +35,8 @@ class AProject extends Component {
                     </div>
                     <div className='project--donation'>
                         <h3>{this.props.project.title}</h3>
+                        {console.log(this.props.project.slug)}
+
                         <h3>Target amount: {this.props.project.targetAmount / 10**18} ETH</h3> {/* convert the amount to ethers */}
                         {this.props.userAuthenticated === true ?
                         <a href={`/donation/${this.props.project.id}`}><span>DONATE</span></a>
@@ -43,6 +45,21 @@ class AProject extends Component {
                             alert("You need to be logged in to donate a project"); 
                             window.location.href = "/signin"; }}><span>DONATE</span></a>
                         }
+                        <td>
+                        {
+                           this.props.project.creator === this.props.account && this.props.project.amountRaised < this.props.project.targetAmount / 20
+                           ? 
+                          <button
+                            name={this.props.project.id}
+                            onClick={(event) => {
+                                this.props.deleteProject(event.target.name);
+                            }}
+                          >
+                            Delete Project
+                          </button> 
+                          : null
+                      }
+                  </td>
 
 
                     </div>

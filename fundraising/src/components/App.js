@@ -16,18 +16,24 @@ import Users from '../abis/Users.json';
 import HomePage from './pages/HomePage'
 import SignIn from './pages/SignInPage'
 import SignUp from './pages/SignUpPage'
-import Metamask from './pages/MetamaskPage'
 import Projects from './pages/ProjectsPage'
 import DonationPage from './pages/DonationPage'
 import CreateProject from './pages/CreateProject';
 import MyAccountPage from './pages/MyAccountPage'
 import AProjectPage from './pages/AProjectPage'
+import NotFound from './pages/404'
+import LoadingPage from './pages/LoadingPage';
 
 // Header files
 import Header1 from './headers/Header1';
 import Header2 from './headers/Header2';
 
-
+function slugify(text) {
+  return text
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)+/g, '');
+}
 
 class App extends Component {
 
@@ -87,9 +93,11 @@ class App extends Component {
       // Load projects
       for (var i = 1; i <= projectNum; i++) {
         const project = await fundraising.methods.projects(i).call()
-        this.setState({
-          projects: [...this.state.projects, project]
-        })
+        if (project.id !== "0") { // do not read the deleted projects which have the id as 0
+          this.setState({
+            projects: [...this.state.projects, project]
+          })
+        }
       }
       this.setState({ loading: false })
     } else {
@@ -197,8 +205,22 @@ class App extends Component {
   }
   
   createProject(title, excerpt, body, category, targetAmount) {
+    if (targetAmount <= 0) {
+      alert("Target amount must be above zero!")
+      return;
+    }
+    if (!this.state.userAuthenticated) {
+      alert('You must be logged in to create a project.');
+      return;
+  }
     this.setState({ loading: true })
-    this.state.fundraising.methods.createProject(title, excerpt, body, category, targetAmount).send({ from: this.state.account })
+    let slug = slugify(title);
+    const len = this.state.projects.length;
+    const uniqueID = len > 0 ? parseInt(this.state.projects[len - 1].id) + 1 : 1; // the id projects will always be unique as it is increasing in each project creation
+    // and we assign the uniqueID as 1 if the 
+    slug += "-" + uniqueID;
+
+    this.state.fundraising.methods.createProject(title, excerpt, body, slug, category, targetAmount).send({ from: this.state.account })
     .once('receipt', () => {
       this.handleTransactionResponse();
       this.setState({ loading: true }) // show loading screen before redirecting to the projects page
@@ -279,7 +301,7 @@ class App extends Component {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
     if (isLoggedIn === 'true') {
       // user was previously authenticated, set the state accordingly
-      console.log("if is seen here")
+      // console.log("if is seen here")
 
       this.setState({ userAuthenticated: true }, () => {
         console.log(this.state.userAuthenticated);
@@ -295,18 +317,23 @@ class App extends Component {
     });
   }
 
+  isAuthenticated = () => {
+    return this.state.userAuthenticated;
+  }
+
   render() {
 
     return (
 
       <div>
+
               { 
-              //  this.state.loading
+               this.state.loading
                 
-              //   ? <div id="loader" className="text-center"><p className="text-center" id="alert-message">Loading... Waiting for MetaMask confirmation...</p></div> 
-              //   : 
+                ? <LoadingPage />
+                : 
                 <div>
-                { this.state.userAuthenticated
+                { this.isAuthenticated()
                 ? 
                 <Header2 account={this.state.account}
                         logoutUser={this.logoutUser} 
@@ -323,19 +350,22 @@ class App extends Component {
                           { this.state.userAuthenticated ? <Route path="/signin" element={<Navigate replace to="/" />} /> // do not let the users access the sign in page once they are signed in
                           : <Route path="/signin" element={<SignIn loginUser={this.loginUser} />} /> }
                           <Route path="/signup" element={<SignUp createUser={this.createUser}/>} />
-                          <Route path="/metamask" element={<Metamask />} />
                           <Route path="/projects" element={<Projects account={this.state.account}
                                                                      projects={this.state.projects}
                                                                      userAuthenticated={this.state.userAuthenticated}
                                                                      searchProjects={this.searchProjects}
                                                                      filterProjects={this.filterProjects} />} />
-                          <Route path="/myaccount" element={<MyAccountPage account={this.state.account}
+
+                          <Route path="/myaccount" element={this.isAuthenticated() ? <MyAccountPage account={this.state.account}
                                                                            currentAccountData={this.state.currentAccountData} 
-                                                                           balance={this.state.balanceInEth}/>} />
-                          <Route path="/project" element={<AProjectPage />} />
-                          <Route path="/create-project" element={<CreateProject 
+                                                                           balance={this.state.balanceInEth}/> : <Navigate replace to="/signin" />} />
+
+                          <Route path="/create-project" element={this.isAuthenticated() ? <CreateProject 
                                                         createProject={this.createProject}
-                                                        />} />
+                                                        /> : <Navigate replace to="/signin" />} />
+
+
+
 
                           <Route path="/main" element={<Main 
                                                         account={this.state.account}
@@ -349,13 +379,20 @@ class App extends Component {
                                                         logoutUser={this.logoutUser}/>} />
 
                             {this.state.projects.map((project) => (
-                              <Route key={project.id} path={`/projects/${project.id}`} 
+                              <Route key={project.id} path={`/project/${project.slug}`} 
                                                       element={<AProjectPage 
                                                       project={project}
-                                                      userAuthenticated={this.state.userAuthenticated} />} />
+                                                      account={this.state.account}
+                                                      userAuthenticated={this.state.userAuthenticated}
+                                                      deleteProject={this.deleteProject}
+                                                      />} />
                             ))}
 
-                            {this.state.projects.map((project) => (
+                            {
+                              this.state.projects.map((project) => (
+                              !this.state.userAuthenticated ? <Route path={`/donation/${project.id}`} element={<Navigate replace to="/signin" />} /> // do not let the users access the sign in page once they are signed in
+                              : 
+                              
                               <Route key={project.id} path={`/donation/${project.id}`} element={<DonationPage project={project} 
                                                                                        donateProject={this.donateProject} 
                                                                                        account={this.state.account}
@@ -363,8 +400,12 @@ class App extends Component {
                                                                                        userAuthenticated={this.state.userAuthenticated}
                                                                                                               />} />
                             ))}
+
+                            <Route path="*" element={<NotFound />} />
+
                         </Routes>
                       </BrowserRouter>
+
                 </div>
                       
               }                  

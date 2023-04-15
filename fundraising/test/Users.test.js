@@ -34,6 +34,8 @@ contract('Users', ([user]) => {
       userOutcome = await users.createUser('name', 'surname', 'username', 'email', passwordHash, { from: user });
   })
 
+    console.log(user)
+
 
     it('creates a user', async () => {
       // successful creation

@@ -28,12 +28,13 @@ class ProjectsPage extends Component {
 
   render() {
     const cards = this.props.projects.map(project => {
-      return (
-        <ProjectCard
-          id={project.id}
-          project={project}
-        />
-      );
+      if (project.id != 0)
+        return (
+          <ProjectCard
+            id={project.id}
+            project={project}
+          />
+        );
     });
 
     const categories = [
@@ -64,8 +65,7 @@ class ProjectsPage extends Component {
           </div>
           <div className="projects-list">
             {/* { this.props.projects ?
-            cards : <p>no projects found</p>}
-            {console.log(this.props.projects)} */}
+            cards : <p>no projects found</p> */}
             {cards}
           </div>
         </section>

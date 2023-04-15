@@ -1,0 +1,17 @@
+/* CSS for NotFound component */
+
+.loading-page {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+.loading-page h1 {
+    color: gold;
+    font-size: 3rem;
+  }
+  
+.loading-page p {
+    color: rgb(88, 153, 203);
+    font-size: 1.5rem;
+}
+  

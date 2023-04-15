@@ -1,14 +1,17 @@
 const { assert } = require("chai")
 
 const Fundraising = artifacts.require('./Fundraising.sol')
+const Users = artifacts.require('./Users.sol')
 
 require('chai').use(require('chai-as-promised')).should()
 
 contract('Fundraising', ([deployer, fundraiser, donor]) => {
   let fundraising;
+  let users;
 
   before(async () => {
-    fundraising = await Fundraising.deployed()
+    users = await Users.deployed()
+    fundraising = await Fundraising.new(users.address); // deploy the Fundraising contract with the address of Users contract
   })
 
   describe('deployment', async () => {
@@ -19,13 +22,11 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
       assert.notEqual(address, null)
       assert.notEqual(address, undefined)
     })
-
-
+  
     it('name exists', async () => {
       const name = await fundraising.name()
       assert.equal(name, 'Fundraising in Blockchain')
     })
-
   })
 
   describe('projects', async () => {
@@ -33,7 +34,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
 
     before(async () => {
         projectOutcome = await fundraising.createProject('FundChain StartUP',
-        'this is excerpt', 'this is body', 5, '10000', { from: fundraiser });
+        'this is excerpt', 'this is body', 'slug-example', 5, '10000',{ from: fundraiser });
         projectNum = await fundraising.projectNum()
       })
 
@@ -87,6 +88,9 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
         // oldBalance = await web3.eth.getBalance(fundraiser)
         // oldBalance = new web3.utils.BN(oldBalance)
 
+        let donationUser = users.createUser('name', 'surname', 'username', 'email', web3.utils.keccak256('password'), { from: donor });
+        // let fundraisingUser = users.createUser('name', 'surname', 'username', 'email', web3.utils.keccak256('password'), { from: fundraiser });
+
         // successful donation
         let projectOutcome = await fundraising.donateProject(projectNum, { from: donor, value: '10000'});
 
@@ -122,8 +126,8 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
       const projectNum = 2;
 
       // create one more project to test deletion
-      let projectOutcome = await fundraising.createProject('FundChain StartUP',
-      'this is excerpt', 'this is body', 0, '10000', { from: fundraiser });
+      projectOutcome = await fundraising.createProject('FundChain StartUP',
+        'this is excerpt', 'this is body', 'slug-example', 5, '10000',{ from: fundraiser });
 
       // console.log(projectOutcome.logs[0].args.id.toNumber())
 
