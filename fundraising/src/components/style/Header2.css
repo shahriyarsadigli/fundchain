@@ -3,7 +3,6 @@ header {
 }
 
 .nav-bar {
-    height: px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -64,7 +63,7 @@ header {
     height: 46px;
     width: 160px;
     border-radius: 50px;
-    background-color: rgb(28, 110, 173);
+    background-color: gold;
     border: none;
     border: 1px solid black;
     overflow: hidden;
@@ -72,7 +71,7 @@ header {
 }
 
 .account-button > span {
-    color: white;
+    color: black;
     font-weight: bold;
     font-size: 0.9em;
     padding-top: 2px;
@@ -103,7 +102,7 @@ header {
     left: 80%;
     top: 26%;
     border-radius: 50%;
-    background: white;
+    background: rgb(88,153,203);
 }
 
 .dropdown-menu {

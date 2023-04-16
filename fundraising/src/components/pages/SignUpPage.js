@@ -49,8 +49,6 @@ class SignUp extends Component {
             <main className='signup-page'>
                 <section className='signup' >
                 <form onSubmit={this.handleSubmit}>
-
-
                     <div className='forum-header'>
                         <h2>Sign up to FundChain</h2>
                     </div>

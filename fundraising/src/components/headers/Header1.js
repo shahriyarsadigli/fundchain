@@ -8,12 +8,12 @@ export default function Header1() {
             <header>
                 <nav className="navbar">
                     <div className="nav-logo">
-                    <a href="/"><img src={logo} className="logo--2" alt="logo"/></a>                    
+                    <a href="/"><img src={logo} className="logo--1" alt="logo"/></a>                    
                     </div>
                     <div className="home-buttons">
-                        <a href="/"><button type="button">Home</button></a>
-                        <a href="/projects"><button type="button">Projects</button></a>
-                        <a href="/signin"><button type="button">Sign in</button></a>
+                        <a href="/">Home</a>
+                        <a href="/projects">Projects</a>
+                        <a href="/signin">Sign in</a>
                     </div>
                 </nav>
             </header>

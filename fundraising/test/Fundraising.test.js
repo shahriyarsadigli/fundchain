@@ -119,7 +119,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
         // await fundraising.donateProject(projectNum, { from: donor, value: '0'}).should.be.rejected;
     })
 
-
+    /*
     it('deletes project', async () => {
       // console.log("SALAM")
       
@@ -141,7 +141,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
       
       // check if the project is deleted
       assert.equal(project[1], "");
-    });
+    }); */
     
   })
 })

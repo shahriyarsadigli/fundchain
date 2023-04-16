@@ -17,6 +17,9 @@
     background: white;
     min-width: 900px;
     height: 600px;
+    border: 4px solid gold;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .forum-header {

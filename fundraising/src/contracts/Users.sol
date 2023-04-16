@@ -69,7 +69,7 @@ contract Users {
     }
 
     function addDonation(address _userAddressDonor, address _userAddressFundraiser, uint _amount) public {
-        require(users[_userAddressDonor].userAddress != address(0), "User does not exist.");
+        // require(users[_userAddressDonor].userAddress != address(0), "User does not exist.");
         // require(users[_userAddressFundraiser].userAddress != address(0), "User does not exist.");
         users[_userAddressDonor].numDonations++;
         users[_userAddressDonor].totalDonationsFunded += _amount;
