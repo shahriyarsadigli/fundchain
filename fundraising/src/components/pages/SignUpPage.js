@@ -5,6 +5,12 @@ import React, { Component } from 'react';
 
 class SignUp extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+        };
+      }
+
     isValidEmail(email) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
@@ -42,6 +48,10 @@ class SignUp extends Component {
     
         }
       };
+    
+    handleTogglePassword = () => {
+        this.setState({ showPassword: !this.state.showPassword });
+    }
 
     render() {
     return (
@@ -60,7 +70,10 @@ class SignUp extends Component {
                             <div className='personal-info'>    
                                 <i className="fa-solid fa-envelope" id="email-icon-2"></i>
                                 <i className="fa-solid fa-key" id="password-icon-2"></i>
-                                <a href="#"><i className="fa-regular fa-eye-slash" id="eye-icon-2"></i></a>
+                                {/* <a href="#"><i className="fa-regular fa-eye-slash" id="eye-icon-2"></i></a> */}
+                                <a href="javascript:void(0)" onClick={this.handleTogglePassword}>
+                                <i className={`fa-regular ${this.state.showPassword ? 'fa-eye' : 'fa-eye-slash'}`} id='eye-icon-2'></i>
+                                </a>
                                 <i className="fa-regular fa-user" id="user-icon-1"></i>
                                 <i className="fa-regular fa-user" id="user-icon-2"></i>
                                 <i className="fa-solid fa-user" id="username-icon"></i> 
@@ -113,7 +126,7 @@ class SignUp extends Component {
 
                                 <input
                                     id="userPassword"
-                                    type="password"
+                                    type={this.state.showPassword ? 'text' : 'password'}
                                     ref={(input) => { this.userPassword = input }}
                                     className="password" 
                                     placeholder="Password"

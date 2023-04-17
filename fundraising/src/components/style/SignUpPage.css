@@ -1,10 +1,13 @@
 .signup-body {
-    height: 1200px;
+    height: 100vh;
     padding-top: 10px;
-    background: rgb(231, 231, 231);
+    background-image: url('../images/background.png');
+    background-repeat: repeat;
+    background-size: 50%;
+    background-position: center;
 }
+
 .signup-page {
-    background: rgb(231, 231, 231);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -68,29 +71,30 @@
 }
 
 .personal-info > input {
-    display: flex;
     font-size: 1em;
     margin-bottom: 20px;
     border-radius: 5px;
-    border: none;
-    border: 1px solid gray;
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 40px;
-    padding-right: 140px;
+    border: none;
+    border: 1px solid gray;
+    width: 75%;
+    margin-left: 15%;
 }
 
 .signup-info > input {
-    display: flex;
     font-size: 1em;
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 40px;
-    padding-right: 92px;
     margin-bottom: 20px;
     border-radius: 5px;
+    padding-right: 45px;
     border: none;
     border: 1px solid gray;
+    width: 75%;
+    margin-left: 15%;
 }
 
 .signup--button {
@@ -117,39 +121,39 @@
 #email-icon-2 {
     position: absolute;
     top: 108.5%;
-    left: 5%;
+    left: 19%;
 }
 
 #password-icon-2 {
     position: absolute;
-    top: 142.5%;
-    left: 5%;
+    top: 141.5%;
+    left: 19%;
 }
 
 #eye-icon-2 {
     position: absolute;
-    top: 142.5%;
-    left: 88%;
+    top: 141.5%;
+    left: 81%;
 }
 
 #user-icon-1 {
     position: absolute;
     top: 41.5%;
-    left: 5%;
+    left: 19%;
     color: black;
 }
 
 #user-icon-2 {
     position: absolute;
     top: 75%;
-    left: 5%;
+    left: 19%;
     color: black;
 }
 
 #username-icon {
     position: absolute;
     top: 8.5%;
-    left: 5%;
+    left: 19%;
     color: black;
 }
 

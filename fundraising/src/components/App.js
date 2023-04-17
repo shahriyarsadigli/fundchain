@@ -27,6 +27,7 @@ import LoadingPage from './pages/LoadingPage';
 // Header files
 import Header1 from './headers/Header1';
 import Header2 from './headers/Header2';
+import Footer from './headers/Footer';
 
 function slugify(text) {
   return text
@@ -406,9 +407,14 @@ class App extends Component {
                         </Routes>
                       </BrowserRouter>
 
+
+
+                  <Footer />
                 </div>
+                            
                       
-              }                  
+              }      
+                        
       
       </div>
     );

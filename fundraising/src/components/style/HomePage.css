@@ -5,10 +5,7 @@ html, body{
 }
 
 .main-page {
-  height: 1400px;
-  background: rgb(231, 231, 231);
-  height: 140vh;
-  /* background: rgb(231, 231, 231); */
+  height: 190vh;
   background-image: url('../images/background.png');
   background-repeat: repeat;
   background-size: 60%;

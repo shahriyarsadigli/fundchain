@@ -4,8 +4,6 @@ import '../style/SignInPage.css';
 import React, { Component } from 'react';
 
 class SignIn extends Component {
-
-
   constructor(props) {
     super(props);
     this.state = {
@@ -51,9 +49,8 @@ class SignIn extends Component {
                   <div className='forum-content'>
                         <i className='fa-solid fa-envelope' id='email-icon'></i>
                         <i className='fa-solid fa-key' id='password-icon'></i>
-                        <i className='fa-regular fa-eye' id='toggle-password'></i>
                         <a href="javascript:void(0)" onClick={this.handleTogglePassword}>
-                          <i className={`fa-regular ${this.state.showPassword ? 'fa-eye' : 'fa-eye-slash'}`} id='eye-icon'></i>
+                          <i className={`fa-regular ${this.state.showPassword ? 'fa-eye' : 'fa-eye-slash'}`} id='toggle-password'></i>
                         </a>
                     <input
                       id='loginEmail'

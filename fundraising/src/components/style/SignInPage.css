@@ -72,11 +72,11 @@
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 40px;
-    padding-right: 140px;
     margin-bottom: 20px;
     border-radius: 5px;
     border: none;
     border: 1px solid gray;
+    width: 320%;
 }
 
 /* Icons */
