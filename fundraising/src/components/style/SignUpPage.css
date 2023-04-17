@@ -1,5 +1,5 @@
 .signup-body {
-    height: 100vh;
+    height: 110vh;
     padding-top: 10px;
     background-image: url('../images/background.png');
     background-repeat: repeat;
@@ -98,7 +98,7 @@
 }
 
 .signup--button {
-    width: 300px;
+    width: 320px;
     background: rgb(88,153,203);
     padding: 16px 10px;
     display: flex;
@@ -109,11 +109,12 @@
     color: white;
     border: none;
     transition: all .3s ease;
+    position: relative;
+    left: 2.5%;
 }
 
 .signup--button:hover {
     color: black;
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);;
 }
 
 /* Icons */
