@@ -17,23 +17,24 @@
     background: white;
     min-width: 900px;
     height: 600px;
-    border: 4px solid gold;
     border-radius: 10px;
     overflow: hidden;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.forum-header {
+.signin-header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
     width: 900px;
-    background-color: rgb(17, 17, 111);
+    border-radius: 10px 10px 0px 0px;
+    background-color: rgb(88,153,203);
 }
 
-.forum-header > h2 {
+.signin-header > h2 {
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
 }
 
 .forum-main {
@@ -88,10 +89,11 @@
     right: 184%
 }
 
-#eye-icon {
+#toggle-password {
     position: absolute;
     top: 64%;
     left: 180%;
+    cursor: pointer;
 }
 
 /* Icons */
@@ -107,12 +109,12 @@
     margin-top: 10px;
     color: white;
     border: none;
-    transition: all .3s ease;
+    transition: all .4s ease;
 }
 
 .signin--button:hover {
     color: black;
-    box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .register-options {

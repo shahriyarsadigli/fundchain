@@ -2,8 +2,11 @@ import Header1 from '../headers/Header1';
 import login from '../images/login.png';
 import '../style/SignInPage.css';
 import React, { Component } from 'react';
+import React, { useState } from 'react';
 
 class SignIn extends Component {
+
+
   constructor(props) {
     super(props);
     this.state = {
@@ -27,12 +30,24 @@ class SignIn extends Component {
       }
   };
 
+ 
+
   render() {
+     // Toggle password
+    function PasswordInput(props) {
+      const [showPassword, setShowPassword] = useState(false);
+
+      const togglePassword = () => {
+        setShowPassword(!showPassword);
+      }
+    
+    }
+
     return (
       <div className='signin-body'>
         <main className='signin-page'>
           <section className='signin'>
-            <div className='forum-header'>
+            <div className='signin-header'>
               <h2>Sign in to FundChain</h2>
             </div>
             <div className='forum-main'>
@@ -44,9 +59,7 @@ class SignIn extends Component {
                   <div className='forum-content'>
                         <i className='fa-solid fa-envelope' id='email-icon'></i>
                         <i className='fa-solid fa-key' id='password-icon'></i>
-                        <a href='#'>
-                          <i className='fa-regular fa-eye-slash' id='eye-icon'></i>
-                        </a>
+                        <i className='fa-regular fa-eye' id='toggle-password'></i>
                     <input
                       id='loginEmail'
                       type='text'
