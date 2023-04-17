@@ -12,26 +12,23 @@ class MyAccount extends Component {
                         <img src={Avatar1} className="user--avatar"/>
                     </div>
                     <div className='wallet--row'>
-                        <h3>My Wallet</h3>
-                        <button type="button" className="account-button">
-                                <span>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</span>
-                                <a><span>{Number(this.props.balance).toFixed(4)} ETH</span></a> {/* // show until 4 decimal places  */}
-                        </button> 
+                        <h5>My Wallet</h5>
+                        <div className='wallet--info'>
+                            <h6>{this.props.currentAccountData.name} {this.props.currentAccountData.surname}</h6>
+                            <span><p>Balance:</p> {Number(this.props.balance).toFixed(4)} ETH</span> {/* // show until 4 decimal places  */} 
+                        </div>
                     </div>
                     <div className='account--row'>
-                        <h3>My Account</h3>
-                        <span className='user--email'>{this.props.currentAccountData.email}</span>
-                        <a href="#"><span className='edit--profile'>Edit profile</span></a>
-                        <i class="fa-solid fa-pencil" id="edit--icon"></i>
+                        <h5>My Account</h5>
+                        <div className='account--info'>
+                            <span className='user--email'>{this.props.currentAccountData.email}</span>
+                            <a href="#">Edit profile<i class="fa-solid fa-pencil" id="edit--icon"></i></a>
+                        </div> 
                     </div>
                     <div className='wallet--address'>
                         <p>My wallet address:</p>
                         <span>{this.props.account}</span>
-                    </div>
-                    <div className="eth--icon">
-                        <i class="fa-brands fa-ethereum" id="et-icon"></i>
-                    </div>
-                    
+                    </div>  
                 </div>
                 <div className='section--second'>
                     <a href=""><span id="dashboard--button">Dashboard</span></a>

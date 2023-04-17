@@ -31,7 +31,6 @@
     display: flex;
     flex-direction: column;
     margin-right: 50px;
-    border:1px solid red;
 }
 
 .user--name {
@@ -45,15 +44,68 @@
     width: 20%;
     position: relative;
     bottom: 14%;
+    left: 4%;
     background-color: rgb(231, 231, 231);
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.wallet--row > button {
-    border: 1px solid black;
+.wallet--row > h5 {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(88,153,203);
+    color: white;
+    border-radius: 10px 10px 0px 0px;
 }
-.wallet--row > h3 {
-    margin-bottom: 30px;
+
+.wallet--info {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.wallet--info > h6 {
+    height: 100%;
+    width: 90%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    padding-left: 5px;
+    border: 2px solid rgb(88,153,203);
+}
+
+.wallet--info > span {
+    height: 40%;
+    width: 90%;
+    border: 2px solid gold;
+    background-color: rgb(88,153,203);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.wallet--info > span > p {
+    margin-right: 10px;
+    color: gold;
+    position: relative;
+    top: 25%;
+}
+
+.account--row > h5 {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(88,153,203);
+    color: white;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .account--row {
@@ -64,22 +116,29 @@
     width: 20%;
     position: relative;
     bottom: 14%;
-    left: 5%;
+    left: 8.6%;
     background-color: rgb(231, 231, 231);
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.account--row > a {
+.account--info {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.account--info > span {
+    font-size: 0.9em;
+    width: 90%;
+    font-weight: 500;
+    color: rgb(72, 72, 72);
+    padding-left: 5px;
+}
+
+.account--info > a {
     text-decoration: none;
-}
-
-.user--email {
-    color: rgb(54, 53, 53);
-    margin-bottom: 10px;
-    
-}
-
-.edit--profile {
+    width: 90%;
     padding: 5px 35px 5px 20px;
     background-color: white;
     display: flex;
@@ -91,53 +150,43 @@
     color: black;
 }
 
-.edit--profile:hover {
-    transform: scale(1.01);
+.account--info > a:hover {
+    color: blue;
 }
 
 #edit--icon {
-    position: absolute;
-    left: 66%;
-    top: 82%;
+    padding-left: 3px;
+
 }
+
 
 .wallet--address {
     height: 15%;
     width: 42.8%;
     position: absolute;
     top: 75%;
-    left: 16.5%;
+    left: 20%;
     background-color: rgb(231, 231, 231);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 8px;
+    border: 3px solid rgb(88,153,203);
 }
 
 .wallet--address > span {
-    font-size: 0.8em;
+    font-size: 0.9em;
     color: blue;
 }
 
 .wallet--address > p {
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: 600;
     margin-right: 10px;
+    position: relative;
+    top: 25%;
 }
 
-.eth--icon {
-    position: absolute;
-    height: 24px;
-    width: 24px;
-    border: 1px solid red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    left: 26%;
-    top: 39%;
-    border-radius: 50%;
-    background: red;
-}
 /* section 2 */
 
 .section--second {
@@ -147,7 +196,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    border: 1px solid red;
 }
 
 .section--second > a > span {
@@ -175,8 +223,8 @@
     width: 80%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    border: 1px solid red;
+    align-items: flex-start;
+    padding-top: 10px;
 }
 
 .donations--section {
@@ -184,12 +232,17 @@
     background: white;
     display: flex;
     justify-content: space-between;
-    width: 40%;
-    height: 60%;
+    align-items: center;
+    width: 45%;
+    height: 70%;
     border-radius: 20px;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
+.donations--section div{
+    height: 70%;
+    width: 50%;
+}
 
 .donations--section div > span{
     font-size: 2.5em;
@@ -197,7 +250,9 @@
 }
 
 .donations--section div > h5 {
+    font-size: 1em;
     font-weight: 500;
+    color: rgb(80, 80, 80);
 }
 
 .projects--section {
@@ -205,10 +260,16 @@
     background: white;
     display: flex;
     justify-content: space-between;
-    width: 40%;
-    height: 60%;
+    align-items: center;
+    width: 45%;
+    height: 70%;
     border-radius: 20px;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.projects--section div{
+    height: 70%;
+    width: 50%;
 }
 
 .projects--section div > span{
@@ -217,5 +278,7 @@
 }
 
 .projects--section div > h5 {
+    font-size: 1em;
     font-weight: 500;
+    color: rgb(80, 80, 80);
 }
