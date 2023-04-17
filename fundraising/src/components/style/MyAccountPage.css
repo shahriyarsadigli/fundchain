@@ -242,6 +242,9 @@
 .donations--section div{
     height: 70%;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .donations--section div > span{
@@ -270,6 +273,9 @@
 .projects--section div{
     height: 70%;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .projects--section div > span{
