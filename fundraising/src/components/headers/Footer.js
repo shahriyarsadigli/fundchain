@@ -20,7 +20,7 @@ export default function Footer() {
                 </div>
                 <div className='footer-row'>
                     <h6>FUNDCHAIN <i class="fa-regular fa-copyright"></i></h6>
-                    <span>fundchain2023@gmail.com</span>
+                    <span>info@fundchain.org</span>
                     <span>Powered by Ethereum</span>
                     <span>Baku, Azerbaijan</span>
                 </div>

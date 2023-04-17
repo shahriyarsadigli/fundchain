@@ -33,15 +33,6 @@ class SignIn extends Component {
 
   render() {
      // Toggle password
-    function PasswordInput(props) {
-      const [showPassword, setShowPassword] = useState(false);
-
-      const togglePassword = () => {
-        setShowPassword(!showPassword);
-      }
-    
-    }
-
     return (
       <div className='signin-body'>
         <main className='signin-page'>
