@@ -29,7 +29,9 @@ class SignIn extends Component {
       }
   };
 
- 
+  handleTogglePassword = () => {
+    this.setState({ showPassword: !this.state.showPassword });
+  }
 
   render() {
      // Toggle password
@@ -50,6 +52,9 @@ class SignIn extends Component {
                         <i className='fa-solid fa-envelope' id='email-icon'></i>
                         <i className='fa-solid fa-key' id='password-icon'></i>
                         <i className='fa-regular fa-eye' id='toggle-password'></i>
+                        <a href="javascript:void(0)" onClick={this.handleTogglePassword}>
+                          <i className={`fa-regular ${this.state.showPassword ? 'fa-eye' : 'fa-eye-slash'}`} id='eye-icon'></i>
+                        </a>
                     <input
                       id='loginEmail'
                       type='text'
@@ -69,7 +74,7 @@ class SignIn extends Component {
                     />
                     <input
                       id='loginPassword'
-                      type='password'
+                      type={this.state.showPassword ? 'text' : 'password'}
                       ref={(input) => {
                         this.loginPassword = input;
                       }}
