@@ -2,7 +2,6 @@ import Header1 from '../headers/Header1';
 import login from '../images/login.png';
 import '../style/SignInPage.css';
 import React, { Component } from 'react';
-import React, { useState } from 'react';
 
 class SignIn extends Component {
 
