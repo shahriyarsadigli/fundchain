@@ -162,13 +162,12 @@
 
 }
 
-
 .wallet--address {
     height: 15%;
     width: 42.8%;
     position: absolute;
     top: 75%;
-    left: 20%;
+    left: 21%;  
     background-color: rgb(231, 231, 231);
     display: flex;
     justify-content: center;

@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import { fromWei } from 'web3-utils';
 
 
-
 export default function ProjectCard(props) {
     function getCategoryName(category) {
         switch (category) {
@@ -23,15 +22,15 @@ export default function ProjectCard(props) {
             return 'Unknown';
         }
       }
-      
-      
+    
+    const images = require.context('../images/project_images', true);
 
     return(
         <div className="project-card">
 
             <div className="project-content">
             <a href={`/project/${props.project.slug}`} className="project-name">
-                {/* // move to the page of the project with this id  */}
+                {/* move to the page of the project with this id  */}
                 <h4>{props.project.title}</h4>
                 <span className="project-author">By {props.project.creator}</span>
                 <p>{props.project.excerpt}</p>
@@ -58,6 +57,10 @@ export default function ProjectCard(props) {
                 {parseInt(window.web3.utils.toWei(props.project.amountRaised.toString(), 'Ether')) >= parseInt(window.web3.utils.toWei(props.project.targetAmount.toString(), 'Ether'))
                         ? <p>Goal Reached!</p>
                         : null }
+
+                <div className="card">
+                    <img src={images(`./${props.project.imagePath}`)} alt="" />
+                </div>                
             </div>
         </div>
     )

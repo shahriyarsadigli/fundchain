@@ -134,3 +134,9 @@
     position: relative;
     bottom: 1px;
 }
+
+.card img {
+    width: 100%;
+    height: auto;
+  }
+  

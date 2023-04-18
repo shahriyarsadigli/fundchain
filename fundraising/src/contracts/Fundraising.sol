@@ -22,12 +22,13 @@ contract Fundraising {
         string title;
         string excerpt;
         string body;
+        string imagePath;
         string slug;
         Category category;  
         address payable creator;
         uint targetAmount;
         uint amountRaised;
-        uint createdAt;
+        // uint createdAt;
     }
 
     event projectCreated(
@@ -35,12 +36,12 @@ contract Fundraising {
         string title,
         string excerpt,
         string body,
+        string imagePath,
         string slug,
         Category category,
         address payable creator,
         uint targetAmount,
-        uint amountRaised,
-        uint createdAt
+        uint amountRaised
     );
 
     event projectDonated(
@@ -48,12 +49,12 @@ contract Fundraising {
         string title,
         string excerpt,
         string body,
+        string imagePath,
         string slug,
         Category category,
         address payable creator,
         uint targetAmount,
-        uint amountRaised,        
-        uint createdAt
+        uint amountRaised        
     );
 
     event projectDeleted(
@@ -61,15 +62,15 @@ contract Fundraising {
         string title,
         string excerpt,
         string body,
+        string imagePath,
         string slug,
         Category category,
         address payable creator,
         uint targetAmount,
-        uint amountRaised,
-        uint createdAt
+        uint amountRaised
     );
 
-    function createProject(string memory _title, string memory _excerpt, string memory _body, string memory _slug, Category _category, uint _targetAmount) public {
+    function createProject(string memory _title, string memory _excerpt, string memory _body, string memory _imagePath, string memory _slug, Category _category, uint _targetAmount) public {
         uint _amountRaised = 0;
         require(bytes(_title).length > 0);
         require(bytes(_excerpt).length > 0);
@@ -84,11 +85,11 @@ contract Fundraising {
         // add to the number of projects the user created and modify in Users contract
         usersContract.addProject(msg.sender);
 
-        uint _createdAt = block.timestamp;
+        // uint _createdAt = block.timestamp;
 
         projectNum++;
-        projects[projectNum] = Project(projectNum, _title, _excerpt, _body, _slug, _category, msg.sender, _targetAmount, _amountRaised, _createdAt);
-        emit projectCreated(projectNum, _title, _excerpt, _body, _slug, _category, msg.sender, _targetAmount, _amountRaised, _createdAt);
+        projects[projectNum] = Project(projectNum, _title, _excerpt, _body, _imagePath, _slug, _category, msg.sender, _targetAmount, _amountRaised);
+        emit projectCreated(projectNum, _title, _excerpt, _body, _imagePath, _slug, _category, msg.sender, _targetAmount, _amountRaised);
     }
 
     function donateProject(uint _id) public payable { // we make it payable to be able to make transactions
@@ -119,7 +120,7 @@ contract Fundraising {
 
 
         
-        emit projectDonated(projectNum, _project.title, _project.excerpt, _project.body, _project.slug, _project.category, _fundraiser, _project.targetAmount, _project.amountRaised, _project.createdAt);  
+        emit projectDonated(projectNum, _project.title, _project.excerpt, _project.body, _project.imagePath, _project.slug, _project.category, _fundraiser, _project.targetAmount, _project.amountRaised);  
 
     }
 
@@ -137,7 +138,7 @@ contract Fundraising {
         // Delete the project from the mapping
         delete projects[_id];
 
-        emit projectDeleted(projectNum, _project.title, _project.excerpt, _project.body, _project.slug, _project.category, _fundraiser, _project.targetAmount, _project.amountRaised, _project.createdAt);
+        emit projectDeleted(projectNum, _project.title, _project.excerpt, _project.body, _project.imagePath, _project.slug, _project.category, _fundraiser, _project.targetAmount, _project.amountRaised);
     }
 
 }

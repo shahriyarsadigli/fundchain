@@ -205,7 +205,7 @@ class App extends Component {
     localStorage.removeItem('isLoggedIn');
   }
   
-  createProject(title, excerpt, body, category, targetAmount) {
+  createProject(title, excerpt, body, imagePath, category, targetAmount) {
     if (targetAmount <= 0) {
       alert("Target amount must be above zero!")
       return;
@@ -221,7 +221,7 @@ class App extends Component {
     // and we assign the uniqueID as 1 if the 
     slug += "-" + uniqueID;
 
-    this.state.fundraising.methods.createProject(title, excerpt, body, slug, category, targetAmount).send({ from: this.state.account })
+    this.state.fundraising.methods.createProject(title, excerpt, body, imagePath, slug, category, targetAmount).send({ from: this.state.account })
     .once('receipt', () => {
       this.handleTransactionResponse();
       this.setState({ loading: true }) // show loading screen before redirecting to the projects page

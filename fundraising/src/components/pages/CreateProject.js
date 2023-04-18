@@ -1,5 +1,7 @@
 import '../style/CreateProject.css'
 import React, { Component } from 'react'
+import technology1 from '../images/project_images/technology1.jpeg'
+import technology2 from '../images/project_images/technology2.jpeg'
 
 class CreateProject extends Component {
     state = {
@@ -10,9 +12,33 @@ class CreateProject extends Component {
           { value: 3, label: 'Environment' },
           { value: 4, label: 'Education' },
           { value: 5, label: 'Art' },
-        ]
+        ],
+        showImageMenu: false,
+        showImageOptions: false,
+        projectData: {
+              image: ''
+            }
+      };
+    
+    imageOptions = [
+        { value: 'technology1.jpeg', label: 'Technology 1', image: technology1 },
+        { value: 'technology2.jpeg', label: 'Technology 2', image: technology2 },
+        // and so on for all your images
+    ];
+
+
+    handleImageChange = (selectedImage) => {
+        this.setState({ projectData: { 
+            ...this.state.projectData, 
+            image: selectedImage },         
+            showImageOptions: false
+        })
+        console.log(this.state.projectData.image)
       };
       
+      toggleImageOptions = () => {
+        this.setState({ showImageOptions: !this.state.showImageOptions });
+      };
     
     render() {
         return (
@@ -28,8 +54,9 @@ class CreateProject extends Component {
                         const body = this.projectBody.value
                         const category = this.projectCategory.value
                         const targetAmount = window.web3.utils.toWei(this.targetAmount.value.toString(), 'Ether')
+                        const imagePath = this.state.projectData.image
 
-                        this.props.createProject(title, excerpt, body, category, targetAmount)
+                        this.props.createProject(title, excerpt, body, imagePath, category, targetAmount)
                         }}>
                 <div className='project-info'>
                     <div className='project-info-1'>
@@ -87,7 +114,26 @@ class CreateProject extends Component {
                         <option value={category.value}>{category.label}</option>
                     ))}
                     </select>
+                    </div>
 
+ 
+
+                    <div className="project-info6">
+                    <button type="button" onClick={this.toggleImageOptions}>Choose Image</button>
+                    {this.state.showImageOptions && (
+                        <ul className="image-grid">
+                        {this.imageOptions.map((option) => (
+                            <li
+                            key={option.value}
+                            className={this.state.projectData.image === option.value ? 'selected' : ''}
+                            onClick={() => this.handleImageChange(option.value)}
+                            >
+                            <img src={option.image} alt={option.label} />
+                            <span>{option.label}</span>
+                            </li>
+                        ))}
+                        </ul>
+                    )}
                     </div>
     
                     <div className='project-button'>

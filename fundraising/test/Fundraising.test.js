@@ -34,7 +34,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
 
     before(async () => {
         projectOutcome = await fundraising.createProject('FundChain StartUP',
-        'this is excerpt', 'this is body', 'slug-example', 5, '10000',{ from: fundraiser });
+        'this is excerpt', 'this is body', 'img.jpg', 'slug-example', 5, '10000',{ from: fundraiser });
         projectNum = await fundraising.projectNum()
       })
 
@@ -119,7 +119,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
         // await fundraising.donateProject(projectNum, { from: donor, value: '0'}).should.be.rejected;
     })
 
-    /*
+    
     it('deletes project', async () => {
       // console.log("SALAM")
       
@@ -127,7 +127,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
 
       // create one more project to test deletion
       projectOutcome = await fundraising.createProject('FundChain StartUP',
-        'this is excerpt', 'this is body', 'slug-example', 5, '10000',{ from: fundraiser });
+        'this is excerpt', 'this is body', 'img.jpg', 'slug-example', 5, '10000',{ from: fundraiser });
 
       // console.log(projectOutcome.logs[0].args.id.toNumber())
 
@@ -141,7 +141,7 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
       
       // check if the project is deleted
       assert.equal(project[1], "");
-    }); */
+    }); 
     
   })
 })

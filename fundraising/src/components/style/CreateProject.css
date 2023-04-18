@@ -101,3 +101,24 @@
     text-decoration: none;
 }
 
+/* image selection */
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    list-style: none;
+}
+  
+  
+.image-grid li {
+    width: 100%;
+}
+  
+.image-grid img {
+    max-width: 90%;
+    height: 90px;
+}
+  

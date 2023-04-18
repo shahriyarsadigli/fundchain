@@ -1,10 +1,6 @@
-import rocket from '../images/Ethereum-Logo.png';
-import smoke from '../images/smokey.png';
-import Header1 from '../headers/Header1.js'
 import Artwork from '../images/Fundchain-artwork.png'
 import '../style/HomePage.css';
 import React from 'react';
-import Footer from '../headers/Footer.js'
 
 
 export default function HomePage() {
