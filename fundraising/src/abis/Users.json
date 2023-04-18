@@ -290,7 +290,11 @@
             "name": "className",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "58:23:1",
+=======
+            "src": "55:23:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -316,7 +320,11 @@
             "name": "userNum",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "88:23:1",
+=======
+            "src": "84:23:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -359,7 +367,11 @@
             "name": "users",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "120:37:1",
+=======
+            "src": "114:37:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -390,7 +402,11 @@
                 "name": "User",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 456,
+<<<<<<< Updated upstream
                 "src": "139:4:1",
+=======
+                "src": "133:4:1",
+>>>>>>> Stashed changes
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_User_$456_storage_ptr",
                   "typeString": "struct Users.User"
@@ -406,7 +422,11 @@
             "name": "usernameExists",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "164:46:1",
+=======
+            "src": "157:46:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -451,7 +471,11 @@
             "name": "emailExists",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "217:43:1",
+=======
+            "src": "209:43:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -500,7 +524,11 @@
                 "name": "userAddress",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "294:19:1",
+=======
+                "src": "282:19:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -527,7 +555,11 @@
                 "name": "name",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "324:11:1",
+=======
+                "src": "311:11:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -553,7 +585,11 @@
                 "name": "surname",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "346:14:1",
+=======
+                "src": "332:14:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -579,7 +615,11 @@
                 "name": "username",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "371:15:1",
+=======
+                "src": "356:15:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -605,7 +645,11 @@
                 "name": "email",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "397:12:1",
+=======
+                "src": "381:12:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -631,7 +675,11 @@
                 "name": "passwordHash",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "420:20:1",
+=======
+                "src": "403:20:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -657,7 +705,11 @@
                 "name": "numDonations",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "451:17:1",
+=======
+                "src": "433:17:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -683,7 +735,11 @@
                 "name": "numProjects",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "479:16:1",
+=======
+                "src": "460:16:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -709,7 +765,11 @@
                 "name": "totalDonationsFunded",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "506:25:1",
+=======
+                "src": "486:25:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -735,7 +795,11 @@
                 "name": "totalDonationsReceived",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "542:27:1",
+=======
+                "src": "521:27:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -759,7 +823,11 @@
             "name": "User",
             "nodeType": "StructDefinition",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "271:306:1",
+=======
+            "src": "260:295:1",
+>>>>>>> Stashed changes
             "visibility": "public"
           },
           {
@@ -779,7 +847,11 @@
                   "name": "userAddress",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "613:19:1",
+=======
+                  "src": "588:19:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -807,7 +879,11 @@
                   "name": "name",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "643:11:1",
+=======
+                  "src": "617:11:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -834,7 +910,11 @@
                   "name": "surname",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "665:14:1",
+=======
+                  "src": "638:14:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -861,7 +941,11 @@
                   "name": "username",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "690:15:1",
+=======
+                  "src": "662:15:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -888,7 +972,11 @@
                   "name": "email",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "716:12:1",
+=======
+                  "src": "687:12:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -915,7 +1003,11 @@
                   "name": "passwordHash",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "739:20:1",
+=======
+                  "src": "709:20:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -961,7 +1053,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 420,
+<<<<<<< Updated upstream
                       "src": "808:9:1",
+=======
+                      "src": "774:9:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
                         "typeString": "string storage ref"
@@ -1019,7 +1115,11 @@
               "src": "797:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "775:69:1",
+=======
+            "src": "742:67:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -1056,7 +1156,11 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                               "src": "1013:5:1",
+=======
+                              "src": "975:5:1",
+>>>>>>> Stashed changes
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                                 "typeString": "mapping(address => struct Users.User storage ref)"
@@ -1072,7 +1176,11 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                                 "src": "1019:3:1",
+=======
+                                "src": "981:3:1",
+>>>>>>> Stashed changes
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
@@ -1111,7 +1219,11 @@
                           "memberName": "userAddress",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 437,
+<<<<<<< Updated upstream
                           "src": "1013:29:1",
+=======
+                          "src": "975:29:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -1219,7 +1331,11 @@
                         694
                       ],
                       "referencedDeclaration": 694,
+<<<<<<< Updated upstream
                       "src": "1005:7:1",
+=======
+                      "src": "967:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -1267,7 +1383,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 431,
+<<<<<<< Updated upstream
                             "src": "1117:14:1",
+=======
+                            "src": "1078:14:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                               "typeString": "mapping(string memory => bool)"
@@ -1281,7 +1401,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 484,
+<<<<<<< Updated upstream
                             "src": "1132:9:1",
+=======
+                            "src": "1093:9:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
                               "typeString": "string memory"
@@ -1341,7 +1465,11 @@
                         694
                       ],
                       "referencedDeclaration": 694,
+<<<<<<< Updated upstream
                       "src": "1108:7:1",
+=======
+                      "src": "1069:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -1389,7 +1517,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 435,
+<<<<<<< Updated upstream
                             "src": "1190:11:1",
+=======
+                            "src": "1150:11:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                               "typeString": "mapping(string memory => bool)"
@@ -1403,7 +1535,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 486,
+<<<<<<< Updated upstream
                             "src": "1202:6:1",
+=======
+                            "src": "1162:6:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
                               "typeString": "string memory"
@@ -1463,7 +1599,11 @@
                         694
                       ],
                       "referencedDeclaration": 694,
+<<<<<<< Updated upstream
                       "src": "1181:7:1",
+=======
+                      "src": "1141:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -1498,7 +1638,11 @@
                       "name": "_numDonations",
                       "nodeType": "VariableDeclaration",
                       "scope": 577,
+<<<<<<< Updated upstream
                       "src": "1278:18:1",
+=======
+                      "src": "1235:18:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1552,7 +1696,11 @@
                       "name": "_numProjects",
                       "nodeType": "VariableDeclaration",
                       "scope": 577,
+<<<<<<< Updated upstream
                       "src": "1311:17:1",
+=======
+                      "src": "1267:17:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1606,7 +1754,11 @@
                       "name": "_totalDonationsFunded",
                       "nodeType": "VariableDeclaration",
                       "scope": 577,
+<<<<<<< Updated upstream
                       "src": "1343:26:1",
+=======
+                      "src": "1298:26:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1660,7 +1812,11 @@
                       "name": "_totalDonationsReceived",
                       "nodeType": "VariableDeclaration",
                       "scope": 577,
+<<<<<<< Updated upstream
                       "src": "1384:28:1",
+=======
+                      "src": "1338:28:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -1720,7 +1876,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                         "src": "1433:5:1",
+=======
+                        "src": "1383:5:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                           "typeString": "mapping(address => struct Users.User storage ref)"
@@ -1736,7 +1896,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                           "src": "1439:3:1",
+=======
+                          "src": "1389:3:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -1781,7 +1945,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                             "src": "1458:3:1",
+=======
+                            "src": "1408:3:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
@@ -1808,6 +1976,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 480,
+<<<<<<< Updated upstream
                           "src": "1470:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -1848,6 +2017,9 @@
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 486,
                           "src": "1498:6:1",
+=======
+                          "src": "1420:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -1855,12 +2027,58 @@
                         },
                         {
                           "argumentTypes": null,
+<<<<<<< Updated upstream
+=======
+                          "id": 544,
+                          "name": "_surname",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 482,
+                          "src": "1427:8:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 545,
+                          "name": "_username",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 484,
+                          "src": "1437:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 546,
+                          "name": "_email",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 486,
+                          "src": "1448:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+>>>>>>> Stashed changes
                           "id": 547,
                           "name": "_passwordHash",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 488,
+<<<<<<< Updated upstream
                           "src": "1506:13:1",
+=======
+                          "src": "1456:13:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes32",
                             "typeString": "bytes32"
@@ -1873,7 +2091,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 521,
+<<<<<<< Updated upstream
                           "src": "1521:13:1",
+=======
+                          "src": "1471:13:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1886,7 +2108,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 525,
+<<<<<<< Updated upstream
                           "src": "1586:12:1",
+=======
+                          "src": "1535:12:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1899,7 +2125,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 529,
+<<<<<<< Updated upstream
                           "src": "1600:21:1",
+=======
+                          "src": "1549:21:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1912,7 +2142,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 533,
+<<<<<<< Updated upstream
                           "src": "1623:23:1",
+=======
+                          "src": "1572:23:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -1967,7 +2201,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 456,
+<<<<<<< Updated upstream
                         "src": "1453:4:1",
+=======
+                        "src": "1403:4:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_User_$456_storage_ptr_$",
                           "typeString": "type(struct Users.User storage pointer)"
@@ -2014,7 +2252,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 431,
+<<<<<<< Updated upstream
                         "src": "1658:14:1",
+=======
+                        "src": "1606:14:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                           "typeString": "mapping(string memory => bool)"
@@ -2028,7 +2270,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 484,
+<<<<<<< Updated upstream
                         "src": "1673:9:1",
+=======
+                        "src": "1621:9:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -2092,7 +2338,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 435,
+<<<<<<< Updated upstream
                         "src": "1701:11:1",
+=======
+                        "src": "1648:11:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                           "typeString": "mapping(string memory => bool)"
@@ -2106,7 +2356,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 486,
+<<<<<<< Updated upstream
                         "src": "1713:6:1",
+=======
+                        "src": "1660:6:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -2166,7 +2420,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                           "src": "1759:3:1",
+=======
+                          "src": "1703:3:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -2193,6 +2451,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 480,
+<<<<<<< Updated upstream
                         "src": "1771:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -2233,6 +2492,9 @@
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 486,
                         "src": "1799:6:1",
+=======
+                        "src": "1715:5:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -2240,12 +2502,58 @@
                       },
                       {
                         "argumentTypes": null,
+<<<<<<< Updated upstream
+=======
+                        "id": 571,
+                        "name": "_surname",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 482,
+                        "src": "1722:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 572,
+                        "name": "_username",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 484,
+                        "src": "1732:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 573,
+                        "name": "_email",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 486,
+                        "src": "1743:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+>>>>>>> Stashed changes
                         "id": 574,
                         "name": "_passwordHash",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 488,
+<<<<<<< Updated upstream
                         "src": "1807:13:1",
+=======
+                        "src": "1751:13:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -2284,7 +2592,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 470,
+<<<<<<< Updated upstream
                       "src": "1747:11:1",
+=======
+                      "src": "1691:11:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_bytes32_$returns$__$",
                         "typeString": "function (address,string memory,string memory,string memory,string memory,bytes32)"
@@ -2327,7 +2639,11 @@
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "872:19:1",
+=======
+                  "src": "835:19:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2353,7 +2669,11 @@
                   "name": "_surname",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "893:22:1",
+=======
+                  "src": "856:22:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2379,7 +2699,11 @@
                   "name": "_username",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "917:23:1",
+=======
+                  "src": "880:23:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2405,7 +2729,11 @@
                   "name": "_email",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "942:20:1",
+=======
+                  "src": "905:20:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2431,7 +2759,11 @@
                   "name": "_passwordHash",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "964:21:1",
+=======
+                  "src": "927:21:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2461,7 +2793,11 @@
               "src": "994:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "852:977:1",
+=======
+            "src": "815:957:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -2485,7 +2821,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 431,
+<<<<<<< Updated upstream
                           "src": "2018:14:1",
+=======
+                          "src": "1958:14:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                             "typeString": "mapping(string memory => bool)"
@@ -2499,7 +2839,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 580,
+<<<<<<< Updated upstream
                           "src": "2033:9:1",
+=======
+                          "src": "1973:9:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -2554,7 +2898,11 @@
                         694
                       ],
                       "referencedDeclaration": 694,
+<<<<<<< Updated upstream
                       "src": "2010:7:1",
+=======
+                      "src": "1950:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -2589,7 +2937,11 @@
                       "name": "userAddress",
                       "nodeType": "VariableDeclaration",
                       "scope": 619,
+<<<<<<< Updated upstream
                       "src": "2082:19:1",
+=======
+                      "src": "2021:19:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -2623,7 +2975,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                         "src": "2104:5:1",
+=======
+                        "src": "2043:5:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                           "typeString": "mapping(address => struct Users.User storage ref)"
@@ -2639,7 +2995,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                           "src": "2110:3:1",
+=======
+                          "src": "2049:3:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -2678,7 +3038,11 @@
                     "memberName": "userAddress",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 437,
+<<<<<<< Updated upstream
                     "src": "2104:29:1",
+=======
+                    "src": "2043:29:1",
+>>>>>>> Stashed changes
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -2698,7 +3062,11 @@
                       "name": "storedPasswordHash",
                       "nodeType": "VariableDeclaration",
                       "scope": 619,
+<<<<<<< Updated upstream
                       "src": "2144:26:1",
+=======
+                      "src": "2082:26:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -2731,7 +3099,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                         "src": "2173:5:1",
+=======
+                        "src": "2111:5:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                           "typeString": "mapping(address => struct Users.User storage ref)"
@@ -2745,7 +3117,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 595,
+<<<<<<< Updated upstream
                         "src": "2179:11:1",
+=======
+                        "src": "2117:11:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -2770,7 +3146,11 @@
                     "memberName": "passwordHash",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 447,
+<<<<<<< Updated upstream
                     "src": "2173:31:1",
+=======
+                    "src": "2111:31:1",
+>>>>>>> Stashed changes
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2798,7 +3178,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 603,
+<<<<<<< Updated upstream
                       "src": "2219:18:1",
+=======
+                      "src": "2156:18:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -2813,7 +3197,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 582,
+<<<<<<< Updated upstream
                       "src": "2241:13:1",
+=======
+                      "src": "2178:13:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -2835,6 +3223,43 @@
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
                           "id": 615,
+<<<<<<< Updated upstream
+=======
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2256:5:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 586,
+                        "id": 616,
+                        "nodeType": "Return",
+                        "src": "2249:12:1"
+                      }
+                    ]
+                  },
+                  "id": 618,
+                  "nodeType": "IfStatement",
+                  "src": "2152:120:1",
+                  "trueBody": {
+                    "id": 614,
+                    "nodeType": "Block",
+                    "src": "2193:36:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 612,
+>>>>>>> Stashed changes
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -2910,7 +3335,11 @@
                   "name": "_username",
                   "nodeType": "VariableDeclaration",
                   "scope": 620,
+<<<<<<< Updated upstream
                   "src": "1856:23:1",
+=======
+                  "src": "1797:23:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -2936,7 +3365,11 @@
                   "name": "_passwordHash",
                   "nodeType": "VariableDeclaration",
                   "scope": 620,
+<<<<<<< Updated upstream
                   "src": "1881:21:1",
+=======
+                  "src": "1822:21:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2969,7 +3402,11 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 620,
+<<<<<<< Updated upstream
                   "src": "1924:4:1",
+=======
+                  "src": "1865:4:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2993,7 +3430,11 @@
               "src": "1923:6:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "1837:509:1",
+=======
+            "src": "1778:500:1",
+>>>>>>> Stashed changes
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -3027,7 +3468,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "2665:5:1",
+=======
+                          "src": "2592:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -3041,7 +3486,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 622,
+<<<<<<< Updated upstream
                           "src": "2671:17:1",
+=======
+                          "src": "2598:17:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -3066,7 +3515,11 @@
                       "memberName": "numDonations",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 449,
+<<<<<<< Updated upstream
                       "src": "2665:37:1",
+=======
+                      "src": "2592:37:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3100,7 +3553,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "2715:5:1",
+=======
+                          "src": "2641:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -3114,7 +3571,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 622,
+<<<<<<< Updated upstream
                           "src": "2721:17:1",
+=======
+                          "src": "2647:17:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -3139,7 +3600,11 @@
                       "memberName": "totalDonationsFunded",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 453,
+<<<<<<< Updated upstream
                       "src": "2715:45:1",
+=======
+                      "src": "2641:45:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3154,7 +3619,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 626,
+<<<<<<< Updated upstream
                       "src": "2764:7:1",
+=======
+                      "src": "2690:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3189,7 +3658,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "2782:5:1",
+=======
+                          "src": "2707:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -3203,7 +3676,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 624,
+<<<<<<< Updated upstream
                           "src": "2788:22:1",
+=======
+                          "src": "2713:22:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -3228,7 +3705,11 @@
                       "memberName": "totalDonationsReceived",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 455,
+<<<<<<< Updated upstream
                       "src": "2782:52:1",
+=======
+                      "src": "2707:52:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3243,7 +3724,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 626,
+<<<<<<< Updated upstream
                       "src": "2838:7:1",
+=======
+                      "src": "2763:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3278,7 +3763,11 @@
                   "name": "_userAddressDonor",
                   "nodeType": "VariableDeclaration",
                   "scope": 650,
+<<<<<<< Updated upstream
                   "src": "2375:25:1",
+=======
+                  "src": "2305:25:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3305,7 +3794,11 @@
                   "name": "_userAddressFundraiser",
                   "nodeType": "VariableDeclaration",
                   "scope": 650,
+<<<<<<< Updated upstream
                   "src": "2402:30:1",
+=======
+                  "src": "2332:30:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3332,7 +3825,11 @@
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 650,
+<<<<<<< Updated upstream
                   "src": "2434:12:1",
+=======
+                  "src": "2364:12:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3362,7 +3859,11 @@
               "src": "2455:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "2354:499:1",
+=======
+            "src": "2284:493:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -3396,7 +3897,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "3027:5:1",
+=======
+                          "src": "2947:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -3410,7 +3915,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 652,
+<<<<<<< Updated upstream
                           "src": "3033:19:1",
+=======
+                          "src": "2953:19:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -3435,7 +3944,11 @@
                       "memberName": "numProjects",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 451,
+<<<<<<< Updated upstream
                       "src": "3027:38:1",
+=======
+                      "src": "2947:38:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3469,7 +3982,11 @@
                   "name": "_userAddressCreator",
                   "nodeType": "VariableDeclaration",
                   "scope": 662,
+<<<<<<< Updated upstream
                   "src": "2881:27:1",
+=======
+                  "src": "2803:27:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3500,7 +4017,11 @@
               "src": "2917:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "2861:214:1",
+=======
+            "src": "2783:211:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -3534,7 +4055,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "3253:5:1",
+=======
+                          "src": "3168:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -3548,7 +4073,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 664,
+<<<<<<< Updated upstream
                           "src": "3259:19:1",
+=======
+                          "src": "3174:19:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -3573,7 +4102,11 @@
                       "memberName": "numProjects",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 451,
+<<<<<<< Updated upstream
                       "src": "3253:38:1",
+=======
+                      "src": "3168:38:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -3607,7 +4140,11 @@
                   "name": "_userAddressCreator",
                   "nodeType": "VariableDeclaration",
                   "scope": 674,
+<<<<<<< Updated upstream
                   "src": "3107:27:1",
+=======
+                  "src": "3024:27:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -3638,14 +4175,22 @@
               "src": "3143:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "3083:218:1",
+=======
+            "src": "3000:215:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 676,
+<<<<<<< Updated upstream
         "src": "36:3272:1"
+=======
+        "src": "34:3185:1"
+>>>>>>> Stashed changes
       }
     ],
     "src": "0:3308:1"
@@ -3693,7 +4238,11 @@
             "name": "className",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "58:23:1",
+=======
+            "src": "55:23:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -3719,7 +4268,11 @@
             "name": "userNum",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "88:23:1",
+=======
+            "src": "84:23:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -3762,7 +4315,11 @@
             "name": "users",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "120:37:1",
+=======
+            "src": "114:37:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -3793,7 +4350,11 @@
                 "name": "User",
                 "nodeType": "UserDefinedTypeName",
                 "referencedDeclaration": 456,
+<<<<<<< Updated upstream
                 "src": "139:4:1",
+=======
+                "src": "133:4:1",
+>>>>>>> Stashed changes
                 "typeDescriptions": {
                   "typeIdentifier": "t_struct$_User_$456_storage_ptr",
                   "typeString": "struct Users.User"
@@ -3809,7 +4370,11 @@
             "name": "usernameExists",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "164:46:1",
+=======
+            "src": "157:46:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -3854,7 +4419,11 @@
             "name": "emailExists",
             "nodeType": "VariableDeclaration",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "217:43:1",
+=======
+            "src": "209:43:1",
+>>>>>>> Stashed changes
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -3903,7 +4472,11 @@
                 "name": "userAddress",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "294:19:1",
+=======
+                "src": "282:19:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -3930,7 +4503,11 @@
                 "name": "name",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "324:11:1",
+=======
+                "src": "311:11:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -3956,7 +4533,11 @@
                 "name": "surname",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "346:14:1",
+=======
+                "src": "332:14:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -3982,7 +4563,11 @@
                 "name": "username",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "371:15:1",
+=======
+                "src": "356:15:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -4008,7 +4593,11 @@
                 "name": "email",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "397:12:1",
+=======
+                "src": "381:12:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -4034,7 +4623,11 @@
                 "name": "passwordHash",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "420:20:1",
+=======
+                "src": "403:20:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -4060,7 +4653,11 @@
                 "name": "numDonations",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "451:17:1",
+=======
+                "src": "433:17:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -4086,7 +4683,11 @@
                 "name": "numProjects",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "479:16:1",
+=======
+                "src": "460:16:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -4112,7 +4713,11 @@
                 "name": "totalDonationsFunded",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "506:25:1",
+=======
+                "src": "486:25:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -4138,7 +4743,11 @@
                 "name": "totalDonationsReceived",
                 "nodeType": "VariableDeclaration",
                 "scope": 456,
+<<<<<<< Updated upstream
                 "src": "542:27:1",
+=======
+                "src": "521:27:1",
+>>>>>>> Stashed changes
                 "stateVariable": false,
                 "storageLocation": "default",
                 "typeDescriptions": {
@@ -4162,7 +4771,11 @@
             "name": "User",
             "nodeType": "StructDefinition",
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "271:306:1",
+=======
+            "src": "260:295:1",
+>>>>>>> Stashed changes
             "visibility": "public"
           },
           {
@@ -4182,7 +4795,11 @@
                   "name": "userAddress",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "613:19:1",
+=======
+                  "src": "588:19:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4210,7 +4827,11 @@
                   "name": "name",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "643:11:1",
+=======
+                  "src": "617:11:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4237,7 +4858,11 @@
                   "name": "surname",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "665:14:1",
+=======
+                  "src": "638:14:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4264,7 +4889,11 @@
                   "name": "username",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "690:15:1",
+=======
+                  "src": "662:15:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4291,7 +4920,11 @@
                   "name": "email",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "716:12:1",
+=======
+                  "src": "687:12:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4318,7 +4951,11 @@
                   "name": "passwordHash",
                   "nodeType": "VariableDeclaration",
                   "scope": 470,
+<<<<<<< Updated upstream
                   "src": "739:20:1",
+=======
+                  "src": "709:20:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -4364,7 +5001,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 420,
+<<<<<<< Updated upstream
                       "src": "808:9:1",
+=======
+                      "src": "774:9:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_string_storage",
                         "typeString": "string storage ref"
@@ -4422,7 +5063,11 @@
               "src": "797:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "775:69:1",
+=======
+            "src": "742:67:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -4459,7 +5104,11 @@
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
                               "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                               "src": "1013:5:1",
+=======
+                              "src": "975:5:1",
+>>>>>>> Stashed changes
                               "typeDescriptions": {
                                 "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                                 "typeString": "mapping(address => struct Users.User storage ref)"
@@ -4475,7 +5124,11 @@
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
                                 "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                                 "src": "1019:3:1",
+=======
+                                "src": "981:3:1",
+>>>>>>> Stashed changes
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
@@ -4514,7 +5167,11 @@
                           "memberName": "userAddress",
                           "nodeType": "MemberAccess",
                           "referencedDeclaration": 437,
+<<<<<<< Updated upstream
                           "src": "1013:29:1",
+=======
+                          "src": "975:29:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -4622,7 +5279,11 @@
                         694
                       ],
                       "referencedDeclaration": 694,
+<<<<<<< Updated upstream
                       "src": "1005:7:1",
+=======
+                      "src": "967:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -4670,7 +5331,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 431,
+<<<<<<< Updated upstream
                             "src": "1117:14:1",
+=======
+                            "src": "1078:14:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                               "typeString": "mapping(string memory => bool)"
@@ -4684,7 +5349,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 484,
+<<<<<<< Updated upstream
                             "src": "1132:9:1",
+=======
+                            "src": "1093:9:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
                               "typeString": "string memory"
@@ -4744,7 +5413,11 @@
                         694
                       ],
                       "referencedDeclaration": 694,
+<<<<<<< Updated upstream
                       "src": "1108:7:1",
+=======
+                      "src": "1069:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -4792,7 +5465,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 435,
+<<<<<<< Updated upstream
                             "src": "1190:11:1",
+=======
+                            "src": "1150:11:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                               "typeString": "mapping(string memory => bool)"
@@ -4806,7 +5483,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 486,
+<<<<<<< Updated upstream
                             "src": "1202:6:1",
+=======
+                            "src": "1162:6:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_string_memory_ptr",
                               "typeString": "string memory"
@@ -4866,7 +5547,11 @@
                         694
                       ],
                       "referencedDeclaration": 694,
+<<<<<<< Updated upstream
                       "src": "1181:7:1",
+=======
+                      "src": "1141:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -4901,7 +5586,11 @@
                       "name": "_numDonations",
                       "nodeType": "VariableDeclaration",
                       "scope": 577,
+<<<<<<< Updated upstream
                       "src": "1278:18:1",
+=======
+                      "src": "1235:18:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -4955,7 +5644,11 @@
                       "name": "_numProjects",
                       "nodeType": "VariableDeclaration",
                       "scope": 577,
+<<<<<<< Updated upstream
                       "src": "1311:17:1",
+=======
+                      "src": "1267:17:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -5009,7 +5702,11 @@
                       "name": "_totalDonationsFunded",
                       "nodeType": "VariableDeclaration",
                       "scope": 577,
+<<<<<<< Updated upstream
                       "src": "1343:26:1",
+=======
+                      "src": "1298:26:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -5063,7 +5760,11 @@
                       "name": "_totalDonationsReceived",
                       "nodeType": "VariableDeclaration",
                       "scope": 577,
+<<<<<<< Updated upstream
                       "src": "1384:28:1",
+=======
+                      "src": "1338:28:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -5123,7 +5824,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                         "src": "1433:5:1",
+=======
+                        "src": "1383:5:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                           "typeString": "mapping(address => struct Users.User storage ref)"
@@ -5139,7 +5844,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                           "src": "1439:3:1",
+=======
+                          "src": "1389:3:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -5184,7 +5893,11 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                             "src": "1458:3:1",
+=======
+                            "src": "1408:3:1",
+>>>>>>> Stashed changes
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
                               "typeString": "msg"
@@ -5211,6 +5924,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 480,
+<<<<<<< Updated upstream
                           "src": "1470:5:1",
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
@@ -5251,6 +5965,9 @@
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 486,
                           "src": "1498:6:1",
+=======
+                          "src": "1420:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -5258,12 +5975,58 @@
                         },
                         {
                           "argumentTypes": null,
+<<<<<<< Updated upstream
+=======
+                          "id": 544,
+                          "name": "_surname",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 482,
+                          "src": "1427:8:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 545,
+                          "name": "_username",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 484,
+                          "src": "1437:9:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+                          "id": 546,
+                          "name": "_email",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 486,
+                          "src": "1448:6:1",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        {
+                          "argumentTypes": null,
+>>>>>>> Stashed changes
                           "id": 547,
                           "name": "_passwordHash",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 488,
+<<<<<<< Updated upstream
                           "src": "1506:13:1",
+=======
+                          "src": "1456:13:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_bytes32",
                             "typeString": "bytes32"
@@ -5276,7 +6039,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 521,
+<<<<<<< Updated upstream
                           "src": "1521:13:1",
+=======
+                          "src": "1471:13:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -5289,7 +6056,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 525,
+<<<<<<< Updated upstream
                           "src": "1586:12:1",
+=======
+                          "src": "1535:12:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -5302,7 +6073,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 529,
+<<<<<<< Updated upstream
                           "src": "1600:21:1",
+=======
+                          "src": "1549:21:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -5315,7 +6090,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 533,
+<<<<<<< Updated upstream
                           "src": "1623:23:1",
+=======
+                          "src": "1572:23:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
@@ -5370,7 +6149,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 456,
+<<<<<<< Updated upstream
                         "src": "1453:4:1",
+=======
+                        "src": "1403:4:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_type$_t_struct$_User_$456_storage_ptr_$",
                           "typeString": "type(struct Users.User storage pointer)"
@@ -5417,7 +6200,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 431,
+<<<<<<< Updated upstream
                         "src": "1658:14:1",
+=======
+                        "src": "1606:14:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                           "typeString": "mapping(string memory => bool)"
@@ -5431,7 +6218,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 484,
+<<<<<<< Updated upstream
                         "src": "1673:9:1",
+=======
+                        "src": "1621:9:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -5495,7 +6286,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 435,
+<<<<<<< Updated upstream
                         "src": "1701:11:1",
+=======
+                        "src": "1648:11:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                           "typeString": "mapping(string memory => bool)"
@@ -5509,7 +6304,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 486,
+<<<<<<< Updated upstream
                         "src": "1713:6:1",
+=======
+                        "src": "1660:6:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -5569,7 +6368,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                           "src": "1759:3:1",
+=======
+                          "src": "1703:3:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -5596,6 +6399,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 480,
+<<<<<<< Updated upstream
                         "src": "1771:5:1",
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
@@ -5636,6 +6440,9 @@
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 486,
                         "src": "1799:6:1",
+=======
+                        "src": "1715:5:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_string_memory_ptr",
                           "typeString": "string memory"
@@ -5643,12 +6450,58 @@
                       },
                       {
                         "argumentTypes": null,
+<<<<<<< Updated upstream
+=======
+                        "id": 571,
+                        "name": "_surname",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 482,
+                        "src": "1722:8:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 572,
+                        "name": "_username",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 484,
+                        "src": "1732:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 573,
+                        "name": "_email",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 486,
+                        "src": "1743:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_memory_ptr",
+                          "typeString": "string memory"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+>>>>>>> Stashed changes
                         "id": 574,
                         "name": "_passwordHash",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 488,
+<<<<<<< Updated upstream
                         "src": "1807:13:1",
+=======
+                        "src": "1751:13:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -5687,7 +6540,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 470,
+<<<<<<< Updated upstream
                       "src": "1747:11:1",
+=======
+                      "src": "1691:11:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_address_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_string_memory_ptr_$_t_bytes32_$returns$__$",
                         "typeString": "function (address,string memory,string memory,string memory,string memory,bytes32)"
@@ -5730,7 +6587,11 @@
                   "name": "_name",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "872:19:1",
+=======
+                  "src": "835:19:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -5756,7 +6617,11 @@
                   "name": "_surname",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "893:22:1",
+=======
+                  "src": "856:22:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -5782,7 +6647,11 @@
                   "name": "_username",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "917:23:1",
+=======
+                  "src": "880:23:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -5808,7 +6677,11 @@
                   "name": "_email",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "942:20:1",
+=======
+                  "src": "905:20:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -5834,7 +6707,11 @@
                   "name": "_passwordHash",
                   "nodeType": "VariableDeclaration",
                   "scope": 578,
+<<<<<<< Updated upstream
                   "src": "964:21:1",
+=======
+                  "src": "927:21:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -5864,7 +6741,11 @@
               "src": "994:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "852:977:1",
+=======
+            "src": "815:957:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -5888,7 +6769,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 431,
+<<<<<<< Updated upstream
                           "src": "2018:14:1",
+=======
+                          "src": "1958:14:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_string_memory_$_t_bool_$",
                             "typeString": "mapping(string memory => bool)"
@@ -5902,7 +6787,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 580,
+<<<<<<< Updated upstream
                           "src": "2033:9:1",
+=======
+                          "src": "1973:9:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_string_memory_ptr",
                             "typeString": "string memory"
@@ -5957,7 +6846,11 @@
                         694
                       ],
                       "referencedDeclaration": 694,
+<<<<<<< Updated upstream
                       "src": "2010:7:1",
+=======
+                      "src": "1950:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
                         "typeString": "function (bool,string memory) pure"
@@ -5992,7 +6885,11 @@
                       "name": "userAddress",
                       "nodeType": "VariableDeclaration",
                       "scope": 619,
+<<<<<<< Updated upstream
                       "src": "2082:19:1",
+=======
+                      "src": "2021:19:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -6026,7 +6923,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                         "src": "2104:5:1",
+=======
+                        "src": "2043:5:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                           "typeString": "mapping(address => struct Users.User storage ref)"
@@ -6042,7 +6943,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 690,
+<<<<<<< Updated upstream
                           "src": "2110:3:1",
+=======
+                          "src": "2049:3:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_message",
                             "typeString": "msg"
@@ -6081,7 +6986,11 @@
                     "memberName": "userAddress",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 437,
+<<<<<<< Updated upstream
                     "src": "2104:29:1",
+=======
+                    "src": "2043:29:1",
+>>>>>>> Stashed changes
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
@@ -6101,7 +7010,11 @@
                       "name": "storedPasswordHash",
                       "nodeType": "VariableDeclaration",
                       "scope": 619,
+<<<<<<< Updated upstream
                       "src": "2144:26:1",
+=======
+                      "src": "2082:26:1",
+>>>>>>> Stashed changes
                       "stateVariable": false,
                       "storageLocation": "default",
                       "typeDescriptions": {
@@ -6134,7 +7047,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                         "src": "2173:5:1",
+=======
+                        "src": "2111:5:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                           "typeString": "mapping(address => struct Users.User storage ref)"
@@ -6148,7 +7065,11 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 595,
+<<<<<<< Updated upstream
                         "src": "2179:11:1",
+=======
+                        "src": "2117:11:1",
+>>>>>>> Stashed changes
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
@@ -6173,7 +7094,11 @@
                     "memberName": "passwordHash",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 447,
+<<<<<<< Updated upstream
                     "src": "2173:31:1",
+=======
+                    "src": "2111:31:1",
+>>>>>>> Stashed changes
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -6201,7 +7126,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 603,
+<<<<<<< Updated upstream
                       "src": "2219:18:1",
+=======
+                      "src": "2156:18:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -6216,7 +7145,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 582,
+<<<<<<< Updated upstream
                       "src": "2241:13:1",
+=======
+                      "src": "2178:13:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -6238,6 +7171,43 @@
                           "argumentTypes": null,
                           "hexValue": "66616c7365",
                           "id": 615,
+<<<<<<< Updated upstream
+=======
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "2256:5:1",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 586,
+                        "id": 616,
+                        "nodeType": "Return",
+                        "src": "2249:12:1"
+                      }
+                    ]
+                  },
+                  "id": 618,
+                  "nodeType": "IfStatement",
+                  "src": "2152:120:1",
+                  "trueBody": {
+                    "id": 614,
+                    "nodeType": "Block",
+                    "src": "2193:36:1",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 612,
+>>>>>>> Stashed changes
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": true,
@@ -6313,7 +7283,11 @@
                   "name": "_username",
                   "nodeType": "VariableDeclaration",
                   "scope": 620,
+<<<<<<< Updated upstream
                   "src": "1856:23:1",
+=======
+                  "src": "1797:23:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "memory",
                   "typeDescriptions": {
@@ -6339,7 +7313,11 @@
                   "name": "_passwordHash",
                   "nodeType": "VariableDeclaration",
                   "scope": 620,
+<<<<<<< Updated upstream
                   "src": "1881:21:1",
+=======
+                  "src": "1822:21:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6372,7 +7350,11 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 620,
+<<<<<<< Updated upstream
                   "src": "1924:4:1",
+=======
+                  "src": "1865:4:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6396,7 +7378,11 @@
               "src": "1923:6:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "1837:509:1",
+=======
+            "src": "1778:500:1",
+>>>>>>> Stashed changes
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -6430,7 +7416,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "2665:5:1",
+=======
+                          "src": "2592:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -6444,7 +7434,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 622,
+<<<<<<< Updated upstream
                           "src": "2671:17:1",
+=======
+                          "src": "2598:17:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -6469,7 +7463,11 @@
                       "memberName": "numDonations",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 449,
+<<<<<<< Updated upstream
                       "src": "2665:37:1",
+=======
+                      "src": "2592:37:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6503,7 +7501,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "2715:5:1",
+=======
+                          "src": "2641:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -6517,7 +7519,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 622,
+<<<<<<< Updated upstream
                           "src": "2721:17:1",
+=======
+                          "src": "2647:17:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -6542,7 +7548,11 @@
                       "memberName": "totalDonationsFunded",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 453,
+<<<<<<< Updated upstream
                       "src": "2715:45:1",
+=======
+                      "src": "2641:45:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6557,7 +7567,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 626,
+<<<<<<< Updated upstream
                       "src": "2764:7:1",
+=======
+                      "src": "2690:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6592,7 +7606,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "2782:5:1",
+=======
+                          "src": "2707:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -6606,7 +7624,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 624,
+<<<<<<< Updated upstream
                           "src": "2788:22:1",
+=======
+                          "src": "2713:22:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -6631,7 +7653,11 @@
                       "memberName": "totalDonationsReceived",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 455,
+<<<<<<< Updated upstream
                       "src": "2782:52:1",
+=======
+                      "src": "2707:52:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6646,7 +7672,11 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 626,
+<<<<<<< Updated upstream
                       "src": "2838:7:1",
+=======
+                      "src": "2763:7:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6681,7 +7711,11 @@
                   "name": "_userAddressDonor",
                   "nodeType": "VariableDeclaration",
                   "scope": 650,
+<<<<<<< Updated upstream
                   "src": "2375:25:1",
+=======
+                  "src": "2305:25:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6708,7 +7742,11 @@
                   "name": "_userAddressFundraiser",
                   "nodeType": "VariableDeclaration",
                   "scope": 650,
+<<<<<<< Updated upstream
                   "src": "2402:30:1",
+=======
+                  "src": "2332:30:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6735,7 +7773,11 @@
                   "name": "_amount",
                   "nodeType": "VariableDeclaration",
                   "scope": 650,
+<<<<<<< Updated upstream
                   "src": "2434:12:1",
+=======
+                  "src": "2364:12:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6765,7 +7807,11 @@
               "src": "2455:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "2354:499:1",
+=======
+            "src": "2284:493:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -6799,7 +7845,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "3027:5:1",
+=======
+                          "src": "2947:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -6813,7 +7863,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 652,
+<<<<<<< Updated upstream
                           "src": "3033:19:1",
+=======
+                          "src": "2953:19:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -6838,7 +7892,11 @@
                       "memberName": "numProjects",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 451,
+<<<<<<< Updated upstream
                       "src": "3027:38:1",
+=======
+                      "src": "2947:38:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -6872,7 +7930,11 @@
                   "name": "_userAddressCreator",
                   "nodeType": "VariableDeclaration",
                   "scope": 662,
+<<<<<<< Updated upstream
                   "src": "2881:27:1",
+=======
+                  "src": "2803:27:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -6903,7 +7965,11 @@
               "src": "2917:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "2861:214:1",
+=======
+            "src": "2783:211:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
@@ -6937,7 +8003,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 427,
+<<<<<<< Updated upstream
                           "src": "3253:5:1",
+=======
+                          "src": "3168:5:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_mapping$_t_address_$_t_struct$_User_$456_storage_$",
                             "typeString": "mapping(address => struct Users.User storage ref)"
@@ -6951,7 +8021,11 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 664,
+<<<<<<< Updated upstream
                           "src": "3259:19:1",
+=======
+                          "src": "3174:19:1",
+>>>>>>> Stashed changes
                           "typeDescriptions": {
                             "typeIdentifier": "t_address",
                             "typeString": "address"
@@ -6976,7 +8050,11 @@
                       "memberName": "numProjects",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 451,
+<<<<<<< Updated upstream
                       "src": "3253:38:1",
+=======
+                      "src": "3168:38:1",
+>>>>>>> Stashed changes
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -7010,7 +8088,11 @@
                   "name": "_userAddressCreator",
                   "nodeType": "VariableDeclaration",
                   "scope": 674,
+<<<<<<< Updated upstream
                   "src": "3107:27:1",
+=======
+                  "src": "3024:27:1",
+>>>>>>> Stashed changes
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -7041,14 +8123,22 @@
               "src": "3143:0:1"
             },
             "scope": 675,
+<<<<<<< Updated upstream
             "src": "3083:218:1",
+=======
+            "src": "3000:215:1",
+>>>>>>> Stashed changes
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 676,
+<<<<<<< Updated upstream
         "src": "36:3272:1"
+=======
+        "src": "34:3185:1"
+>>>>>>> Stashed changes
       }
     ],
     "src": "0:3308:1"
@@ -7061,12 +8151,21 @@
     "5777": {
       "events": {},
       "links": {},
+<<<<<<< Updated upstream
       "address": "0x211a490e0471606391B9E70B3FbF166FE1751306",
       "transactionHash": "0x6295fa8fbe31f6cbd721ce77a73a3eaacc776e3a6ca9f543650635e6601b106d"
     }
   },
   "schemaVersion": "3.0.2",
   "updatedAt": "2023-04-18T12:34:31.399Z",
+=======
+      "address": "0x4dF2248E2E8844bd5c5030D7128eE9807Ef4FC73",
+      "transactionHash": "0xb2774e06c3f78ff1dc1499c0d1d3b0fba0652e0962a89fa6d9072e71b7df3b38"
+    }
+  },
+  "schemaVersion": "3.0.2",
+  "updatedAt": "2023-04-18T14:19:54.405Z",
+>>>>>>> Stashed changes
   "devdoc": {
     "methods": {}
   },

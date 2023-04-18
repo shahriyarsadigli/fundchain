@@ -39,7 +39,7 @@ class AProject extends Component {
 
                         <h3>Target amount: {this.props.project.targetAmount / 10**18} ETH</h3> {/* convert the amount to ethers */}
                         {this.props.userAuthenticated === true ?
-                        <a href={`/donation/${this.props.project.id}`}><span>DONATE</span></a>
+                        <a href={`/donation/${this.props.project.slug}`}><span>DONATE</span></a>
                         :
                         <a href={`/signin`} onClick={(e) => { e.preventDefault(); 
                             alert("You need to be logged in to donate a project"); 

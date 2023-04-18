@@ -73,8 +73,10 @@ contract Fundraising {
     function createProject(string memory _title, string memory _excerpt, string memory _body, string memory _imagePath, string memory _slug, Category _category, uint _targetAmount) public {
         uint _amountRaised = 0;
         require(bytes(_title).length > 0);
+        require(bytes(_slug).length > 0);
         require(bytes(_excerpt).length > 0);
         require(bytes(_body).length > 0);
+        require(bytes(_imagePath).length > 0);
         require(_targetAmount > 0);
         require(_category <= Category.Art, "Invalid category");
 

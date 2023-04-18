@@ -158,11 +158,17 @@ class App extends Component {
     }, 2000);
   }
 
+  capitalizeFirstLetter(str) { // for capitalizing the first letter of the name and surname in case the user doesn't input correctly
+    return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
+  }
+
   createUser(name, surname, username, email, password) {
     const web3 = window.web3
     this.setState({ loading: true })
     const passwordHash = web3.utils.sha3(password)
-    this.state.users.methods.createUser(name, surname, username, email, passwordHash).send({ from: this.state.account })
+    const name_formed = this.capitalizeFirstLetter(name);
+    const surname_formed = this.capitalizeFirstLetter(surname);
+    this.state.users.methods.createUser(name_formed, surname_formed, username, email, passwordHash).send({ from: this.state.account })
     .once('receipt', (receipt) => {
       this.setState({ loading: false })
       this.setState({ userAuthenticated: true });
@@ -213,7 +219,7 @@ class App extends Component {
     if (!this.state.userAuthenticated) {
       alert('You must be logged in to create a project.');
       return;
-  }
+    }
     this.setState({ loading: true })
     let slug = slugify(title);
     const len = this.state.projects.length;
@@ -233,14 +239,22 @@ class App extends Component {
   donateProject(id, amount) {
     this.setState({ loading: true })
     this.state.fundraising.methods.donateProject(id).send({ from: this.state.account, value: amount })
-    .once('receipt', this.handleTransactionResponse)
+    .once('receipt', () => {
+      this.handleTransactionResponse();
+      this.setState({ loading: true }) // show loading screen before redirecting to the projects page
+      window.location.href = `/projects`; // redirect to projects page with slug in the URL
+    })
     .catch(this.handleTransactionError);
   }
 
   deleteProject(id) {
     this.setState({ loading: true })
     this.state.fundraising.methods.deleteProject(id).send({ from: this.state.account })
-    .once('receipt', this.handleTransactionResponse)
+    .once('receipt', () => {
+      this.handleTransactionResponse();
+      this.setState({ loading: true }) // show loading screen before redirecting to the projects page
+      window.location.href = '/projects'; // redirect to projects page
+    })
     .catch(this.handleTransactionError);
   }
 
@@ -315,6 +329,7 @@ class App extends Component {
       if (this.state.userAuthenticated) {
         this.logoutUser();
       }
+      window.location.reload(); // reload the page
     });
   }
 
@@ -350,7 +365,10 @@ class App extends Component {
                           <Route index element={<HomePage />} />
                           { this.state.userAuthenticated ? <Route path="/signin" element={<Navigate replace to="/" />} /> // do not let the users access the sign in page once they are signed in
                           : <Route path="/signin" element={<SignIn loginUser={this.loginUser} />} /> }
-                          <Route path="/signup" element={<SignUp createUser={this.createUser}/>} />
+
+                          { this.state.userAuthenticated ? <Route path="/signup" element={<Navigate replace to="/" />} /> // do not let the users access the sign in page once they are signed in
+                          : <Route path="/signup" element={<SignUp createUser={this.createUser}/>} /> }
+
                           <Route path="/projects" element={<Projects account={this.state.account}
                                                                      projects={this.state.projects}
                                                                      userAuthenticated={this.state.userAuthenticated}
@@ -391,10 +409,9 @@ class App extends Component {
 
                             {
                               this.state.projects.map((project) => (
-                              !this.state.userAuthenticated ? <Route path={`/donation/${project.id}`} element={<Navigate replace to="/signin" />} /> // do not let the users access the sign in page once they are signed in
+                              !this.state.userAuthenticated ? <Route path={`/donation/${project.slug}`} element={<Navigate replace to="/signin" />} /> // do not let the users access the sign in page once they are signed in
                               : 
-                              
-                              <Route key={project.id} path={`/donation/${project.id}`} element={<DonationPage project={project} 
+                              <Route key={project.id} path={`/donation/${project.slug}`} element={<DonationPage project={project} 
                                                                                        donateProject={this.donateProject} 
                                                                                        account={this.state.account}
                                                                                        balance={this.state.balanceInEth}

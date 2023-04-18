@@ -56,6 +56,11 @@ class CreateProject extends Component {
                         const targetAmount = window.web3.utils.toWei(this.targetAmount.value.toString(), 'Ether')
                         const imagePath = this.state.projectData.image
 
+                        if (!imagePath) {
+                            alert('Please select an image for your project')
+                            return
+                        }
+
                         this.props.createProject(title, excerpt, body, imagePath, category, targetAmount)
                         }}>
                 <div className='project-info'>
