@@ -47,7 +47,7 @@ class AProject extends Component {
                         }
                         <td>
                         {
-                           this.props.project.creator === this.props.account && this.props.project.amountRaised < this.props.project.targetAmount / 20
+                           this.props.userAuthenticated && this.props.project.creator === this.props.account && this.props.project.amountRaised < this.props.project.targetAmount / 20
                            ? 
                           <button
                             name={this.props.project.id}

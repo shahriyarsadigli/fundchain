@@ -362,7 +362,9 @@ class App extends Component {
                 }
                 <BrowserRouter>
                         <Routes>
-                          <Route index element={<HomePage />} />
+                          <Route index element={<HomePage 
+                                                         projects={this.state.projects}
+                                                        />} />
                           { this.state.userAuthenticated ? <Route path="/signin" element={<Navigate replace to="/" />} /> // do not let the users access the sign in page once they are signed in
                           : <Route path="/signin" element={<SignIn loginUser={this.loginUser} />} /> }
 
@@ -377,6 +379,7 @@ class App extends Component {
 
                           <Route path="/myaccount" element={this.isAuthenticated() ? <MyAccountPage account={this.state.account}
                                                                            currentAccountData={this.state.currentAccountData} 
+                                                                           projects={this.state.projects}
                                                                            balance={this.state.balanceInEth}/> : <Navigate replace to="/signin" />} />
 
                           <Route path="/create-project" element={this.isAuthenticated() ? <CreateProject 
@@ -397,7 +400,7 @@ class App extends Component {
                                                         loginUser ={this.loginUser}
                                                         logoutUser={this.logoutUser}/>} />
 
-                            {this.state.projects.map((project) => (
+                          {this.state.projects.map((project) => (
                               <Route key={project.id} path={`/project/${project.slug}`} 
                                                       element={<AProjectPage 
                                                       project={project}
@@ -405,11 +408,11 @@ class App extends Component {
                                                       userAuthenticated={this.state.userAuthenticated}
                                                       deleteProject={this.deleteProject}
                                                       />} />
-                            ))}
+                          ))}
 
-                            {
+                          {
                               this.state.projects.map((project) => (
-                              !this.state.userAuthenticated ? <Route path={`/donation/${project.slug}`} element={<Navigate replace to="/signin" />} /> // do not let the users access the sign in page once they are signed in
+                              !this.state.userAuthenticated ? <Route path={`/donation/${project.slug}`} element={<Navigate replace to="/signin" />} /> // do not let the users access the donation page if they are not signed in
                               : 
                               <Route key={project.id} path={`/donation/${project.slug}`} element={<DonationPage project={project} 
                                                                                        donateProject={this.donateProject} 

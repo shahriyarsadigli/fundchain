@@ -1,9 +1,21 @@
 import Artwork from '../images/Fundchain-artwork.png'
 import '../style/HomePage.css';
-import React from 'react';
+import React, { Component } from 'react';
+import ProjectCard from '../headers/ProjectCard.js'
 
 
-export default function HomePage() {
+class HomePage extends Component {
+    render() {
+        const cards = this.props.projects.map(project => {
+            if (project.id != 0)
+              return (
+                <ProjectCard
+                  id={project.id}
+                  project={project}
+                />
+              );
+          });
+
     return (
         <main className="main-page">
             <section className="home">
@@ -68,7 +80,16 @@ export default function HomePage() {
                         </div>
                     </div>
                 </div>
+
+                <div className="projects-list">
+                    {/* { this.props.projects ?
+                    cards : <p>no projects found</p> */}
+                    {cards}
+                </div>
             </section>
         </main>
     )
 }
+}
+
+export default HomePage;

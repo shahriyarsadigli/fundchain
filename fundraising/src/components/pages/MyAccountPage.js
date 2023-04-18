@@ -1,7 +1,7 @@
 import '../style/MyAccountPage.css'
 import Avatar1 from '../images/user-avatar.png'
 import React, { Component } from 'react';
-import ProjectsPage from '../pages/ProjectsPage.js'
+import ProjectCard from '../headers/ProjectCard.js'
 
 
 function Dashboard(props) {
@@ -33,7 +33,34 @@ function Dashboard(props) {
 
 
 class MyAccount extends Component {
+
+    state = {
+        showProjects: false
+      };
+
+      handleProjectsClick = (event) => {
+        event.preventDefault();
+        this.setState({ showProjects: true });
+      }
+
+      handleDashboardClick = (event) => {
+        event.preventDefault();
+        this.setState({ showProjects: false });
+      }
+      
+
     render() {
+
+        const cards = this.props.projects.map(project => {
+            if (project.id != 0 && project.creator === this.props.currentAccountData.userAddress) // load only the projects which are created by this user
+              return (
+                <ProjectCard
+                  id={project.id}
+                  project={project}
+                />
+              );
+          });
+
     return (
         <main className='account--main'>
             <div className='account--section'>
@@ -61,11 +88,11 @@ class MyAccount extends Component {
                     </div>  
                 </div>
                 <div className='section--second'>
-                    <a href=""><span id="dashboard--button">Dashboard</span></a>
-                    <a href=""><span id="projects--button">My projects</span></a>
+                    <a onClick={this.handleDashboardClick}><span id="dashboard--button">Dashboard</span></a>
+                    <a onClick={this.handleProjectsClick}><span id="projects--button">My projects</span></a>
                 </div>
-                <Dashboard currentAccountData={this.props.currentAccountData} />
-                {/* <ProjectsPage /> */}
+                {!this.state.showProjects && <Dashboard currentAccountData={this.props.currentAccountData} />}
+                {this.state.showProjects && <div className="projects-list">{cards}</div>}
             </div>
         </main>
     )

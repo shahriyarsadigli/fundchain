@@ -290,3 +290,10 @@
     font-weight: 500;
     color: rgb(80, 80, 80);
 }
+
+/* My projects and Dashboard buttons */
+.section--second a:hover span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
