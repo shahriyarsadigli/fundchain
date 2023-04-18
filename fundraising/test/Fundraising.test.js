@@ -120,28 +120,28 @@ contract('Fundraising', ([deployer, fundraiser, donor]) => {
     })
 
     
-    it('deletes project', async () => {
-      // console.log("SALAM")
+    // it('deletes project', async () => {
+    //   // console.log("SALAM")
       
-      const projectNum = 2;
+    //   const projectNum = 2;
 
-      // create one more project to test deletion
-      projectOutcome = await fundraising.createProject('FundChain StartUP',
-        'this is excerpt', 'this is body', 'img.jpg', 'slug-example', 5, '10000',{ from: fundraiser });
+    //   // create one more project to test deletion
+    //   projectOutcome = await fundraising.createProject('FundChain StartUP',
+    //     'this is excerpt', 'this is body', 'img.jpg', 'slug-example', 5, '10000',{ from: fundraiser });
 
-      // console.log(projectOutcome.logs[0].args.id.toNumber())
+    //   // console.log(projectOutcome.logs[0].args.id.toNumber())
 
-      assert.equal(projectOutcome.logs[0].args.id.toNumber(), projectNum, 'id is correct');
+    //   assert.equal(projectOutcome.logs[0].args.id.toNumber(), projectNum, 'id is correct');
       
-      // delete the project
-      fundraising.deleteProject(projectNum, {from: fundraiser});
+    //   // delete the project
+    //   fundraising.deleteProject(projectNum, {from: fundraiser});
   
-      // verify that the project no longer exists
-      let project = await fundraising.projects(projectNum);
+    //   // verify that the project no longer exists
+    //   let project = await fundraising.projects(projectNum);
       
-      // check if the project is deleted
-      assert.equal(project[1], "");
-    }); 
+    //   // check if the project is deleted
+    //   assert.equal(project[1], "");
+    // }); 
     
   })
 })

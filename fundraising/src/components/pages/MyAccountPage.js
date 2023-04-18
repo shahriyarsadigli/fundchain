@@ -1,6 +1,36 @@
 import '../style/MyAccountPage.css'
 import Avatar1 from '../images/user-avatar.png'
 import React, { Component } from 'react';
+import ProjectsPage from '../pages/ProjectsPage.js'
+
+
+function Dashboard(props) {
+    return (
+        <div className='section--third'>
+                    <div className='donations--section'>
+                        <div>
+                            <h5>DONATIONS</h5>
+                            <span>{props.currentAccountData.numDonations}</span>
+                        </div>
+                        <div>
+                            <h5>TOTAL DONATION AMOUNT</h5>
+                            <span>{props.currentAccountData.totalDonationsFunded / 10 ** 18} ETH</span> {/* // show in ethers */}
+                        </div>
+                    </div>
+                    <div className='projects--section'>
+                        <div>
+                            <h5>PROJECTS</h5>
+                            <span>{props.currentAccountData.numProjects}</span>
+                        </div>
+                        <div>
+                            <h5>TOTAL DONATION RECEIVED</h5>
+                            <span>{props.currentAccountData.totalDonationsReceived / 10 ** 18} ETH</span> {/* // show in ethers */}
+                        </div>
+                    </div>
+        </div>
+    )
+}
+
 
 class MyAccount extends Component {
     render() {
@@ -34,28 +64,8 @@ class MyAccount extends Component {
                     <a href=""><span id="dashboard--button">Dashboard</span></a>
                     <a href=""><span id="projects--button">My projects</span></a>
                 </div>
-                <div className='section--third'>
-                    <div className='donations--section'>
-                        <div>
-                            <h5>DONATIONS</h5>
-                            <span>{this.props.currentAccountData.numDonations}</span>
-                        </div>
-                        <div>
-                            <h5>TOTAL DONATION AMOUNT</h5>
-                            <span>{this.props.currentAccountData.totalDonationsFunded / 10 ** 18} ETH</span> {/* // show in ethers */}
-                        </div>
-                    </div>
-                    <div className='projects--section'>
-                        <div>
-                            <h5>PROJECTS</h5>
-                            <span>{this.props.currentAccountData.numProjects}</span>
-                        </div>
-                        <div>
-                            <h5>TOTAL DONATION RECEIVED</h5>
-                            <span>{this.props.currentAccountData.totalDonationsReceived / 10 ** 18} ETH</span> {/* // show in ethers */}
-                        </div>
-                    </div>
-                </div>
+                <Dashboard currentAccountData={this.props.currentAccountData} />
+                {/* <ProjectsPage /> */}
             </div>
         </main>
     )
