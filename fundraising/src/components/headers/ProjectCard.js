@@ -1,6 +1,8 @@
 import '../style/ProjectCard.css';
-import React, {Component} from 'react';
+// import React, {Component} from 'react';
 import { fromWei } from 'web3-utils';
+import React, { useState } from 'react';
+
 
 
 export default function ProjectCard(props) {
@@ -25,43 +27,51 @@ export default function ProjectCard(props) {
     
     const images = require.context('../images/project_images', true);
 
+    // Donation bar
+    const donationTarget = fromWei(props.project.amountRaised)
+    const amountRaised = fromWei(props.project.amountRaised)
+
+    const [percentageRaised, setPercentageRaised] = useState((amountRaised / donationTarget) * 100);
+
+
     return(
         <div className="project-card">
 
-            <div className="project-content">
-            <a href={`/project/${props.project.slug}`} className="project-name">
+          <a href={`/project/${props.project.slug}`} className="project-content">
+            <div className="project-img">
+                    <img src={images(`./${props.project.imagePath}`)} alt="" />
+                    <span>{getCategoryName(props.project.category)}</span>
+            </div>  
+            <div  className="project-name">
                 {/* move to the page of the project with this id  */}
                 <h4>{props.project.title}</h4>
-                <span className="project-author">By {props.project.creator}</span>
                 <p>{props.project.excerpt}</p>
-                <p>{getCategoryName(props.project.category)}</p>
-            </a>
+            </div>
 
-                <div className="donation-amount">
-                    <span>{fromWei(props.project.amountRaised, 'ether')} Eth</span>
-                    <h6>Raised</h6>
-                </div>
-                <div className="donation-amount">
-                    <h6>Target Amount</h6>
-                    <span>{fromWei(props.project.targetAmount, 'ether')} Eth</span> 
-                </div>
-
-             
-                <div className="project-footer">
-                    <hr></hr>
+            <div className="donation-amount">
+                    <div className='donation-raised'>
+                      <h6>Raised: <span>{fromWei(props.project.amountRaised, 'ether')} Eth</span></h6>
+                      <span className='donation-percentage'>{percentageRaised}%</span>
+                    </div>
+                    <div className='donation-bar'>
+                    <span className='donation-progress' style={{width: `${percentageRaised}%`}}></span>
+                    </div>
+                    
+                    {/* <h6>Target Amount</h6>
+                    <span>{fromWei(props.project.targetAmount, 'ether')} Eth</span>  */}
+            </div>
+            <div className="project-footer">
+                    {/* <span className="project-author">By {props.project.creator}</span> */}
+                    <span className="project-author">By Byers</span>
                     <div className="project-verified">
                         <i class="fa-solid fa-circle-check"></i>
                         <span>VERIFIED</span>  {/* verified by MetaMask */}
                     </div>
-                </div>
-                {parseInt(window.web3.utils.toWei(props.project.amountRaised.toString(), 'Ether')) >= parseInt(window.web3.utils.toWei(props.project.targetAmount.toString(), 'Ether'))
-                        ? <p>Goal Reached!</p>
-                        : null }
-
-                <div className="card">
-                    <img src={images(`./${props.project.imagePath}`)} alt="" />
-                </div>                
             </div>
+            {parseInt(window.web3.utils.toWei(props.project.amountRaised.toString(), 'Ether')) >= parseInt(window.web3.utils.toWei(props.project.targetAmount.toString(), 'Ether'))
+                        ? <p>Goal Reached!</p>
+                        : null }              
+          </a>
         </div>
     )
 

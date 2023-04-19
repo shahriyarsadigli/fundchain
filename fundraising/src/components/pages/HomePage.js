@@ -80,12 +80,11 @@ class HomePage extends Component {
                         </div>
                     </div>
                 </div>
-
-                <div className="projects-list">
-                    {/* { this.props.projects ?
+            </section>
+            <section className='projects--list'>
+                {/* { this.props.projects ?
                     cards : <p>no projects found</p> */}
                     {cards}
-                </div>
             </section>
         </main>
     )
