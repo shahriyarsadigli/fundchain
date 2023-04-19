@@ -200,7 +200,7 @@
     align-items: center;
 }
 
-.section--second > a > span {
+.section--second > a  {
     margin-right: 20px;
     padding: 15px 30px;
     background: white;
@@ -208,14 +208,16 @@
     font-size: 0.9em;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
     font-weight: 500;
-    color: black;
+    cursor: pointer;
+    transition: 0.2s ease;
 }
 
-.section--second > a {
-    text-decoration: none;
+#dashboard--button:hover {
+    color: blue;
 }
-#dashboard--button {
-    background-color: #afd0e8;
+
+#projects--button:hover {
+    color: blue;
 }
 
 /* section 3 */

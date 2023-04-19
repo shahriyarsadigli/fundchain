@@ -28,10 +28,10 @@ export default function ProjectCard(props) {
     const images = require.context('../images/project_images', true);
 
     // Donation bar
-    const donationTarget = fromWei(props.project.amountRaised)
+    const donationTarget = fromWei(props.project.targetAmount)
     const amountRaised = fromWei(props.project.amountRaised)
 
-    const [percentageRaised, setPercentageRaised] = useState((amountRaised / donationTarget) * 100);
+    const [percentageRaised, setPercentageRaised] = useState(Math.floor((amountRaised / donationTarget) * 100));
 
 
     return(

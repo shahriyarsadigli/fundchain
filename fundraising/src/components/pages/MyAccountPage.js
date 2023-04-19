@@ -88,8 +88,17 @@ class MyAccount extends Component {
                     </div>  
                 </div>
                 <div className='section--second'>
-                    <a onClick={this.handleDashboardClick}><span id="dashboard--button">Dashboard</span></a>
-                    <a onClick={this.handleProjectsClick}><span id="projects--button">My projects</span></a>
+                    <a onClick={this.handleDashboardClick} id="dashboard--button"
+                        style={{
+                            backgroundColor: this.state.showProjects === false ? '#afd0e8' : 'white',
+                        }}
+                    >
+                        Dashboard</a>
+                    <a onClick={this.handleProjectsClick} id="projects--button"
+                        style={{
+                            backgroundColor: this.state.showProjects === true ? '#afd0e8' : 'white',
+                        }}
+                        >My projects</a>
                 </div>
                 {!this.state.showProjects && <Dashboard currentAccountData={this.props.currentAccountData} />}
                 {this.state.showProjects && <div className="projects-list">{cards}</div>}
