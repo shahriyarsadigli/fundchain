@@ -6,7 +6,7 @@ html, body{
 }
 
 .main-page {
-  height: 300vh;
+  height: auto;
   background-image: url('../images/background.png');
   background-repeat: repeat;
   background-size: 60%;
@@ -15,7 +15,7 @@ html, body{
 
 .home {
   width: 100%;
-  height: 22%;
+  height: 65vh;
   position: relative;
 }
 .home-body {
@@ -86,7 +86,7 @@ html, body{
 /* New additions */
 
 .home--promotion {
-  height: 24%;
+  height: 80vh;
   width: 80%;
   position: relative;
   left: 10%;
@@ -177,7 +177,6 @@ html, body{
 /* Project list */
 .projects--list {
   width: 80%;
-  min-height: 500px;
   position: relative;
   left: 10%;
   display: flex;
@@ -185,4 +184,3 @@ html, body{
   justify-content: flex-start;
   margin-top: 60px;
 }
-

@@ -95,7 +95,7 @@ class ProjectsPage extends Component {
 
           <div className="projects-list">
             { this.props.projects ?
-            cards : <p>no projects found</p>
+            cards : console.log("SALAM")
             //  {cards}
             }
           </div>
