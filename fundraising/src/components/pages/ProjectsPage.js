@@ -94,9 +94,10 @@ class ProjectsPage extends Component {
           </div>
 
           <div className="projects-list">
-            {/* { this.props.projects ?
-            cards : <p>no projects found</p> */}
-            {cards}
+            { this.props.projects ?
+            cards : <p>no projects found</p>
+            //  {cards}
+            }
           </div>
         </section>
       </main>

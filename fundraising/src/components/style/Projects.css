@@ -32,6 +32,7 @@
     justify-content: flex-start;
     width: 80%;
     height: 85%;
+    margin-bottom: 40px;
 }
 
 /* search and filter here */
@@ -44,6 +45,9 @@
     padding: 0 20px;
     width: 80%;
     border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0px -1px 4px rgba(95, 95, 95, 0.162), 0px 1px 4px rgba(0, 0, 0, 0.25);
+
   }
   
   .search-container {
@@ -66,6 +70,7 @@
     border-radius: 10px;
     padding-left: 2%;
     background-color: rgba(88, 153, 203, 0.143);
+    box-shadow: 0px -1px 4px rgba(181, 181, 181, 0.081), 0px 1px 4px rgba(0, 0, 0, 0.25);
   }
   
   .search-container::after {
