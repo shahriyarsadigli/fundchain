@@ -47,7 +47,7 @@ class DonationPage extends Component {
                         </div>
                         <h3>{this.props.project.title}</h3>
                         {/* Author name to be added */}
-                        <h6>By Byers</h6> 
+                        <h6 className="project-author">{this.props.project.ownerData.name} {this.props.project.ownerData.surname}</h6>
                         <span className='funds--raised'>Total Funds Raised: {this.props.project.amountRaised / 10**18} ETH</span>
                         <span className='funds--amount'>Target Amount: {this.props.project.targetAmount / 10**18} ETH</span>
                     </div>

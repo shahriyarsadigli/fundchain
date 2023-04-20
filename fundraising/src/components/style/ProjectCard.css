@@ -52,22 +52,25 @@
     height: 40%;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 }
 
 .project-img > img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+    border-radius: 8px;
 }
 
 .project-img > span {
     width: 40%;
     height: 15%;
-    background-color: rgb(88,153,203);
+    background-color: #196CAE;
     position: absolute;
     right: 0%;
     color: white;
     text-align: center;
+    border-radius: 8px;
 }
 
 /* Project name */
