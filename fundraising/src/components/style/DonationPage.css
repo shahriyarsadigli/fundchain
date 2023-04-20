@@ -1,43 +1,43 @@
 
 .main {
-    margin: 0;
+    margin: 0 auto;
 }
 
 .donation--card {
-    height: 1000px;
-    background: rgb(231, 231, 231);
+    height: 100vh;
+    background-image: url('../images/background.png');
+    background-repeat: repeat;
+    background-size: 60%;
+    background-position: center;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 60px;
+    padding-top: 70px;
 }
 
+/* Left side */
 .project--info {
-    height: 40%;
-    width: 360px;
-    background-color: rgb(220, 214, 214);
+    height: 64%;
+    width: 24%;
+    background-color: #afd0e8;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    box-shadow: 0px 1px 9px rgb(114, 112, 112);
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 .project--img {
-    height: 48%;
+    height: 40%;
     width: 90%;
     margin-top: 10px;
     box-shadow: 0px 1px 9px rgb(101, 100, 100);
 }
 
-.donation--info {
-    height: 40%;
-    width: 360px;
-    background-color: white;
-}
-
 .project--details {
+    height: 60%;
+    width: 90%;
     position: relative;
     right: 0%;
     top: 14%;
@@ -47,18 +47,17 @@
 
 .project--verified {
     position: absolute;
-    top: -30%;
+    top: -16%;
+    color: rgb(26, 213, 45);;
 }
 
 .project--verified > i {
     margin-right: 5px;
-    color: rgb(25, 186, 25);
     font-size: 1.3em;
 }
 
 .project--verified > span {
-    color: rgb(25, 186, 25);
-    font-weight: 400;
+    font-weight: 600;
     position: absolute;
     top: -8%;
 }
@@ -69,39 +68,56 @@
 
 .project--details > h6 {
     color: gray;
-    margin-top: -8px;
+    margin-top: -5px;
 }
 
 .project--details > span {
-    background-color: white;
     margin-top: 10px;
     padding-left: 10px;
-    padding-right: 94px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    width: 100%;
+    height: 15%;
     border-radius: 10px;
     font-weight: 500;
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     color: rgb(17, 17, 111);
 }
 
-/* Second part */
+.funds--raised {
+    background-color: gold;
+}
+
+.funds--amount {
+    background-color: rgb(88,153,203);
+}
+
+/* Right side */
 .donation--info {
+    background: rgb(236,244,252);
+    height: 64%;
+    width: 24%;
     border-radius: 0 20px 20px 0;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     position: relative;
+    padding: 20px;
 }
 
 .donation--details {
     height: 24%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    left: 7%;
-    top: 7%;
+    left: 5%;
+}
+
+.donation--details > span {
+    margin-bottom: 10px;
+    margin-left: 40px;
 }
 
 .donation--details > h2 {
@@ -110,12 +126,63 @@
 
 .donation--details > hr {
     font-size: large;
+    border: 1px solid black;
+    width: 100%;
+    position: absolute;
+    top: 80%;
+}
+
+/* Metamask Icon */
+.donation--details > img {
+    position: absolute;
+    width: 10%;
+    top: 60%;
+    left: 1%;
 }
 
 .donation--balance {
+    height: 36%;
+    width: 90%;
     position: relative;
-    left: 7%;
     top: 3%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.donation--address {
+    height: 40%;
+    width: 100%;
+    border: 2px solid rgb(88,153,203);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.donation--address > h6 {
+    height: 50%;
+    width: 100%;
+    background-color: rgb(88,153,203);
+    text-align: center;
+    color: white;
+}
+
+.donation--address > span {
+    height: 50%;
+    width: 100%;
+    font-size: 0.7em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10%;
 }
 
 .donation--balance > input {
@@ -128,90 +195,63 @@
 }
 
 .balance--buttons {
+    height: 24%;
+    width: 100%;
     display: flex;
     margin-top: 12px;
+    border: 2px solid rgb(17, 17, 111);
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .account--balance {
     padding: 3px 10px;
+    padding-left: 17px;
+    width: 40%;
     background: rgb(17, 17, 111);
     color: white;
-    border-radius: 5px 0 0 5px;
+    text-align: start;
 }
 
 .balance--amount {
+    width: 60%;
+    text-align: end;
     padding: 3px 10px;
-    border: 2px solid rgb(17, 17, 111);
     border-radius: 0 5px 5px 0;
-    
+    font-weight: 600;
 }
 
 .donation--submit {
+    height: 36%;
+    width: 90%;
     position: relative;
-    left: 7%;
-    top: 8%;
+    left: 5%;
     display: flex;
     flex-direction: column;
 }
 
-.donation--amount {
-    position: absolute;
+.donation--enter {
+    height: 60%;
+    width: 100%;
+    margin-top: 10px;
     border-radius: 10px;
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
-    padding: 3px 15px 3px 230px;
-    display: flex;
-    align-items: last baseline;
-    background-color: rgb(220, 214, 214);
-    font-size: 0.8em;
-    color: rgb(17, 17, 111);
-    top: 1.2em;
-    z-index: 0;
+    border: 1px solid black;
+    background-color: #afd0e8;
+    padding-left: 15px;
 }
 
 .donation--button {
-    position: absolute;
-    padding: 10px 118px;
-    top: 3.9em;
-    background-color: rgb(25, 186, 25);
+    position: relative;
+    height: 74%;
+    width: 100%;
+    top: 70%;
+    background-color: gold;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
     color: white;
+    border: none;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.card--details {
-    position: relative;
-}
-
-.card--details > span {
-    position: absolute;
-    top: 4.4em;
-    left: 3em;
-    font-size: 0.7em;
-    font-weight: 600;
-}
-
-.card--details > hr {
-    position: relative;
-    bottom: 6.5em;
-    left: 1.5em;
-    width:83%;
-    margin-left:0;
-    border-width: 1px;
-    border-color: grey;
-}
-
-.card--details > h6 {
-    position: absolute;
-    bottom: 3.2em;
-    left: 1.9em;
-    font-size: 1.3em;
-}
-
-.card--details > h6 > i {
-    margin-right: 5px;
-    font-size: 1.3em;
-    position: relative;
-    top: 0.1em;
-}

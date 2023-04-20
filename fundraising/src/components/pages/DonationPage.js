@@ -1,6 +1,7 @@
 import '../style/DonationPage.css'
 import React, { Component } from 'react';
 import Pimg1 from '../images/project1.jpg'
+import MetamaskIcon from '../images/metamask.svg'
 
 
 class DonationPage extends Component {
@@ -27,34 +28,44 @@ class DonationPage extends Component {
           this.props.donateProject(event.target.name, amount);
         }
       }
+    
 
     render() {
+    
+    // Image for a donation card
+    const images = require.context('../images/project_images', true);
 
     return (
         <main>
             <section className="donation--card">
                 <div className="project--info">
-                    <img className="project--img" src={Pimg1}/>
+                    <img className="project--img" src={images(`./${this.props.project.imagePath}`)} alt=""/>
                     <div className="project--details">
                         <div className="project--verified">
                             <i class="fa-solid fa-circle-check"></i>
                             <span>VERIFIED</span>
                         </div>
                         <h3>{this.props.project.title}</h3>
-                        <h6>Fund Receiving Address: {this.props.project.creator}</h6>
-                        <span>Total Funds Raised: {this.props.project.amountRaised / 10**18} ETH</span>
-                        <span>Target Amount: {this.props.project.targetAmount / 10**18} ETH</span>
+                        {/* Author name to be added */}
+                        <h6>By Byers</h6> 
+                        <span className='funds--raised'>Total Funds Raised: {this.props.project.amountRaised / 10**18} ETH</span>
+                        <span className='funds--amount'>Target Amount: {this.props.project.targetAmount / 10**18} ETH</span>
                     </div>
                 </div>
                 <div className="donation--info">
                     <div className="donation--details">
                         <h2>Donate with</h2>
-                        <span>METAMASK wallet</span>
+                        <span>METAMASK Wallet</span>
+                        <img src={MetamaskIcon} />
+                        <hr></hr>
                     </div>
-                    <hr></hr>
                     <div className="donation--balance">
+                        <div className="donation--address">
+                            <h6>Fund Receiving Address </h6>
+                            <span>{this.props.project.creator}</span>
+                        </div>
                         <div className="balance--buttons">
-                            <span className="account--balance">Balance</span>
+                            <span className="account--balance">My Balance</span>
                             <span className="balance--amount">{Number(this.props.balance).toFixed(4)} ETH</span>
                         </div>
                     </div>
@@ -85,11 +96,6 @@ class DonationPage extends Component {
                                 : null
                             }
                         
-                    </div>
-                    <div className="card--details">
-                        {/* <span>Your total donation:</span>
-                        <hr></hr>
-                        <h6><i class="fa-brands fa-ethereum"></i>ETH</h6> */}
                     </div>
                     
                 </div>
