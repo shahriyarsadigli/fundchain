@@ -1,7 +1,7 @@
 
 .projects-body {
-    height: 1700px;
-    background: rgb(231, 231, 231);
+    height: auto;
+    background-color: rgba(88, 153, 203, 0.155);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,15 +9,21 @@
 }
 
 .explore-projects {
-    height: 60px;
-    width: 80%;
-    margin-top: 31px;
+    color: white;
+    height: 40vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(cyan, white);
-    font-size: 1.1em;
+    background-image: url('../images/background2.png');
+    background-repeat: repeat;
+    background-size: 190%;
+    background-position: center;
+    font-size: 3em;
     font-weight: bold;
+    margin-bottom: 10px;
+    flex-direction: column;
+
 }
 
 .projects-list {
@@ -27,3 +33,119 @@
     width: 80%;
     height: 85%;
 }
+
+/* search and filter here */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #196bae24;
+    height: 50px;
+    padding: 0 20px;
+    width: 80%;
+    border-radius: 10px;
+  }
+  
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    padding-left: 5%;
+  }
+  
+  .search-input {
+    color: black;
+    position: relative;
+    z-index: 1;
+    border: none;
+    padding: 5px;
+    width: 80%;
+    font-size: 16px;
+    border-radius: 10px;
+    padding-left: 2%;
+    background-color: rgba(88, 153, 203, 0.143);
+  }
+  
+  .search-container::after {
+    content: '\f002';
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+    font-family: 'FontAwesome';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  .category-carousel {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .category-carousel::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+  }
+  
+  
+  .category {
+    color: black;
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(88, 153, 203, 0.143);
+    transition: 0.4s ease;
+}
+.category:hover {
+    background-color: rgba(88, 153, 203, 0.718);
+}
+  
+  .category-active {
+    color: white;
+    font-weight: bold;
+    border: 1px solid rgba(21, 116, 188, 0.828);
+    padding: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(21, 116, 188, 0.647);
+  }  
+  
+  .prev-btn,
+  .next-btn {
+    background-color: rgba(88, 153, 203, 0.419);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    height: 55%;
+    border-radius: 50%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    transition: 0.4s ease;
+  }
+  
+  
+  .prev-btn:hover,
+  .next-btn:hover {
+    background-color: rgba(21, 116, 188, 0.716);
+  }
+  
+ 
+  
+
+

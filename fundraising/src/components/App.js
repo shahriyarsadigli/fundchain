@@ -95,11 +95,15 @@ class App extends Component {
       for (var i = 1; i <= projectNum; i++) {
         const project = await fundraising.methods.projects(i).call()
         if (project.id !== "0") { // do not read the deleted projects which have the id as 0
+          const projectOwnerData = await this.state.users.methods.users(project.creator).call()
+          project.ownerData = projectOwnerData // add the owner data to the project object
           this.setState({
             projects: [...this.state.projects, project]
           })
         }
       }
+
+      
       this.setState({ loading: false })
     } else {
       window.alert('Fundraising contract not deployed to detected network.')
@@ -114,6 +118,7 @@ class App extends Component {
       account: '',
       projectNum: 0,
       projects: [],
+      users: [],
       loading: true,
       userAuthenticated: false, // initially there is no user logged in
       currentAccountData: null
@@ -268,6 +273,8 @@ class App extends Component {
     for (let i = 1; i <= projectNum; i++) {
       const project = await fundraising.methods.projects(i).call();
       if (project.title.toLowerCase().includes(query.toLowerCase()) || project.excerpt.toLowerCase().includes(query.toLowerCase())) {
+        const projectOwnerData = await this.state.users.methods.users(project.creator).call()
+        project.ownerData = projectOwnerData // add the owner data to the project object
         projects.push(project);
       }
     }
@@ -287,17 +294,21 @@ class App extends Component {
     const projectNum = await fundraising.methods.projectNum().call();
     const projects = [];
 
-    console.log(category)
+    // console.log(category)
 
     if (category === "All") { 
       for (let i = 1; i <= projectNum; i++) {
         const project = await fundraising.methods.projects(i).call();
+        const projectOwnerData = await this.state.users.methods.users(project.creator).call()
+        project.ownerData = projectOwnerData // add the owner data to the project object
         projects.push(project);
       }
     }
     else {
       for (let i = 1; i <= projectNum; i++) {
         const project = await fundraising.methods.projects(i).call();
+        const projectOwnerData = await this.state.users.methods.users(project.creator).call()
+        project.ownerData = projectOwnerData // add the owner data to the project object
         if (Number(project.category) === Number(category)) {
           projects.push(project);
           }
@@ -309,7 +320,7 @@ class App extends Component {
     // if (projects.length === 0) {
     //   alert("No projects matching the selected category were found.");
     // }
-  }
+    }
   
 
   componentDidMount() {
@@ -340,7 +351,6 @@ class App extends Component {
   render() {
 
     return (
-
       <div>
 
               { 

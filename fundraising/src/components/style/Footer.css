@@ -2,7 +2,7 @@
     margin: 0 auto;
     width: 100%;
     height: 40vh;
-    background: rgb(236,244,252);
+    background: #196CAE;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,6 +13,7 @@
     width: 80%;
     display: flex;
     position: relative;
+    color: white;
 }
 
 .footer-row {
@@ -26,13 +27,13 @@
 .footer-row > a {
     font-size: 1.1em;
     font-weight: 400;
-    color: rgb(54, 54, 54);
+    color: rgb(255, 255, 255);
 }
 
 .footer-row > span {
     font-size: 1.1em;
     font-weight: 400;
-    color: rgb(54, 54, 54);
+    color: rgb(255, 255, 255);
 }
 
 .footer-row > img {

@@ -61,8 +61,7 @@ export default function ProjectCard(props) {
                     <span>{fromWei(props.project.targetAmount, 'ether')} Eth</span>  */}
             </div>
             <div className="project-footer">
-                    {/* <span className="project-author">By {props.project.creator}</span> */}
-                    <span className="project-author">By Byers</span>
+                    <span className="project-author">{props.project.ownerData.name} {props.project.ownerData.surname}</span>
                     <div className="project-verified">
                         <i class="fa-solid fa-circle-check"></i>
                         <span>VERIFIED</span>  {/* verified by MetaMask */}
@@ -70,7 +69,8 @@ export default function ProjectCard(props) {
             </div>
             {parseInt(window.web3.utils.toWei(props.project.amountRaised.toString(), 'Ether')) >= parseInt(window.web3.utils.toWei(props.project.targetAmount.toString(), 'Ether'))
                         ? <p>Goal Reached!</p>
-                        : null }              
+                        : null }    
+
           </a>
         </div>
     )
