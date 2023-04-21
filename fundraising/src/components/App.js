@@ -356,7 +356,7 @@ class App extends Component {
               { 
                this.state.loading
                 
-                ? <LoadingPage />
+                ? <div id="loader" className="rejection-message"><p className="text-center" id="alert-message"><LoadingPage /></p></div> 
                 : 
                 <div>
                 { this.isAuthenticated()

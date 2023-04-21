@@ -93,16 +93,17 @@ class HomePage extends Component {
             </section>
             <div className='projects--list-header'>FUNDCHAIN PROJECTS</div>
             <section className='projects--list'>
-
-                {/* { this.props.projects ?
-                    cards : <p>no projects found</p> */}
-                    {cards}
+                { this.props.projects.length ?
+                cards : 
+                <div className="no-projects" ><h1>No projects to display...</h1></div>
+                }
             
                 <div className="scroll-button">
                     <div className='scroll-button-holder' onClick={this.scrollToTop}>
                         <i class="fas fa-arrow-up"></i>
                     </div>  
                 </div>
+
             </section>
         </main>
     )

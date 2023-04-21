@@ -1,1 +1,12 @@
-/* Styles go here */
+/* CSS for App component */
+
+.rejection-message {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+.rejection-message p {
+    color: rgb(88, 153, 203);
+    font-size: 1.5rem;
+}
+  
