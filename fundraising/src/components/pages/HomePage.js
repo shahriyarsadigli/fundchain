@@ -2,9 +2,25 @@ import Artwork from '../images/Fundchain-artwork.png'
 import '../style/HomePage.css';
 import React, { Component } from 'react';
 import ProjectCard from '../headers/ProjectCard.js'
+import HomeBgS1 from '../images/HomeBg-2.png'
 
 
 class HomePage extends Component {
+
+    scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+    }
+
+    scrollToProjects() {
+        window.scrollTo({
+          top: document.documentElement.scrollHeight * 0.42,
+          behavior: "smooth"
+        });
+    }
+      
     render() {
         const cards = this.props.projects.map(project => {
             if (project.id != 0)
@@ -16,7 +32,9 @@ class HomePage extends Component {
               );
           });
 
+
     return (
+        
         <main className="main-page">
             <section className="home">
                 <div className="home-body">
@@ -24,9 +42,10 @@ class HomePage extends Component {
                         <h1>FundChain empowers <br></br>the future of startups  with<br></br>secure and transparent fundraising.</h1>
                         <h5>Join the decentralized revolution of startup funding powered by Ethereum.</h5>
                         <img src={Artwork} className="home--artwork"/>
+                        <img src={HomeBgS1} className="home--bg2"/>
                     </div>
                     <div className="main--buttons">
-                        <a href="/projects"><button type="button">VIEW PROJECTS</button></a>
+                        <a onClick={this.scrollToProjects}><button type="button">VIEW PROJECTS</button></a>
                         <a href="/create-project"><button type="button">CREATE A PROJECT</button></a>
                     </div>
                 </div>
@@ -44,10 +63,7 @@ class HomePage extends Component {
                         <div className='text--section'>
                             <h4>Give Support</h4>
                             <div className='text--body'>
-                                <span>Help startups succeed with your</span>
-                                <span>donation and gain access to</span>
-                                <span>exclusive rewards, support, and</span>
-                                <span>recognition.</span>
+                                <p>Help startups succeed with your donation and gain access to exclusive rewards, support, and recognition.</p>
                             </div>
                         </div>
                     </div>
@@ -58,10 +74,7 @@ class HomePage extends Component {
                         <div className='text--section'>
                             <h4>Share Happiness</h4>
                             <div className='text--body'>
-                                <span>Spread joy and make a positive</span>
-                                <span>impact on the world by</span>
-                                <span>supporting innovative startups</span>
-                                <span>through your donation.</span>
+                                <p>Spread joy and make a positive impact on the world by supporting innovative startups through your donation.</p>
                             </div>
                         </div>
                     </div>
@@ -72,19 +85,24 @@ class HomePage extends Component {
                         <div className='text--section'>
                             <h4>Inspire Others</h4>
                             <div className='text--body'>
-                                <span>Inspire others to create positive</span>
-                                <span>change by supporting innovative</span>
-                                <span> startups and joining a community</span>
-                                <span>of like-minded individuals.</span>
+                                <p>Inspire others to create positive change by supporting innovative startups and joining a community of like-minded individuals.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+            <div className='projects--list-header'>FUNDCHAIN PROJECTS</div>
             <section className='projects--list'>
+
                 {/* { this.props.projects ?
                     cards : <p>no projects found</p> */}
                     {cards}
+            
+                <div className="scroll-button">
+                    <div className='scroll-button-holder' onClick={this.scrollToTop}>
+                        <i class="fas fa-arrow-up"></i>
+                    </div>  
+                </div>
             </section>
         </main>
     )

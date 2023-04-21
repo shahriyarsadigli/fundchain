@@ -70,7 +70,8 @@
     right: 0%;
     color: white;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 5px;
+    line-height: 170%;
 }
 
 /* Project name */
