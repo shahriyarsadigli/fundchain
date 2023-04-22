@@ -57,7 +57,7 @@ class ProjectsPage extends Component {
     });
 
     const categories = [
-      { value: null, label: "All" },
+      { value: 6, label: "All" },
       { value: 0, label: "Other" },
       { value: 1, label: "Technology" },
       { value: 2, label: "Healthcare" },
@@ -92,7 +92,7 @@ class ProjectsPage extends Component {
             </div>
             <button className="next-btn" onClick={this.handleNextClick}><i className="fa fa-angle-right"></i></button>
           </div>
-
+                {console.log(this.props.projects.length)}
           <div className="projects-list">
             { this.props.projects.length ?
             cards : 

@@ -272,11 +272,13 @@ class App extends Component {
 
     for (let i = 1; i <= projectNum; i++) {
       const project = await fundraising.methods.projects(i).call();
+      if (project.id !== "0") { // do not read the deleted projects which have the id as 0
       if (project.title.toLowerCase().includes(query.toLowerCase()) || project.excerpt.toLowerCase().includes(query.toLowerCase())) {
         const projectOwnerData = await this.state.users.methods.users(project.creator).call()
         project.ownerData = projectOwnerData // add the owner data to the project object
         projects.push(project);
       }
+    }
     }
 
     this.setState({ projects: projects });
@@ -296,23 +298,27 @@ class App extends Component {
 
     // console.log(category)
 
-    if (category === "All") { 
+    if (category === 6) { 
       for (let i = 1; i <= projectNum; i++) {
         const project = await fundraising.methods.projects(i).call();
+        if (project.id !== "0") { // do not read the deleted projects which have the id as 0
         const projectOwnerData = await this.state.users.methods.users(project.creator).call()
         project.ownerData = projectOwnerData // add the owner data to the project object
         projects.push(project);
       }
     }
+    }
     else {
       for (let i = 1; i <= projectNum; i++) {
         const project = await fundraising.methods.projects(i).call();
+        if (project.id !== "0") { // do not read the deleted projects which have the id as 0
         const projectOwnerData = await this.state.users.methods.users(project.creator).call()
         project.ownerData = projectOwnerData // add the owner data to the project object
         if (Number(project.category) === Number(category)) {
           projects.push(project);
           }
         }
+      }
     } 
   
     this.setState({ projects: projects });
@@ -420,17 +426,15 @@ class App extends Component {
                                                       />} />
                           ))}
 
-                          {
-                              this.state.projects.map((project) => (
+                          {   this.state.projects.map((project) => (
                               !this.state.userAuthenticated ? <Route path={`/donation/${project.slug}`} element={<Navigate replace to="/signin" />} /> // do not let the users access the donation page if they are not signed in
-                              : 
-                              <Route key={project.id} path={`/donation/${project.slug}`} element={<DonationPage project={project} 
-                                                                                       donateProject={this.donateProject} 
-                                                                                       account={this.state.account}
-                                                                                       balance={this.state.balanceInEth}
-                                                                                       userAuthenticated={this.state.userAuthenticated}
+                              : <Route key={project.id} path={`/donation/${project.slug}`} element={<DonationPage project={project} 
+                                                                                         donateProject={this.donateProject} 
+                                                                                         account={this.state.account}
+                                                                                         balance={this.state.balanceInEth}
+                                                                                         userAuthenticated={this.state.userAuthenticated}
                                                                                                               />} />
-                            ))}
+                          ))}
 
                             <Route path="*" element={<NotFound />} />
 
