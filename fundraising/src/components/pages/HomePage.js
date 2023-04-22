@@ -3,6 +3,7 @@ import '../style/HomePage.css';
 import React, { Component } from 'react';
 import ProjectCard from '../headers/ProjectCard.js'
 import HomeBgS1 from '../images/HomeBg-2.png'
+import ProjectsBgHome from '../images/projects-bg.png'
 
 
 class HomePage extends Component {
@@ -91,7 +92,7 @@ class HomePage extends Component {
                     </div>
                 </div>
             </section>
-            <div className='projects--list-header'>FUNDCHAIN PROJECTS</div>
+            <div className='projects--list-header'><img src={ProjectsBgHome} className="home--artwork"/></div>
             <section className='projects--list'>
                 { this.props.projects.length ?
                 cards : 

@@ -95,6 +95,11 @@ html, body{
   color: white;
 }
 
+.main--buttons > a > button:focus {
+  outline: none;
+}
+
+
 /* New additions */
 
 .home--promotion {
@@ -193,9 +198,9 @@ html, body{
 /* Project list */
 
 .projects--list-header {
-  height: 10vh;
+  height: 14vh;
   margin-top: 40px;
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1.8em;
@@ -205,7 +210,17 @@ html, body{
   background-size: 60%;
   background-position: center;
   color: white;
-  border: 10px 0 solid #afd0e8;
+  border: 10px 0 solid #afd0e8; */
+  position: relative;
+  margin-bottom: 50px;
+
+}
+
+.projects--list-header > img {
+  width: 100%;
+  position: relative;
+  left: 0;
+  top: 0;
 }
 .projects--list {
   width: 80%;
