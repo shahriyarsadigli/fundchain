@@ -26,6 +26,7 @@
     justify-content: flex-start;
     align-items: center;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    position: relative;
 }
 
 .project--img {
@@ -47,8 +48,8 @@
 
 .project--verified {
     position: absolute;
-    top: -16%;
-    color: rgb(26, 213, 45);;
+    top: -17%;
+    color: rgb(16, 224, 37);;
 }
 
 .project--verified > i {
@@ -64,35 +65,57 @@
 
 .project--details > h3 {
     font-weight: 700;
+    font-size: 1.5em;
+    position: relative;
+    bottom: 5%;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 
 .project--details > h6 {
     color: gray;
-    margin-top: -5px;
-}
-
-.project--details > span {
-    margin-top: 10px;
-    padding-left: 10px;
-    width: 100%;
-    height: 15%;
-    border-radius: 10px;
-    font-weight: 500;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    color: white;
-    border: 2px solid white;
+    position: relative;
+    bottom: 8%;
 }
 
 .funds--raised {
     background-color: gold;
+    height: 15%;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
+    position: relative;
+    bottom: 4%;
+}
+
+.funds--raised > span {
+    font-weight: 600;
 }
 
 .funds--amount {
     background-color: rgb(88,153,203);
+    height: 15%;
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 15px;
 }
 
+.funds--amount > span {
+    font-weight: 600;
+}
+
+
+.funds-raised-amount {
+    color: white;
+}
 /* Right side */
 .donation--info {
     background: rgb(236,244,252);
@@ -177,7 +200,7 @@
 .donation--address > span {
     height: 50%;
     width: 100%;
-    font-size: 0.7em;
+    font-size: 0.65em;
     font-weight: bold;
     display: flex;
     align-items: center;
@@ -206,20 +229,26 @@
 }
 
 .account--balance {
-    padding: 3px 10px;
     padding-left: 17px;
     width: 40%;
     background: rgb(17, 17, 111);
     color: white;
-    text-align: start;
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .balance--amount {
     width: 60%;
-    text-align: end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     padding: 3px 10px;
     border-radius: 0 5px 5px 0;
     font-weight: 600;
+    font-size: 0.9em;
+    color: #196CAE;
 }
 
 .donation--submit {
@@ -246,13 +275,22 @@
     height: 74%;
     width: 100%;
     top: 70%;
-    background-color: gold;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 20px;
-    color: white;
+    color: black;
     border: none;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(to right, gold 50%, rgb(88,153,203) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+.donation--button:hover {
+    background-position: -100%;
+    color: white;
 }
 

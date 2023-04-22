@@ -61,6 +61,8 @@
     height: 40%;
     display: flex;
     align-items: center;
+    position: relative;
+    top: 9%;
 }
 
 
@@ -76,18 +78,22 @@
 
 
 .project-name-info > h3 {
-    height: 30%;
+    font-size: 1.4em;
+    height: 75%;
     color: black;
     font-weight: 700;
     position: relative;
-    bottom: 8%;
+    top: 11%;
+    display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+
 }
 
 .project-name-info > span {
     height: 20%;
     color: #196CAE;
-    position: relative;
-    bottom: 15%;
     font-size: 1.1em;
 }
 
@@ -127,7 +133,7 @@
 }
 
 .project-funds-info > div > span {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: 600;
 }
 
@@ -177,6 +183,8 @@
 }
 
 .project--donation > h4 {
+    padding: 5px 20px;
+    font-size: 1.3em;
     height: 20%;
     width: 90%;
     border-radius: 10px;
@@ -186,7 +194,16 @@
     justify-content: center;
     align-items: center;
     background-color: rgba(88, 153, 203, 0.155);
-    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25); */
+    position: relative;
+}
+
+.project--donation > h4 > i {
+    position: absolute;
+    left: 92%;
+    bottom: 60%;
+    font-size: 0.75em;
+    cursor: pointer;
 }
 
 .project--donation--bar {
@@ -203,7 +220,7 @@
     position: absolute;
     font-size: 0.9em;
     left: 45%;
-    top: 22%;
+    top: 18%;
 }
 
 .project--donation--progress {
@@ -220,26 +237,28 @@
     align-items: center;
 }
 .project--donation--button > a {
-    height: 60%;
+    height: 70%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(88,153,203);
     border-radius: 20px;
-    color: white;
+    color: black;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
     font-weight: 500;
-}
-
-.project--donation--button > a {
+    /* test */
+    background-image: linear-gradient(to right, gold 50%, rgb(88,153,203) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
     text-decoration: none;
-    transition: all .3s ease;
+    transition: all .4s ease;
 }
 
-.project--donation > a:hover {
-    transform: scale(1.01);
+.project--donation--button > a:hover {
+    background-position: -100%;
+    color: white;
 }
+
 
 .project--donation--category {
     height: 10%;
@@ -254,5 +273,25 @@
     color: gray;
     position: relative;
     right: 25%;
+}
+
+/* Project delete */
+
+.project--delete {
+    position: absolute;
+    bottom: 71%;
+    right: 18%;
+}
+
+.project--delete > button {
+    padding: 12px 40px 12px 70px;
+    border: none;
+    background-color: #e5eff7; 
+    color: red;
+    font-size: 1.5em;
+}
+
+.project--delete > button:focus {
+    outline: none;
 }
 

@@ -3,6 +3,7 @@ import React, { Component, useState } from 'react';
 import { fromWei } from 'web3-utils';
 
 
+
 function getCategoryName(category) {
     switch (category) {
       case '0':
@@ -34,13 +35,18 @@ class AProject extends Component {
     }
 
     componentDidMount() {
-        // const donationTarget = fromWei(this.props.project.targetAmount);
-        // const amountRaised = fromWei(this.props.project.amountRaised);
-        const donationTarget = 100;
-        const amountRaised = 50;
+        const donationTarget = fromWei(this.props.project.targetAmount);
+        const amountRaised = fromWei(this.props.project.amountRaised);
         const percentageRaised = Math.floor((amountRaised / donationTarget) * 100);
         this.setState({ percentageRaised });
     }
+
+    // Delete Project 
+    handleDeleteIconClick = () => {
+        this.setState((prevState) => ({
+          showDeleteButton: !prevState.showDeleteButton
+        }));
+      };
     render() {
 
     const images = require.context('../images/project_images', true);
@@ -78,7 +84,9 @@ class AProject extends Component {
                         <p> {this.props.project.body} </p>
                     </div>
                     <div className='project--donation'>
-                        <h4>{this.props.project.title}</h4>
+                        <h4>{this.props.project.title}
+                            <i onClick={this.handleDeleteIconClick} class="fa-regular fa-trash-can"></i>
+                        </h4>
                         <div className='project--donation--bar'>
                             <span className='project--donation--progress' style={{width: `${this.state.percentageRaised}%`}}></span>
                             <h6>{this.state.percentageRaised}%</h6>
@@ -96,11 +104,12 @@ class AProject extends Component {
                             {getCategoryName(this.props.project.category)}
                         </div>
                         
-                        {/* <td>
+                        <div className='project--delete'>
                         {
                            this.props.userAuthenticated && this.props.project.creator === this.props.account && this.props.project.amountRaised < this.props.project.targetAmount / 20
                            ? 
                           <button
+                            style={{ display: this.state.showDeleteButton ? "block" : "none" }}
                             name={this.props.project.id}
                             onClick={(event) => {
                                 this.props.deleteProject(event.target.name);
@@ -110,7 +119,7 @@ class AProject extends Component {
                           </button> 
                           : null
                         }
-                        </td> */}
+                        </div>
                     </div>
                 </div>
             </div>

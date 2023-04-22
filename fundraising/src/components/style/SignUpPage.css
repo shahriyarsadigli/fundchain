@@ -36,7 +36,7 @@
 }
 
 .signup-header > h2 {
-    color: white;
+    color: black;
     font-size: 1.6rem;
 }
 
@@ -99,7 +99,6 @@
 
 .signup--button {
     width: 320px;
-    background: rgb(88,153,203);
     padding: 16px 10px;
     display: flex;
     align-items: center;
@@ -111,10 +110,16 @@
     transition: all .3s ease;
     position: relative;
     left: 2.5%;
+    background-image: linear-gradient(to right, rgb(88,153,203) 50%, gold 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
+    text-decoration: none;
+    transition: all .4s ease;
 }
 
 .signup--button:hover {
     color: black;
+    background-position: -100%; 
 }
 
 /* Icons */

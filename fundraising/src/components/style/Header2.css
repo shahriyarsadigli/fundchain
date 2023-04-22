@@ -115,13 +115,14 @@ header {
     display: none;
     padding-top: -10px;
     box-sizing: border-box;
+    width: 170px;
 }
 
 .dropdown-menu > a {
     color: rgb(94, 93, 93);
     text-decoration: none;
     display: block;
-    padding: 14px 16px;
+    padding: 14px 20px;
     border-radius: 20px;
 }
 
@@ -129,7 +130,7 @@ header {
     color: rgb(94, 93, 93);
     text-decoration: none;
     display: block;
-    padding: 14px 16px;
+    padding: 14px 20px;
     border-radius: 20px;
     
 }

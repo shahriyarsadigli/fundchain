@@ -104,20 +104,23 @@
 
 .signin--button {
     width: 346px;
-    background: gold;
     padding: 16px 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100px;
     margin-top: 10px;
-    color: white;
+    color: black;
     border: none;
     transition: all .4s ease;
+    background-image: linear-gradient(to right, gold 50%, rgb(88,153,203) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
 }
 
 .signin--button:hover {
-    color: black;
+    background-position: -100%;
+    color: white;
     
 }
 
