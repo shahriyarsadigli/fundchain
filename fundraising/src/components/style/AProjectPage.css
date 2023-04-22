@@ -4,68 +4,63 @@
 }
 
 .project--body {
-    height: 1400px;
+    height: auto;
     width: 100%;
     position: relative;
-    background: rgb(231, 231, 231);
+    background: rgba(88, 153, 203, 0.155);
 }
 
+/* Project Header */
 .project--header {
-    height: 32%;
+    height: 60vh;
     width: 100%;
     overflow: hidden;
     transition: all .5s ease;
+    background-image: url('../images/project-bg.png');
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
 }
 
-.project--header:hover .project--bg,
-.project--header:focus .project--bg {
-    transform: scale(1.15);
-    filter: brightness(60%);
-}
-
-.project--header > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 25% 10%;
-    transition: all .5s ease;
-}
 
 .project-name-badge {
-    position: absolute;
-    left: 15%;
-    top: 3em;
-    height: 330px;
-    width: 300px;
-    border: 2px solid blue;
+    height: 80%;
+    width: 22%;
     border-radius: 10px;
     overflow: hidden;
-    display: none;
-    
-}
-
-.project--header:hover .project-name-badge {
-    display: block;
-}
-
-
-.project-name-img > img {
-    height: 200px;
-    width: 300px;
-    box-sizing: border-box;
-    padding: 15px 15px 5px 15px;
-    
-}
-
-.project-name-info {
-    padding-left: 15px;
+    background-color:  white ;
+    padding: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 1.8%;
+}
+
+.project-name-badge > img {
+    height: 60%;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px; 
+}
+
+.project-name-info {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 .project-name-verified {
-    margin-top: 10px;
+    height: 40%;
+    display: flex;
+    align-items: center;
 }
 
 
@@ -77,67 +72,85 @@
 
 .project-name-verified > span {
     color: rgb(0, 255, 0);
-    position: relative;
-    bottom: 0.15em;
 }
 
 
-.project-name-info > h2 {
+.project-name-info > h3 {
+    height: 30%;
+    color: black;
+    font-weight: 700;
     position: relative;
-    bottom: 0.3em;
-    color: white;
+    bottom: 8%;
 }
 
 .project-name-info > span {
+    height: 20%;
+    color: #196CAE;
     position: relative;
-    bottom: 1.6em;
-    color: red;
+    bottom: 15%;
+    font-size: 1.1em;
 }
 
 /* Donation info */
 
-.project--d-info{
-    width: 45.3%;
-    height: 3%;
+.project-funds-info{
+    height: 65%;
+    width: 30%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    background-color: rgb(17, 17, 111);
-    margin-top: 30px;
-    margin-bottom: 30px;
-    position: relative;
-    left: 15%;
-    border-radius: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+
+.project-funds-info > p {
+    height: 35%;
+    width: 90%;
+    font-size: 1.3em;
+    max-height: calc(3em * 3); /* 3em for 1 line of text, 3 lines of text */
+    overflow: hidden;
+    line-height: 1.4em; /* sets the height of each line of text */
+}
+
+.project-funds-info > div {
+    height: 16%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 25px;
+    background: rgba(88, 153, 203, 0.155);
+    border-radius: 10px;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
-    border: 3px solid white;
 }
 
-.project--d-info > h3 {
-    margin-right: 15px;
-    color: white;
-}
-
-.project--d-info > span {
-    font-size: 1.1em;
+.project-funds-info > div > span {
+    font-size: 1.2em;
     font-weight: 600;
-    color: greenyellow;
 }
-/* Project description */
+
+.project-funds-amount {
+    color: #196CAE;
+}
+
+/* Project Content */
 
 .project--content {
-    height: 60%;
+    height: auto;
+    min-height: 100vh;
     display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    width: 80%;
+    left: 10%;
 }
 
 .project--description {
-    height: 80%;
-    width: 40%;
-    border: 3px solid blue ;
-    padding: 10px;
-    padding: 10px 40px;
-    position: relative;
-    left: 15%;
-    border-radius: 15px;
+    height: auto;
+    width: 55%;
+    padding: 50px 30px;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
     background-color: white;
 }
@@ -146,41 +159,80 @@
     font-weight: 400;
 }
 
-/* Donation button */
+/* Project donation - Right side */
 
 .project--donation {
-    position: relative;
-    left: 20%;
-    height: 25%;
-    width: 20%;
-    border-radius: 50px;
+    padding: 20px;
+    height: 50vh;
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: white;
+    justify-content: space-evenly;
+    position: relative;
+    right: 2.5%;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.project--donation > h3 {
-    padding: 8px 35px;
-    background-color: rgb(231, 231, 231);
+.project--donation > h4 {
+    height: 20%;
+    width: 90%;
     border-radius: 10px;
     color: black;
-    position: relative;
-    bottom: 1.9em;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(88, 153, 203, 0.155);
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
-.project--donation > a > span {
-    padding: 15px 110px;
-    background-color: rgb(0, 255, 0);
+.project--donation--bar {
+    height: 8%;
+    width: 90%;
+    border-radius: 10px;
+    background-color: #196CAE;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.project--donation--bar > h6 {
+    position: absolute;
+    font-size: 0.9em;
+    left: 45%;
+    top: 22%;
+}
+
+.project--donation--progress {
+    height: 100%;
+    background-color: gold;
+    position: absolute;
+}
+
+.project--donation--button {
+    height: 25%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project--donation--button > a {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(88,153,203);
     border-radius: 20px;
     color: white;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
     font-weight: 500;
 }
 
-.project--donation > a {
+.project--donation--button > a {
     text-decoration: none;
     transition: all .3s ease;
 }
@@ -188,3 +240,19 @@
 .project--donation > a:hover {
     transform: scale(1.01);
 }
+
+.project--donation--category {
+    height: 10%;
+    width: 40%;
+    border: 3px solid rgba(88, 153, 203, 0.155);
+    border-radius: 10px;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9em;
+    color: gray;
+    position: relative;
+    right: 25%;
+}
+

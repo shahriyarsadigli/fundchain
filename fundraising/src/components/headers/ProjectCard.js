@@ -54,7 +54,7 @@ export default function ProjectCard(props) {
                       <span className='donation-percentage'>{percentageRaised}%</span>
                     </div>
                     <div className='donation-bar'>
-                    <span className='donation-progress' style={{width: `${percentageRaised}%`}}></span>
+                      <span className='donation-progress' style={{width: `${percentageRaised}%`}}></span>
                     </div>
                     
                     {/* <h6>Target Amount</h6>

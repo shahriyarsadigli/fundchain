@@ -16,7 +16,7 @@ class HomePage extends Component {
 
     scrollToProjects() {
         window.scrollTo({
-          top: document.documentElement.scrollHeight * 0.42,
+          top: document.documentElement.scrollHeight * 0.52,
           behavior: "smooth"
         });
     }
