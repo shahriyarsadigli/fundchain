@@ -1,124 +1,356 @@
-/* * {
-    outline: 1px solid red;
-  } */
-.createproject-page{
-    height: 1000px;
-}
-.createproject-head{
-    position: absolute;
-    width: 1440px;
-    height: 150px;
-    left: 0px;
-    top: 100px;
- 
-    
+
+.create-project-main{
+    height: auto;
+    position: relative;
+    background: rgba(88, 153, 203, 0.155);
+    padding-bottom: 100px;
 }
 
-.startss1{
-    position: absolute;
-    width: 1440px;
-    height: 150px;
-    left: 0px;
-    top: 0px;
-}
-
-.createproject-head h1{
-    position: absolute;
-    width: 755px;
-    height:5px;
-    left: 342px;
-    top: 32px;
-    
-    /* Alt Heading 0 */
-    font-family: 'Crimson Pro';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 65px;
-    line-height: 80px;
+/* Project Header */
+.create-project-header{
+    height: 30vh;
+    width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    
+    object-fit: cover;
+    background-color: rgb(88,153,203);
+}
+
+.create-project-header > h1 {
     color: white;
+    font-weight: 700;
 }
-.project-info{
-    position: absolute;
-    width: 650px;
-    height: 50px;
-    left: 179px;
-    top: 240px;
-}
-.project-info-1 > input{
-    padding: 5px 10px;
-    padding-right: 500px;
 
-    box-sizing: border-box;
-    background: #FFFFFF;
-    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+.create-project-header > span {
+    font-size: 1.4em;
+    color: gold;
 }
-.project-description{
-    padding: 5px 10px;
-    padding-right: 500px;
-    padding-bottom: 300px;
 
-    box-sizing: border-box;
-    background: #FFFFFF;
-    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+.create-project-header > span > i {
+    margin-right: 5px;
 }
-.project-excerpt{
-    padding: 5px 10px;
-    padding-right: 500px;
 
-    box-sizing: border-box;
-    background: #FFFFFF;
-    box-shadow: -1px -1px 5px rgba(0, 0, 0, 0.25), 1px 1px 3px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+/* Project Header */
+
+/* Project Body */
+
+.create-project-body {
+    height: 340vh;
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
 }
-.project-button > button{
-    background: #FF0000;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    text-decoration: none;
-    position: absolute;
-    width: 140px;
-    height: 50px;
-    left: 250px;
-    top: 630px;
-    
-}
-.project-button > button > a{
-    font-family: 'Dosis';
-    font-style: normal;
-    font-weight: 5000;
-    font-size: 30px;
-    line-height: 28px;
+
+
+/* Project title */
+
+.create-project-title {
+    height: 10%;
+    width: 100%;
     display: flex;
     align-items: center;
-    text-align: center;
-    color: #FFFFFF;
-    text-decoration: none;
 }
+
+.create-project-title > span {
+    height: 8vh;
+    width: 20%;
+    background-color: rgb(88,153,203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.create-project-title > div {
+    height: 60%;
+    width: 50%;
+    position: relative;
+    left: 5%;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.create-project-title > div >input {
+    height: 45%;
+    width: 100%;
+    border: none;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+/* Project title */
+
+
+/* Project excerpt */
+.create-project-excerpt {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.create-project-excerpt > span {
+    height: 8vh;
+    width: 20%;
+    background-color: rgb(88,153,203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px;
+    position: relative;
+    bottom: 11%;
+}
+
+.create-project-excerpt > div {
+    height: 80%;
+    width: 50%;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.create-project-excerpt > div > textarea {
+    height: 70%;
+    width: 100%;
+    border: none;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 10px 15px;
+
+}
+/* Project excerpt */
+
+
+/* Project description */
+
+.create-project-description {
+    height: 37%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.create-project-description > span {
+    height: 8vh;
+    width: 20%;
+    background-color: rgb(88,153,203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px;
+    position: relative;
+    bottom: 34%;
+}
+
+.create-project-description > div {
+    height: 80%;
+    width: 50%;
+    position: relative;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.create-project-description > div > textarea {
+    height: 80%;
+    width: 100%;
+    border: none;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+/* Project description */
+
+
+/* Project target amount */
+
+.create-project-target-amount {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.create-project-target-amount > span {
+    height: 8vh;
+    width: 20%;
+    background-color: rgb(88,153,203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px;
+    position: relative;
+    bottom: 20%;
+}
+
+.create-project-target-amount > div {
+    height: 80%;
+    width: 50%;
+    position: relative;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.create-project-target-amount > div > input {
+    height: 35%;
+    width: 100%;
+    border: none;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    padding: 0px 15px;
+}
+/* Project target amount */
+
+
+/* Project category */
+
+.create-project-category {
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid red;
+    position: relative;
+    top: 4%;
+}
+
+.create-project-category > span {
+    height: 8vh;
+    width: 20%;
+    background-color: rgb(88,153,203);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.create-project-category > div {
+    height: 80%;
+    width: 50%;
+    position: relative;
+    left: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-project-category > div > select {
+    height: 10%;
+    width: 20%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.create-project-category > div > button {
+    height: 10%;
+    width: 70%;
+    border-radius: 5px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
+}
+
 
 /* image selection */
 
-.image-grid {
+.image--selection {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
-    border: 1px solid #ccc;
     padding: 20px;
     list-style: none;
+    position: absolute;
+    height: 60vh;
+    width: 75%;
+    top: 15%;
+    left: 27.5%;
 }
   
-  
-.image-grid li {
+.image--selection > div {
     width: 100%;
+    /* position: relative;
+    top: 10vh;
+    left: 30vh; */
+    border: 1px solid red;
 }
   
-.image-grid img {
-    max-width: 90%;
-    height: 90px;
+.image--selection > div > img {
+    width: 90px;
+    height: 60px;
+    object-fit: cover;
 }
   
+/* Project category */
+
+
+/* Project publish */
+.create-project-publish {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: self-start;
+    position: relative;
+    top: 7%;
+}
+
+.create-project-publish > span {
+    height: 8vh;
+    width: 20%;
+    background-color: gold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    color: white;
+    font-weight: 600;
+    border-radius: 0px 5px 5px 0px;
+}
+
+.create-project-publish > button {
+    height: 35%;
+    width: 20%;
+    border: none;
+    background-color: gold;
+    border-radius: 100px;
+    color: black;
+    border: none;
+    background-image: linear-gradient(to right, #ffd700 50%,  rgb(88,153,203) 50%);
+    background-size: 200% 100%;
+    transition: background-position 0.5s;
+    text-decoration: none;
+    transition: all .4s ease;
+    font-weight: 500;
+    letter-spacing: 1px;
+    position: relative;
+    left: 20%;
+}
+
+.create-project-publish > button:hover {
+    color: white;
+    background-position: -100%; 
+}
+

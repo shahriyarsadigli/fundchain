@@ -1,6 +1,5 @@
 import '../style/DonationPage.css'
 import React, { Component } from 'react';
-import Pimg1 from '../images/project1.jpg'
 import MetamaskIcon from '../images/metamask.svg'
 
 
