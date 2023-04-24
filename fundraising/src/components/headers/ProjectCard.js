@@ -31,7 +31,7 @@ export default function ProjectCard(props) {
     const donationTarget = fromWei(props.project.targetAmount)
     const amountRaised = fromWei(props.project.amountRaised)
 
-    const [percentageRaised, setPercentageRaised] = useState(Math.floor((amountRaised / donationTarget) * 100));
+    // const [percentageRaised, setPercentageRaised] = useState(Math.floor((amountRaised / donationTarget) * 100));
 
 
     return(
@@ -51,10 +51,10 @@ export default function ProjectCard(props) {
             <div className="donation-amount">
                     <div className='donation-raised'>
                       <h6>Raised: <span>{fromWei(props.project.amountRaised, 'ether')} Eth</span></h6>
-                      <span className='donation-percentage'>{percentageRaised}%</span>
+                      <span className='donation-percentage'>{Math.floor((amountRaised / donationTarget) * 100)}%</span>
                     </div>
                     <div className='donation-bar'>
-                      <span className='donation-progress' style={{width: `${percentageRaised}%`}}></span>
+                      <span className='donation-progress' style={{width: `${Math.floor((amountRaised / donationTarget) * 100)}%`}}></span>
                     </div>
                     
                     {/* <h6>Target Amount</h6>
@@ -76,4 +76,3 @@ export default function ProjectCard(props) {
     )
 
 }
-

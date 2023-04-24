@@ -49,64 +49,77 @@ class CreateProject extends Component {
         ],
         showImageMenu: false,
         showImageOptions: false,
+        selectedCategory: 'Other', // Default category
         projectData: {
-              image: ''
+              image: '',
+              selectedImageUrl: ''
         },
-        // images: {
-        //     Other: [other1, other2, other3, other4, other5],
-        //     Technology: [technology1, technology2, technology3, technology4, technology5],
-        //     Healthcare: [healthcare1, healthcare2, healthcare3, healthcare4, healthcare5],
-        //     Environment: [environment1, environment2, environment3, environment4, environment5],
-        //     Education: [education1, education2, education3, education4, education5],
-        //     Art: [art1, art2, art3, art4, art5]
-        //   }
-      };
-    
-    imageOptions = [
-        { value: 'technology1.jpeg', image: technology1 },
-        { value: 'technology2.jpeg',image: technology2 },
-        { value: 'technology3.jpg', image: technology3 },
-        { value: 'technology4.jpg', image: technology4 },
-        { value: 'technology5.jpg', image: technology5 },
-        { value: 'art1.jpg', image: art1 },
-        { value: 'art2.jpeg', image: art2 },
-        { value: 'art3.jpg', image: art3 },
-        { value: 'art4.jpg',  image: art4 },
-        { value: 'art5.jpg', image: art5 },
-        { value: 'education1.jpg',  image: education1 },
-        { value: 'education2.jpg', image: education2 },
-        { value: 'education3.jpg', image: education3 },
-        { value: 'education4.jpg', image: education4 },
-        { value: 'education5.jpg', image: education5 },
-        { value: 'environment1.jpg', image: environment1 },
-        { value: 'environment2.jpg', image: environment2 },
-        { value: 'environment3.jpg', image: environment3 },
-        { value: 'environment4.jpg', image: environment4 },
-        { value: 'environment5.jpg', image: environment5 },
-        { value: 'healthcare1.jpg', image: healthcare1 },
-        { value: 'healthcare2.jpg', image: healthcare2 },
-        { value: 'healthcare3.jpg', image: healthcare3 },
-        { value: 'healthcare4.jpg', image: healthcare4 },
-        { value: 'healthcare5.jpg', image: healthcare5 },
-        { value: 'Other1.jpg',  image: other1 },
-        { value: 'Other2.jpg',  image: other2 },
-        { value: 'Other3.jpg',  image: other3 },
-        { value: 'Other4.jpg',  image: other4 },
-        { value: 'Other5.jpg',  image: other5 },
-    ];
-    
-    handleCategoryChange = (event) => {
-        const category = event.target.value;
-        this.setState({ category });
       };
 
-    handleImageChange = (selectedImage) => {
-        this.setState({ projectData: { 
-            ...this.state.projectData, 
-            image: selectedImage },         
+    categoryImages = {
+        Technology: [
+            { value: 'technology1.jpeg', image: technology1 },
+            { value: 'technology2.jpeg', image: technology2 },
+            { value: 'technology3.jpg', image: technology3 },
+            { value: 'technology4.jpg', image: technology4 },
+            { value: 'technology5.jpg', image: technology5 },
+          ],
+        Art: [
+            { value: 'art1.jpg', image: art1 },
+            { value: 'art2.jpeg', image: art2 },
+            { value: 'art3.jpg', image: art3 },
+            { value: 'art4.jpg', image: art4 },
+            { value: 'art5.jpg', image: art5 },
+          ],
+        Education: [
+            { value: 'education1.jpg',  image: education1 },
+            { value: 'education2.jpg', image: education2 },
+            { value: 'education3.jpg', image: education3 },
+            { value: 'education4.jpg', image: education4 },
+            { value: 'education5.jpg', image: education5 },
+        ],
+        Environment: [
+            { value: 'environment1.jpg', image: environment1 },
+            { value: 'environment2.jpg', image: environment2 },
+            { value: 'environment3.jpg', image: environment3 },
+            { value: 'environment4.jpg', image: environment4 },
+            { value: 'environment5.jpg', image: environment5 },
+        ],
+        Healthcare: [
+            { value: 'healthcare1.jpg', image: healthcare1 },
+            { value: 'healthcare2.jpg', image: healthcare2 },
+            { value: 'healthcare3.jpg', image: healthcare3 },
+            { value: 'healthcare4.jpg', image: healthcare4 },
+            { value: 'healthcare5.jpg', image: healthcare5 },
+        ],
+        Other: [
+            { value: 'Other1.jpg',  image: other1 },
+            { value: 'Other2.jpg',  image: other2 },
+            { value: 'Other3.jpg',  image: other3 },
+            { value: 'Other4.jpg',  image: other4 },
+            { value: 'Other5.jpg',  image: other5 },
+        ]
+    };
+    
+    handleCategoryChange = (event) => {
+        const categoryValue = event.target.value;
+        const categorySelected = this.state.categories.find(category => category.value === parseInt(categoryValue, 10)).label;
+        this.setState({ categoryValue, selectedCategory: categorySelected, projectData: {image: ''} }); // update the selected category and reset the image selection
+      };
+
+    handleImageChange = (value) => {
+
+        const categoryImages = this.categoryImages[this.state.selectedCategory];
+        const selectedImage = categoryImages.find((image) => image.value === value);
+        const imageUrl = selectedImage.image;
+        this.setState({
+            projectData: {
+                ...this.state.projectData, 
+              image: value,
+              selectedImageUrl: imageUrl
+            },
             showImageOptions: false
-        })
-        console.log(this.state.projectData.image)
+          });
       };
       
       toggleImageOptions = () => {
@@ -120,8 +133,7 @@ class CreateProject extends Component {
                     <h1>Bring Your Ideas to Life with Fundchain</h1>
                     <span>
                         <i class="fa-solid fa-lightbulb"></i>
-                        {/* {this.props.currentAccountData.name} {this.props.currentAccountData.surname} */}
-                        Project Creator
+                        {this.props.currentAccountData.name} {this.props.currentAccountData.surname}
                     </span>
                 </div>
                 <form onSubmit={(event) => {
@@ -151,7 +163,6 @@ class CreateProject extends Component {
                                     ref={(input) => { this.projectTitle = input }}
                                     placeholder="Your project title"
                                     required />
-
                             </div>
                             
                         </div>
@@ -204,7 +215,7 @@ class CreateProject extends Component {
                         <div className='create-project-category'>
                             <span>Project Category</span>
                             <div className='create-project-input'>
-                                <select ref={(input) => { this.projectCategory = input }}>
+                                <select ref={(input) => { this.projectCategory = input }} onChange={this.handleCategoryChange}>
                                     {this.state.categories.map((category) => (
                                     <option value={category.value}>{category.label}</option>
                                     ))}
@@ -212,19 +223,24 @@ class CreateProject extends Component {
                                 <button type="button" onClick={this.toggleImageOptions}>Click to choose image for your project</button>
                                 {this.state.showImageOptions && (
                                     <div className="image--selection">
-                                        {this.imageOptions.map((option) => (
-                                            <div key={option.value}
-                                                className={this.state.projectData.image === option.value ? 'selected' : ''}
-                                                onClick={() => this.handleImageChange(option.value)}
-                                            >
-                                                <img src={option.image} alt={option.label} />
-                                                <span>{option.label}</span>
-                                            </div>
+                                        {this.categoryImages[this.state.selectedCategory].map((option) => (
+                                        <div
+                                            key={option.value}
+                                            className={this.state.projectData.image === option.value ? 'selected' : ''}
+                                            onClick={() => this.handleImageChange(option.value)}
+                                        >
+                                            <img src={option.image} alt={option.label} />
+                                            <span>{option.label}</span>
+                                        </div>
                                         ))}
                                     </div>
                                 )}
                             </div>
                         </div>
+                        <div className='selected-image'>
+                            <img src={this.state.projectData.selectedImageUrl} />
+                        </div>
+
                         <div className='create-project-publish'>
                             <span>Project Publish</span>
                             <button type="submit">PUBLISH</button>

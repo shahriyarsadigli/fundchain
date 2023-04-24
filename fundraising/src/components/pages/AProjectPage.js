@@ -92,10 +92,16 @@ class AProject extends Component {
                             <h6>{this.state.percentageRaised}%</h6>
                         </div>
                         <div className='project--donation--button'>
-                            {this.props.userAuthenticated === true ?
-                            <a href={`/donation/${this.props.project.slug}`}>DONATE</a>
+                            { 
+                            this.props.userAuthenticated === true ?
+                            <a href={`/donation/${this.props.project.slug}`} onClick={(e) => {
+                              if (this.props.account === this.props.project.creator) {
+                                e.preventDefault();
+                                alert("You cannot donate your own project...");
+                              }
+                            }}>DONATE</a>
                             :
-                            <a href={`/signin`} onClick={(e) => { e.preventDefault(); 
+                            <a href={`/signin`} onClick={(e) => { e.preventDefault();
                             alert("You need to be logged in to donate a project"); 
                             window.location.href = "/signin"; }}>DONATE</a>
                             }

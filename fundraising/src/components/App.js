@@ -398,8 +398,10 @@ class App extends Component {
                                                                            projects={this.state.projects}
                                                                            balance={this.state.balanceInEth}/> : <Navigate replace to="/signin" />} />
 
-                          <Route path="/create-project" element={this.isAuthenticated() ? <CreateProject 
+                          <Route path="/create-project" element={this.isAuthenticated() ? 
+                                                        <CreateProject 
                                                         createProject={this.createProject}
+                                                        currentAccountData={this.state.currentAccountData} 
                                                         /> : <Navigate replace to="/signin" />} />
 
 

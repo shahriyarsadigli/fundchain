@@ -37,7 +37,7 @@
 /* Project Body */
 
 .create-project-body {
-    height: 340vh;
+    height: 540vh;
     width: 100%;
     position: relative;
     margin-top: 40px;
@@ -354,3 +354,13 @@
     background-position: -100%; 
 }
 
+/* selected image */
+.selected-image {
+    width: 300px;
+    height: auto;
+}
+
+.selected-image>img {
+    width: 300px;
+    height: auto;
+}
