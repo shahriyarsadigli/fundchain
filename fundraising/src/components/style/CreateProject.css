@@ -3,7 +3,7 @@
     height: auto;
     position: relative;
     background: rgba(88, 153, 203, 0.155);
-    padding-bottom: 100px;
+    padding-bottom: 200px;
 }
 
 /* Project Header */
@@ -24,7 +24,7 @@
 }
 
 .create-project-header > span {
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: gold;
 }
 
@@ -37,7 +37,7 @@
 /* Project Body */
 
 .create-project-body {
-    height: 540vh;
+    height: 240vh;
     width: 100%;
     position: relative;
     margin-top: 40px;
@@ -60,7 +60,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     font-weight: 600;
     border-radius: 0px 5px 5px 0px;
@@ -103,7 +103,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     font-weight: 600;
     border-radius: 0px 5px 5px 0px;
@@ -123,7 +123,7 @@
 }
 
 .create-project-excerpt > div > textarea {
-    height: 70%;
+    height: 100%;
     width: 100%;
     border: none;
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
@@ -137,7 +137,7 @@
 /* Project description */
 
 .create-project-description {
-    height: 37%;
+    height: 35%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -150,7 +150,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     font-weight: 600;
     border-radius: 0px 5px 5px 0px;
@@ -195,7 +195,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     font-weight: 600;
     border-radius: 0px 5px 5px 0px;
@@ -227,11 +227,10 @@
 /* Project category */
 
 .create-project-category {
-    height: 80vh;
+    height: 25%;
     width: 100%;
     display: flex;
     align-items: flex-start;
-    border: 1px solid red;
     position: relative;
     top: 4%;
 }
@@ -243,7 +242,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     font-weight: 600;
     border-radius: 0px 5px 5px 0px;
@@ -255,18 +254,23 @@
     position: relative;
     left: 5%;
     display: flex;
+    flex-direction: column;
+}
+
+.create-project-category-buttons {
+    display: flex;
     justify-content: space-between;
 }
 
-.create-project-category > div > select {
-    height: 10%;
+.create-project-category-buttons > select {
+    height: 100%;
     width: 20%;
     margin-bottom: 20px;
     border-radius: 5px;
 }
 
-.create-project-category > div > button {
-    height: 10%;
+.create-project-category-buttons > button {
+    height: 100%;
     width: 70%;
     border-radius: 5px;
     border: none;
@@ -274,6 +278,14 @@
     box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25), 0px 1px 4px rgba(0, 0, 0, 0.25);
 }
 
+.create-project-category-buttons > button:hover {
+    color: #196CAE;
+
+}
+
+.create-project-category-buttons > button:focus {
+    outline: none;
+  }
 
 /* image selection */
 
@@ -281,27 +293,33 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 20px;
-    padding: 20px;
+    padding: 0px 20px; 
     list-style: none;
     position: absolute;
     height: 60vh;
-    width: 75%;
-    top: 15%;
+    top: 37%;
     left: 27.5%;
 }
   
 .image--selection > div {
-    width: 100%;
+    width: 90px;
+    height: 60px;
     /* position: relative;
     top: 10vh;
     left: 30vh; */
-    border: 1px solid red;
+    border-radius: 5px;
+    overflow: hidden;
 }
   
 .image--selection > div > img {
     width: 90px;
     height: 60px;
     object-fit: cover;
+    cursor: pointer;
+}
+
+.image--selection > div > img:hover {
+    opacity: 70%;
 }
   
 /* Project category */
@@ -314,7 +332,7 @@
     display: flex;
     align-items: self-start;
     position: relative;
-    top: 7%;
+    top: 10%;
 }
 
 .create-project-publish > span {
@@ -324,7 +342,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: white;
     font-weight: 600;
     border-radius: 0px 5px 5px 0px;
@@ -356,11 +374,17 @@
 
 /* selected image */
 .selected-image {
-    width: 300px;
-    height: auto;
+    width: 72vh;
+    height: 30vh;
+    position: absolute;
+    left: 40.5%;
+    bottom: 6%;
+    border-radius: 10px;
+    border: 1px solid rgb(88,153,203);
 }
 
 .selected-image>img {
-    width: 300px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
 }

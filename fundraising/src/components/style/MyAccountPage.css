@@ -156,7 +156,7 @@
 }
 
 .account--info > a:hover {
-    color: blue;
+    color: #196CAE;
 }
 
 #edit--icon {
@@ -215,11 +215,11 @@
 }
 
 #dashboard--button:hover {
-    color: blue;
+    color: #196CAE;
 }
 
 #projects--button:hover {
-    color: blue;
+    color: #196CAE;
 }
 
 /* section 3 */

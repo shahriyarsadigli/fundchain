@@ -215,32 +215,35 @@ class CreateProject extends Component {
                         <div className='create-project-category'>
                             <span>Project Category</span>
                             <div className='create-project-input'>
-                                <select ref={(input) => { this.projectCategory = input }} onChange={this.handleCategoryChange}>
-                                    {this.state.categories.map((category) => (
-                                    <option value={category.value}>{category.label}</option>
-                                    ))}
-                                </select>
-                                <button type="button" onClick={this.toggleImageOptions}>Click to choose image for your project</button>
-                                {this.state.showImageOptions && (
-                                    <div className="image--selection">
-                                        {this.categoryImages[this.state.selectedCategory].map((option) => (
-                                        <div
-                                            key={option.value}
-                                            className={this.state.projectData.image === option.value ? 'selected' : ''}
-                                            onClick={() => this.handleImageChange(option.value)}
-                                        >
-                                            <img src={option.image} alt={option.label} />
-                                            <span>{option.label}</span>
-                                        </div>
+                                <p>Choose in what category your project will be in. After choosing your category, choose an image for your category from the corresponding image list.</p>
+                                <div className='create-project-category-buttons'>
+                                    <select ref={(input) => { this.projectCategory = input }} onChange={this.handleCategoryChange}>
+                                        {this.state.categories.map((category) => (
+                                        <option value={category.value}>{category.label}</option>
                                         ))}
-                                    </div>
-                                )}
+                                    </select>
+                                    <button type="button" onClick={this.toggleImageOptions}>Choose an image for your project</button>
+                                    {this.state.showImageOptions && (
+                                        <div className="image--selection">
+                                            {this.categoryImages[this.state.selectedCategory].map((option) => (
+                                            <div
+                                                key={option.value}
+                                                className={this.state.projectData.image === option.value ? 'selected' : ''}
+                                                onClick={() => this.handleImageChange(option.value)}
+                                            >
+                                                <img src={option.image} alt={option.label} />
+                                                <span>{option.label}</span>
+                                            </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                                
                             </div>
                         </div>
                         <div className='selected-image'>
-                            <img src={this.state.projectData.selectedImageUrl} />
-                        </div>
-
+                                    <img src={this.state.projectData.selectedImageUrl} />
+                                </div>
                         <div className='create-project-publish'>
                             <span>Project Publish</span>
                             <button type="submit">PUBLISH</button>

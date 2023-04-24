@@ -145,7 +145,7 @@
 
 .project--content {
     height: auto;
-    min-height: 100vh;
+    min-height: 60vh;
     display: flex;
     justify-content: space-evenly;
     position: relative;
