@@ -47,8 +47,8 @@ class CreateProject extends Component {
           { value: 4, label: 'Education' },
           { value: 5, label: 'Art' },
         ],
-        showImageMenu: false,
-        showImageOptions: false,
+        showImageMenu: false, // initially do not show the menu
+        showImageOptions: false, // initially do not show the options
         selectedCategory: 'Other', // Default category
         projectData: {
               image: '',
@@ -56,6 +56,7 @@ class CreateProject extends Component {
         },
       };
 
+    // images object with the data of images
     categoryImages = {
         Technology: [
             { value: 'technology1.jpeg', image: technology1 },
@@ -101,17 +102,27 @@ class CreateProject extends Component {
         ]
     };
     
+    // handle the change of category selection
     handleCategoryChange = (event) => {
         const categoryValue = event.target.value;
+
+        // get the label of the selected category
         const categorySelected = this.state.categories.find(category => category.value === parseInt(categoryValue, 10)).label;
-        this.setState({ categoryValue, selectedCategory: categorySelected, projectData: {image: ''} }); // update the selected category and reset the image selection
+        
+        // update the selected category and reset the image selection
+        this.setState({ categoryValue, selectedCategory: categorySelected, projectData: {image: ''} }); 
       };
 
-    handleImageChange = (value) => {
 
+    // handle the change of image selection
+    handleImageChange = (value) => {
         const categoryImages = this.categoryImages[this.state.selectedCategory];
+
+        // get the selected image from the images object
         const selectedImage = categoryImages.find((image) => image.value === value);
         const imageUrl = selectedImage.image;
+
+        // update the state
         this.setState({
             projectData: {
                 ...this.state.projectData, 
@@ -120,11 +131,13 @@ class CreateProject extends Component {
             },
             showImageOptions: false
           });
-      };
+    };
       
-      toggleImageOptions = () => {
+
+    // show or hide image options
+    toggleImageOptions = () => {
         this.setState({ showImageOptions: !this.state.showImageOptions });
-      };
+    };
     
     render() {
         return (
@@ -150,6 +163,7 @@ class CreateProject extends Component {
                             return
                         }
 
+                        // once the form is submitted, call the createProject function with the given values
                         this.props.createProject(title, excerpt, body, imagePath, category, targetAmount)
                         }}>
                     <div className='create-project-body'>
@@ -218,6 +232,7 @@ class CreateProject extends Component {
                                 <p>Choose in what category your project will be in. After choosing your category, choose an image for your category from the corresponding image list.</p>
                                 <div className='create-project-category-buttons'>
                                     <select ref={(input) => { this.projectCategory = input }} onChange={this.handleCategoryChange}>
+                                        {/* map over the categories */}
                                         {this.state.categories.map((category) => (
                                         <option value={category.value}>{category.label}</option>
                                         ))}
@@ -225,6 +240,7 @@ class CreateProject extends Component {
                                     <button type="button" onClick={this.toggleImageOptions}>Choose an image for your project</button>
                                     {this.state.showImageOptions && (
                                         <div className="image--selection">
+                                            {/* show the images basde on the selected category */}
                                             {this.categoryImages[this.state.selectedCategory].map((option) => (
                                             <div
                                                 key={option.value}
@@ -242,8 +258,10 @@ class CreateProject extends Component {
                             </div>
                         </div>
                         <div className='selected-image'>
-                                    <img src={this.state.projectData.selectedImageUrl} />
-                                </div>
+                            {/* show the image once it is selected */}
+                            {this.state.projectData.selectedImageUrl && <img src={this.state.projectData.selectedImageUrl} />}
+                            </div>
+                                
                         <div className='create-project-publish'>
                             <span>Project Publish</span>
                             <button type="submit">PUBLISH</button>

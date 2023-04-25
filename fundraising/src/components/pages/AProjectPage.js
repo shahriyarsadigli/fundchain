@@ -5,6 +5,7 @@ import { fromWei } from 'web3-utils';
 
 
 function getCategoryName(category) {
+  // categories with their values
     switch (category) {
       case '0':
         return 'Other';
@@ -25,7 +26,6 @@ function getCategoryName(category) {
 
 class AProject extends Component {
     
-
     // Donation bar
     constructor(props) {
         super(props);
@@ -34,57 +34,60 @@ class AProject extends Component {
         };
     }
 
+
     componentDidMount() {
         const donationTarget = fromWei(this.props.project.targetAmount);
         const amountRaised = fromWei(this.props.project.amountRaised);
-        const percentageRaised = Math.floor((amountRaised / donationTarget) * 100);
+        const percentageRaised = Math.floor((amountRaised / donationTarget) * 100); // percentage of the raised amount
         this.setState({ percentageRaised });
     }
 
     // Delete Project 
     handleDeleteIconClick = () => {
         this.setState((prevState) => ({
-          showDeleteButton: !prevState.showDeleteButton
+          showDeleteButton: !prevState.showDeleteButton 
         }));
       };
+
     render() {
 
+    // import the images from project_images folder
     const images = require.context('../images/project_images', true);
-
+    const { project } = this.props
     return (
         <main className='project--main'>
             <div className='project--body '>
                 <div className='project--header'>
                     <div className='project-name-badge'>
-                        <img src={images(`./${this.props.project.imagePath}`)} alt="" />
+                        <img src={images(`./${project.imagePath}`)} alt="" />
                         <div className='project-name-info'>
                             <div className="project-name-verified">
                                 <i class="fa-solid fa-circle-check"></i>
                                 <span>VERIFIED</span>
                             </div>
-                            <h3>{this.props.project.title}</h3>
-                            <span>{this.props.project.ownerData.name} {this.props.project.ownerData.surname}</span>
+                            <h3>{project.title}</h3>
+                            <span>{project.ownerData.name} {project.ownerData.surname}</span>
                         </div>
                     </div>
                     <div className='project-funds-info'>
-                        <p>{this.props.project.excerpt}</p>
+                        <p>{project.excerpt}</p>
                         <div className='project-funds-raised'>
                             <span>TOTAL FUNDS RAISED:</span>
-                            <span className='project-funds-amount'>{this.props.project.amountRaised / 10**18} ETH</span>
+                            <span className='project-funds-amount'>{project.amountRaised / 10**18} ETH</span>
                         </div>
                         <div className='project-funds-target'>
                             <span>TOTAL TARGET AMOUNT:</span>
-                            <span className='project-funds-amount'>{fromWei(this.props.project.targetAmount, 'ether')} ETH</span>
+                            <span className='project-funds-amount'>{fromWei(project.targetAmount, 'ether')} ETH</span>
                         </div>
                         
                     </div>
                 </div>
                 <div className='project--content'>
                     <div className='project--description'>
-                        <p> {this.props.project.body} </p>
+                        <p> {project.body} </p>
                     </div>
                     <div className='project--donation'>
-                        <h4>{this.props.project.title}
+                        <h4>{project.title}
                             <i onClick={this.handleDeleteIconClick} class="fa-regular fa-trash-can"></i>
                         </h4>
                         <div className='project--donation--bar'>
@@ -94,8 +97,8 @@ class AProject extends Component {
                         <div className='project--donation--button'>
                             { 
                             this.props.userAuthenticated === true ?
-                            <a href={`/donation/${this.props.project.slug}`} onClick={(e) => {
-                              if (this.props.account === this.props.project.creator) {
+                            <a href={`/donation/${project.slug}`} onClick={(e) => {
+                              if (this.props.account === project.creator) {
                                 e.preventDefault();
                                 alert("You cannot donate your own project...");
                               }
@@ -107,16 +110,16 @@ class AProject extends Component {
                             }
                         </div>
                         <div className='project--donation--category'>
-                            {getCategoryName(this.props.project.category)}
+                            {getCategoryName(project.category)}
                         </div>
                         
                         <div className='project--delete'>
                         {
-                           this.props.userAuthenticated && this.props.project.creator === this.props.account && this.props.project.amountRaised < this.props.project.targetAmount / 20
+                           this.props.userAuthenticated && project.creator === this.props.account && project.amountRaised < project.targetAmount / 20
                            ? 
                           <button
                             style={{ display: this.state.showDeleteButton ? "block" : "none" }}
-                            name={this.props.project.id}
+                            name={project.id}
                             onClick={(event) => {
                                 this.props.deleteProject(event.target.name);
                             }}

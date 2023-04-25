@@ -7,7 +7,6 @@ import ProjectsBgHome from '../images/projects-bg.png'
 
 
 class HomePage extends Component {
-
     scrollToTop() {
         window.scrollTo({
           top: 0,
@@ -17,12 +16,13 @@ class HomePage extends Component {
 
     scrollToProjects() {
         window.scrollTo({
-          top: document.documentElement.scrollHeight * 0.52,
+          top: 1200,
           behavior: "smooth"
         });
     }
       
     render() {
+        // read all of the projects from mapping and return as project cards
         const cards = this.props.projects.map(project => {
             if (project.id != 0)
               return (
@@ -40,7 +40,7 @@ class HomePage extends Component {
             <section className="home">
                 <div className="home-body">
                     <div className="home-content">
-                        <h1>FundChain empowers <br></br>the future of startups  with<br></br>secure and transparent fundraising.</h1>
+                        <h1>Fundchain empowers <br></br>the future of startups  with<br></br>secure and transparent fundraising.</h1>
                         <h5>Join the decentralized revolution of startup funding powered by Ethereum.</h5>
                         <img src={Artwork} className="home--artwork"/>
                         <img src={HomeBgS1} className="home--bg2"/>
@@ -53,7 +53,7 @@ class HomePage extends Component {
             </section>
             <section className="home--promotion">
                 <div className="promotion--title">
-                    <span>Fundraising on FundChain takes</span>
+                    <span>Fundraising on Fundchain takes</span>
                     <span>just a few minutes</span>  
                 </div>
                 <div className="promotion--sections">
@@ -94,6 +94,7 @@ class HomePage extends Component {
             </section>
             <div className='projects--list-header'><img src={ProjectsBgHome} className="home--artwork"/></div>
             <section className='projects--list'>
+                {/* if the length of the projects array is zero, then there is no project to display, otherwise, display projects */}
                 { this.props.projects.length ?
                 cards : 
                 <div className="no-projects" ><h1>No projects to display...</h1></div>

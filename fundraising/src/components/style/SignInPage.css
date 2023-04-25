@@ -34,12 +34,11 @@
     width: 900px;
     border-radius: 10px 10px 0px 0px;
     background-color: rgb(88,153,203);
-}
-
-.signin-header > h2 {
     color: white;
     font-size: 1.6rem;
+    font-weight: 600;
 }
+
 
 .forum-main {
     width: 900px;

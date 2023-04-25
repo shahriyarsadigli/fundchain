@@ -34,26 +34,28 @@ class DonationPage extends Component {
     // Image for a donation card
     const images = require.context('../images/project_images', true);
 
+    const { project } = this.props
+
     return (
         <main>
             <section className="donation--card">
                 <div className="project--info">
-                    <img className="project--img" src={images(`./${this.props.project.imagePath}`)} alt=""/>
+                    <img className="project--img" src={images(`./${project.imagePath}`)} alt=""/>
                     <div className="project--details">
                         <div className="project--verified">
                             <i class="fa-solid fa-circle-check"></i>
                             <span>VERIFIED</span>
                         </div>
-                        <h3>{this.props.project.title}</h3>
+                        <h3>{project.title}</h3>
                         {/* Author name to be added */}
-                        <h6 className="project-author">{this.props.project.ownerData.name} {this.props.project.ownerData.surname}</h6>
+                        <h6 className="project-author">{project.ownerData.name} {project.ownerData.surname}</h6>
                         <div className='funds--raised'>
                             <span>Total Funds Raised: </span>
-                            <span className='funds-raised-amount'>{this.props.project.amountRaised / 10**18} ETH</span>
+                            <span className='funds-raised-amount'>{project.amountRaised / 10**18} ETH</span>
                         </div>
                         <div className='funds--amount'>
                             <span>Target Amount: </span>
-                            <span className='funds-raised-amount'>{this.props.project.targetAmount / 10**18} ETH</span>
+                            <span className='funds-raised-amount'>{project.targetAmount / 10**18} ETH</span>
                         </div>
                     </div>
                 </div>
@@ -67,7 +69,7 @@ class DonationPage extends Component {
                     <div className="donation--balance">
                         <div className="donation--address">
                             <h6>Fund Receiving Address </h6>
-                            <span>{this.props.project.creator}</span>
+                            <span>{project.creator}</span>
                         </div>
                         <div className="balance--buttons">
                             <span className="account--balance">My Balance</span>
@@ -76,7 +78,7 @@ class DonationPage extends Component {
                     </div>
                     <div className="donation--submit">
                             {
-                            this.props.userAuthenticated === true && this.props.project.creator !== this.props.account && parseInt(window.web3.utils.toWei(this.props.project.amountRaised.toString(), 'Ether')) < parseInt(window.web3.utils.toWei(this.props.project.targetAmount.toString(), 'Ether'))
+                            this.props.userAuthenticated === true && project.creator !== this.props.account && parseInt(window.web3.utils.toWei(project.amountRaised.toString(), 'Ether')) < parseInt(window.web3.utils.toWei(project.targetAmount.toString(), 'Ether'))
                             ? 
                                 <div>
                                 <input id="projectName"
@@ -88,7 +90,7 @@ class DonationPage extends Component {
                                     placeholder="Donation Amount"
                                     required />
                                 <button
-                                    name={this.props.project.id}
+                                    name={project.id}
                                     className="donation--button"
                                     onClick={this.handleDonate}
                                 >
@@ -96,7 +98,7 @@ class DonationPage extends Component {
                                 </button> 
 
                                 </div>
-                            : parseInt(window.web3.utils.toWei(this.props.project.amountRaised.toString(), 'Ether')) >= parseInt(window.web3.utils.toWei(this.props.project.targetAmount.toString(), 'Ether'))
+                            : parseInt(window.web3.utils.toWei(project.amountRaised.toString(), 'Ether')) >= parseInt(window.web3.utils.toWei(project.targetAmount.toString(), 'Ether'))
                                 ? <p>Goal Reached!</p>
                                 : null
                             }

@@ -179,12 +179,12 @@
 }
 
 .wallet--address > span {
-    font-size: 0.9em;
+    font-size: 0.8em;
     color: blue;
 }
 
 .wallet--address > p {
-    font-size: 0.9em;
+    font-size: 0.8em;
     font-weight: 600;
     margin-right: 10px;
     position: relative;

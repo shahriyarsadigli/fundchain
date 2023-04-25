@@ -74,7 +74,7 @@ class ProjectsPage extends Component {
       <main className="projects-page">
         <section className="projects-body">
           <div className="explore-projects" >
-            FundChain Projects
+            Fundchain Projects
             <h5>Smart giving made easy with blockchain fundraising</h5>
           </div>
           <div className="search-bar">

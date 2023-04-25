@@ -38,7 +38,7 @@ class SignIn extends Component {
         <main className='signin-page'>
           <section className='signin'>
             <div className='signin-header'>
-              <h2>Sign in to FundChain</h2>
+              Sign in to Fundchain
             </div>
             <div className='forum-main'>
               <div className='forum-img'>
